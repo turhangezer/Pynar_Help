@@ -32,3 +32,13 @@ satırı olarak dikkate alınmaz.
 print (2+3) # Bu kod satırı ekrana 2 sayının toplamını yazar.
 ```
 5
+
+Her satırın başına “#” işareti ekleyerek alt alta yorum satırları oluşturabilirsiniz. Yorum satırlarında özel
+karakterler etkisizdir.
+
+**Örnek 3**
+
+Birden fazla yorum satırı kullanılacaksa yorumlar üçlü tek tırnak veya üçlü çift tırnak blokları arasına
+yazılır.
+
+```python
