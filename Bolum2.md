@@ -19,3 +19,16 @@ Aşağıdaki yorum satırları Python tarafından dikkate alınmamaktadır. Bu n
 print ("Konu: Yorum satırlarını kullanma") 
 #Her satırın başına # işareti eklenerek
 #alt alta yorum satırları oluşturulabilir.
+```
+Konu: Yorum satırlarını kullanma
+
+**Örnek 2**
+
+Yorum satırlarını kod satırının devamında aynı satırda kullanabilirsiniz. Bu kullanımda önce kod gelir,
+devamında yorum satırı “#” işareti ile başlar (öndeki kod çalışır), daha sonra satır sonuna kadar yorum
+satırı olarak dikkate alınmaz.
+
+```python
+print (2+3) # Bu kod satırı ekrana 2 sayının toplamını yazar.
+```
+5
