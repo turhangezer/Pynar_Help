@@ -52,7 +52,7 @@ tırnak kullanılır. Açıklama satırını bitirmek için \naynı şekilde kul
 Konsol çıktısında açıklamalar birden fazla satırda olduğu için satır sonlarına \n kaçış dizisi karakterini
 konsol otomatik olarak eklemiştir. Aynı yorum satırını ′′′′′′yorum satırları′′′′′′ üçlü çift tırnak kullanarak da
 yapılabilir. Yorum satırları içinde kaçış dizisi karakterlerinin de çalışmadığı unutulmamalıdır.
------------------------------------------------------------------
+
 **Örnek 4**
 
 Yorum satırlarını Python yorumlayıcı dikkate almaz. Ancak aşağıdaki kod satırları yorum satırı olarak
@@ -202,11 +202,14 @@ Değişkenler veri tiplerine göre kullanılmazsa Python hata verir.
 sayi1=1
 metin1='deneme'
 print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.
----------------------------------------------------------------------------
+```
+  
 TypeError Traceback (most recent call last)
 <ipython-input-47-e585c633881d> in <module>()
 1 sayi1=1
 2 metin1='deneme'
 ----> 3 print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
+  
+  
 
