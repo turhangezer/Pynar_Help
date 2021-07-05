@@ -211,5 +211,107 @@ TypeError Traceback (most recent call last)
 ----> 3 print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
   
-  
+## 2.2.1. Değişken Adlandırmada Kurallar
+Değişken adı verilirken uyulması gereken bazı kurallar ve kurallar kadar katı olmasa da yararlı kullanım
+önerileri vardır.
+
+Değişken adlandırma kuralları:
+* Değişkenler bir harf (a - z, A - Z) veya alt çizgi (_) ile başlamalıdır. Bunların dışında sayı veya başka
+bir karakter ile de başlayamaz.
+* Değişken adında rakam, alt çizgi(_), büyük veya küçük harf olabilir.
+* Değişken adları herhangi bir uzunlukta olabilir.
+
+Python, değişken adlandırmada Türkçe karakterlerin (ç , ğ, ı, ö, ş ve ü) kullanımına izin vermektedir. Ek
+olarak Python programlama dilinde ayrılmış sözcükler kullanılamaz. Bu özel sözcüklerin listesini görmek
+için aşağıdaki kod kullanılabilir.
+
+```python
+import keyword
+keyword.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue',
+'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global',
+'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass',
+'raise', 'return', 'try', 'while', 'with', 'yield']
+```
+
+Büyük harf ve küçük harf kullanılarak tanımlanan değişkenlerin adı aynı olsa bile farklı değişkenler olduğu unutulmamalıdır.
+
+**Örnek 12**
+
+Python dilinde uygun değişken adı örnekleri:
+
+```python
+#Uygun değişken isimleri
+sayi1=1
+Sayi1=2
+```
+
+Sayi1’ ekrana yazdırılırsa çıktı ne olur?
+
+```python
+print (sayi1)
+print(Sayi1)
+#Büyük harf ve küçük harf kullanarak tanımlanan değişkenlerin adı aynı olsa bile
+farklı değişkenler olduğunu unutulmamalıdır.
+sayı1=3
+#Python değişken adlandırmada Türkçe karakter kullanımına izin vermektedir.
+print(sayı1)
+```
+
+1
+2
+3
+
+
+**Örnek 13**
+
+Python’da hatalı değişken adı kullanımı örneği:
+
+```python
+1sayi=5 #Hatalı değişken adı.
+print (1.sayi)
+```
+
+File "<ipython-input-52-a0b35430cdb5>", line 1
+1sayi=5 #Hatalı değişken adı.
+^
+SyntaxError: invalid syntax
+
+
+## 2.2.2. Değişken Adlandırma için Standartlar
+
+Değişken adlandırma için bazı standartlar vardır. Bu standartlar değişken adının ve içeriğinin anlaşılma-
+sına yardımcı olarak programcıların daha kolay çalışmasını sağlar. Değişken adı, onun içeriği hakkında
+
+bilgi verirse kodun anlaşılması kolaylaşır. Değişken adlarının yazımında bazı standart kullanımlar vardır.
+
+Birden fazla kelimenin kullanılacağı değişken adlarında kelimelerin ilk harfi büyük olabilir. Camel stan-
+dardında (başka standartlar da bulunmaktadır) değişken adlarının görünüşü deve hörgücüne benzetil-
+mektedir. Değişkenin adına küçük harfle başlanır ve sonraki her kelime büyük harfle başlar.
+
+**Örnek 14**
+
+```python
+adi= "Elif"
+soyadi="Altun"
+dogumYili=1981
+universiteMezunuMu=True
+universiteyeBasladigiYil=1999
+mezuniyetNotu=2.00
+print ('Adı: ', adi)
+print ('Soyadı: ', soyadi)
+print('Üniversite Mezunu mu? ', universiteMezunuMu)
+print('Üniversiteye Başladığı Yıl: ', universiteyeBasladigiYil)
+print('Mezuniyet Notu: ', mezuniyetNotu)
+```
+
+Adı: Elif
+
+Soyadı: Altun
+
+Üniversite Mezunu mu? True
+
+Üniversiteye Başladığı Yıl: 1999
+Mezuniyet Notu: 2.0
+
 
