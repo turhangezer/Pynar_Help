@@ -510,8 +510,8 @@ demet1=('Çınar', 24, 'Mühendis', True)
 print ("7. değişkenin veri tipi: ", type(demet1))
 sozluk={'adi': 'Çınar','yasi': 24, 'meslekUnvani':'Mühendis', 'askerlikDurumu': True}
 print ("8. değişkenin veri tipi: ", type(sozluk))
-```
-1. değişkenin veri tipi: <class 'int'>
+
+>>> 1. değişkenin veri tipi: <class 'int'>
 2. değişkenin veri tipi: <class 'float'>
 3. değişkenin veri tipi: <class 'str'>
 4. değişkenin veri tipi: <class 'complex'>
@@ -519,7 +519,7 @@ print ("8. değişkenin veri tipi: ", type(sozluk))
 6. değişkenin veri tipi: <class 'list'>
 7. değişkenin veri tipi: <class 'tuple'>
 8. değişkenin veri tipi: <class 'dict'>
-
+```
 
 ## 2.5. Veri Tiplerini Dönüştürmek
 
@@ -544,9 +544,9 @@ Aşağıdaki örnekte iki sayının da tırnak içinde verilmiş olduğuna dikka
 metin1='5'
 metin2='3'
 print (metin1+metin2)
-```
 
-53
+>>> 53
+``` 
 
 Yukarıda kullanılan değerler tırnak içinde verildiğinden karakter dizisi veri tipindedir. Kod sonuç olarak
 iki karakteri yan yana yazacaktır.
@@ -559,9 +559,9 @@ caktır. Böylece iki sayısal değer üzerinde toplama işlemi yapılabilir.
 
 ``` python
 print(int(metin1)+int(metin2))
-```
-8
 
+>>> 8
+```
 
 Karakter dizisi olan bir değer sayısal bir ifadeye dönüştürüldüğünde bu ifadenin sadece sayısal karakter-
 ler içermesi gerekir. “A” harfi veya metinsel bir ifade int(“A”) kullanılarak sayıya çevrilemez.
@@ -585,15 +585,12 @@ piDegeriInt=(int(piDegeri))
 print('Int veri tipine dönüştürülen piDegeri: ', piDegeriInt)
 daireninAlani=((piDegeriInt*2)*yariCap)
 print('Dairenin Alanı (int)=', daireninAlani)
-```
-Veri Tipi: <class 'float'>
 
+>>> Veri Tipi: <class 'float'>
 Dairenin Alanı (float)= 31.400000000000002
-
 Int veri tipine dönüştürülen piDegeri: 3
-
 Dairenin Alanı (int)= 30
-
+```
 
 **Örnek 24**
 
@@ -607,13 +604,11 @@ print('Askerlik yaptı mı?', askerlikYaptiMiInt)
 askerlikYaptiMiStr=str(askerlikYaptiMi) #string tipine dönüştürüldü.
 print('Askerlik yaptı mı?', askerlikYaptiMiStr)
 #Çıktı olarak True verir ancak bu boolean tipinde değildir.
-```
 
-Askerlik yaptı mı? True
-
+>>> Askerlik yaptı mı? True
 Askerlik yaptı mı? 1
-
 Askerlik yaptı mı? True
+```
 
 ## 2.6. Operatörler
 
@@ -651,14 +646,12 @@ print (sayi1+5)
 #Aynı şekilde değişken kullanarak da yapabiliriz.
 sayi2=10.34
 print (sayi1+sayi2+5.5) #farklı veri tiplerindeki sayıları ve değişkenleri de kullanabiliriz
-```
-8
 
+>>> 8
 11
-
 15
-
 25.84
+```
 
 **Örnek 26**
 
@@ -668,11 +661,10 @@ Toplama operatörünün karakter dizilerinde farklı bir kullanımı vardır: İ
 print ('Merhaba ' + 'Mars')
 metin1='Merhaba ' + 'Mars' + ' nasılsın?'
 print(metin1)
-```
-Merhaba Mars
 
+>>> Merhaba Mars
 Merhaba Mars nasılsın?
-
+```
 
 **Çıkarma Operatörü**
 
@@ -686,13 +678,11 @@ sayi1=5
 sayi2=3
 print(sayi1-sayi2)
 print (3-4-5)
-```
 
+>>> 2
 2
-
-2
-
 -6
+```
 
 **Çarpma Operatörü**
 
@@ -706,13 +696,11 @@ print(5*3*2)
 sayi1=5
 sayi2=3
 print(sayi1*sayi2)
-```
 
-15
-
+>>> 15
 30
-
 15
+```
 
 Çarpma operatörü, toplama operatöründe olduğu gibi karakter dizilerinde farklı bir amaç için kullanılmaktadır.
 
@@ -722,7 +710,8 @@ Bir karakter dizisini istediğiniz kadar yazdırmak için çarpma operatörünü
 
 ```python
 print (20*'BA')
-BABABABABABABABABABABABABABABABABABABABA
+
+>>> BABABABABABABABABABABABABABABABABABABABA
 ```
 
 **Bölme Operatörü**
@@ -733,9 +722,9 @@ Bu operatör, iki sayıyı bölmek için kullanılır.
 
 ```python
 print (5/3)
-```
 
-0.8333333333333334
+>>> 0.8333333333333334
+```
 
 Bölme operatörünü ikiden fazla sayıyı bölmek için de kullanabilirsiniz.
 
@@ -743,9 +732,9 @@ Bölme operatörünü ikiden fazla sayıyı bölmek için de kullanabilirsiniz.
 
 ```python
 print(18/3/2)
-```
 
-3.0
+>>> 3.0
+```
 
 Bu tür durumlarda Python işlemleri soldan başlayarak sırayla yapar. Önce 18/3 işlemini yapar ve sonucu 2’ye böler.
 
@@ -759,9 +748,9 @@ Bir sayının kuvvetini almak için kullanılır. Bir sayının kuvveti o sayın
 
 ```python
 print(5**3)
-```
 
-125
+>>> 125
+```
 
 Kuvvet alma operatörü bir sayının kökünü almak için “1/kuvvet” olarak kullanılabilir.
 
@@ -771,9 +760,9 @@ Kuvvet alma operatörü bir sayının kökünü almak için “1/kuvvet” olara
 
 ```python
 print(49**(1/2))
-```
 
-7.0
+>>> 7.0
+```
 
 **Tam Bölüm Operatörü**
 
@@ -783,9 +772,9 @@ print(49**(1/2))
 
 ```python
 print (121.00//3)
-```
 
-40.0
+>>> 40.0
+```
 
 **Mod Alma Operatörü**
 Bir sayının diğer bir sayıya bölümünden kalanını verir.
@@ -795,11 +784,10 @@ Bir sayının diğer bir sayıya bölümünden kalanını verir.
 ```python
 print (5%3) #Sayının 3 ile bölümünden kalan.
 print (9%2) #Kalan 0 ise sayı çifttir.
-```
 
-2
-
+>>> 2
 1
+```
 
 ### 2.6.2. İlişkisel Operatörler
 İlişkisel operatörler, değerler arasındaki ilişkiyi kontrol ederek sonucu “boolean” bir değer olarak (True,
@@ -834,13 +822,11 @@ sayi1=5
 sayi2=3
 print(sayi1==sayi2)
 print(sayi1==5)
-```
 
+>>> False
 False
-
-False
-
 True
+```
 
 **Örnek 37**
 
@@ -853,13 +839,11 @@ metin1='Emre'
 metin2='emre'
 print(metin1==metin2)
 print(metin1=='Emre')
-```
 
+>>> False
 False
-
-False
-
 True
+```
 
 **Eşit Değildir Operatörü**
 
@@ -875,12 +859,11 @@ sayi2=3
 print(sayi1!=sayi2)
 print(sayi1!=5)
 # Çıktıların == operatörünün tersi olduğuna dikkat ediniz.
-```
-True
 
+>>> True
 True
-
 False
+```
 
 **Örnek 39**
 
@@ -893,12 +876,11 @@ metin1='Emre'
 metin2='emre'
 print(metin1!=metin2)
 print(metin1!='Emre')
-```
-True
 
+>>> True
 True
-
 False
+```
 
 **Büyüktür Operatörü**
 
@@ -911,9 +893,9 @@ Büyüktür “>” operatörü iki değeri karşılaştırmak için kullanılı
 sayi1=6.06
 sayi2=6.07
 print(sayi1>sayi2)
-```
 
-False
+>>> False
+```
 
 “sayi2” değişkenine yeni bir değer atandığını gözden kaçırmayınız.
 
@@ -922,10 +904,10 @@ sayi2=6
 print (sayi1>sayi2)
 sayi2=6.06
 print(sayi1>sayi2)
-```
-True
 
+>>> True
 False
+```
 
 **Küçüktür Operatörü**
 
