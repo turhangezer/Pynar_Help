@@ -452,7 +452,7 @@ a=int(input("birinci sayıyı giriniz: "))
 b=input("ikinci sayıyı giriniz: ")
 print("girdiğiniz sayıların toplamı:",a+b)
 
->> birinci sayıyı giriniz: 6
+>>> birinci sayıyı giriniz: 6
 >>> ikinci sayıyı giriniz: 9
 >>> Traceback (most recent call last):
 >>> File "test.py", line 3, in <module>
