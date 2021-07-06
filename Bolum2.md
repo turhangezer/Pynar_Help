@@ -85,14 +85,12 @@ utf-8 Türkçe alfabeyi de destekleyen bir karakter kodlama sistemidir.
 Yorum satırları süsleme amacıyla da kullanılabilir. Bazı program dosyalarında aşağıdaki gibi süslü açıklamalar, etiketler görülebilir.
 
 ```python
-'''
 #####################################################################
 #******************************************************************##
 # Python Öğreniyorum                                               ##
 # Python 3                                                         ##
 #******************************************************************##
 #####################################################################
-'''
 ```
 
 ## 2.2. Değişkenler
