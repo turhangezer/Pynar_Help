@@ -20,8 +20,9 @@ Aşağıdaki yorum satırları Python tarafından dikkate alınmamaktadır. Bu n
 print ("Konu: Yorum satırlarını kullanma") 
 #Her satırın başına # işareti eklenerek
 #alt alta yorum satırları oluşturulabilir.
+
+>>> Konu: Yorum satırlarını kullanma
 ```
-Konu: Yorum satırlarını kullanma
 
 **Örnek 2**
 
@@ -46,11 +47,12 @@ Birden fazla yorum satırı kullanılacaksa yorumlar üçlü tek tırnak veya ü
 yazılır.
 
 ```python
->>> '''Python'da birden fazla açıklama satırı kullanmak için üçlü tek tırnak veya çift
+'''Python'da birden fazla açıklama satırı kullanmak için üçlü tek tırnak veya çift
 tırnak kullanılır. Açıklama satırını bitirmek için aynı işaretler kullanılır.'''
-```
-'Python'da birden fazla\naçıklama satırı\nkullanmak için üçlü tek tırnak veya çift\n
+
+>>> 'Python'da birden fazla\naçıklama satırı\nkullanmak için üçlü tek tırnak veya çift\n
 tırnak kullanılır. Açıklama satırını bitirmek için \naynı şekilde kullanılır.'
+```
 
 Konsol çıktısında açıklamalar birden fazla satırda olduğu için satır sonlarına \n kaçış dizisi karakterini
 konsol otomatik olarak eklemiştir. Aynı yorum satırını ′′′′′′yorum satırları′′′′′′ üçlü çift tırnak kullanarak da
@@ -120,11 +122,8 @@ sayi1=10.5
 print ('Değişkenin içindeki sayı: ', sayi1, 'oldu')
 
 >>> Değişkenin içindeki sayı: 5
-
 Değişkenin içindeki sayı: 10 oldu
-
 Değişkenin içindeki değer: Murat oldu
-
 Değişkenin içindeki sayı: 10.5 oldu
 ```
 
@@ -187,11 +186,8 @@ print (yenisayi)
 # yenisayi değişkeni tanımlanmamış olduğu için hata mesajı alınır.
 
 >>> NameError Traceback (most recent call last)
-
 \<ipython-input-1-9ff08615337f> in \<module>()
-
 ----> 1 print (yenisayi)
-
 NameError: name 'yenisayi' is not defined
 ```
 
@@ -217,15 +213,10 @@ print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.
   
 >>> TypeError Traceback (most recent call last)
 \<ipython-input-47-e585c633881d> in \<module>()
-
 1 sayi1=1
-
 2 metin1='deneme'
-
 ----> 3 print(sayi1+metin1)
-
  #Bir sayı ile bir metin, kelime toplanamaz.
-
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
@@ -276,9 +267,7 @@ sayı1=3
 print(sayı1)
 
 >>> 1
-
 2
-
 3
 ```
 
@@ -291,12 +280,8 @@ Python’da hatalı değişken adı kullanımı örneği:
 1sayi=5 #Hatalı değişken adı.
 print (1.sayi)
 
-
 >>> File "\<ipython-input-52-a0b35430cdb5>", line 1
-
-
 1sayi=5 #Hatalı değişken adı.
-
 ^
 SyntaxError: invalid syntax
 ```
@@ -327,15 +312,10 @@ print('Üniversite Mezunu mu? ', universiteMezunuMu)
 print('Üniversiteye Başladığı Yıl: ', universiteyeBasladigiYil)
 print('Mezuniyet Notu: ', mezuniyetNotu)
 
-
 >>> Adı: Elif
-
 Soyadı: Altun
-
 Üniversite Mezunu mu? True
-
 Üniversiteye Başladığı Yıl: 1999
-
 Mezuniyet Notu: 2.0
 ```
 
@@ -353,19 +333,14 @@ olduğuna dikkat edilmelidir.
 sayi1=5
 sayi2='3'
 print (sayi1+sayi2)
-```
 
-TypeError Traceback (most recent call last)
-
+>>> TypeError Traceback (most recent call last)
 \<ipython-input-55-294ee141ba94> in \<module>()
-
 1 sayi1=5
-
 2 sayi2='3'
-
 ----> 3 print (sayi1+sayi2)
-
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
+``` 
 
 Kod çalıştırıldığında bir hata mesajı alınır. Bir aritmetik operatörü kullanılırken bir sayı ile bir karakter
 dizisi (ikinci değişkenin adı sizi yanıltmasın) toplamaya çalışıldığı için Python hata verir. Veri tipleri, de-
@@ -382,10 +357,9 @@ sayi2='3'
 ediniz.
 print (sayi1*sayi2)
 #Sizce nasıl bir sonuç çıkar?
+
+>>> 33333
 ```
-
-33333
-
 
 Örnekte görüldüğü gibi kod “çarpma” işlemi yapamamıştır. Çünkü ortada iki sayısal değer yoktur. İkinci
 örnekte 3 sayısını bir karakter olarak 5 defa yazmıştır.
@@ -432,13 +406,12 @@ print ('Alan=', alan)
 print('Yarıçapı 2 olan dairenin alanı ', alan, ' cm 2 dir' )
 karmasikSayi=4+5j
 print('Bir karmaşık sayı=', karmasikSayi+3j)
-```
 
-pi sayısı= 3.14
+>>> pi sayısı= 3.14
 Alan= 12.56
 Yarıçapı 2 olan dairenin alanı 12.56 cm 2 dir
 Bir karmaşık sayı= (4+8j)
-
+```
 
 ### 2.3.3. Karakter Dizisi (string) Veri Tipi
 Karakter dizisi, kullanıcıdan alınan değerlerin metin formatında tutulduğu veri tipleridir. Python karakter
@@ -458,14 +431,12 @@ print (metin1 * 2) # karakter dizisini 2 defa yazar
 print (metin1 + metin2) # iki karakter dizisini birleştirir
 print ('metin1 adlı değişkendeki değerin uzunluğu:', len(metin1))
 #Boşluğun da bir karakter olduğunu gözden kaçırmayınız.
-```
-Merhaba
 
+>>> Merhaba
 Merhaba Merhaba
-
 Merhaba Mars
-
 metin1 adlı değişkendeki değerin uzunluğu: 8
+```
 
 #### 2.3.3.1. Karakter Dizilerinde (string) Dilimleme İşlemleri
 Bir karakter dizisinin içindeki karakterlere tek tek veya belirli bir aralıkta erişilebilir. Köşeli parantez içinde
@@ -498,20 +469,15 @@ print (metin[-2]) # karakter dizisinin en sondan ikinci karakterini yazar.
 print (metin [:7]) # indisi 0' dan 7'ye kadar olan (7 dahil değil) karakterleri yazar.
 print (metin[8:]) # başlangıç indisinden sonra tüm karakterleri yazar.
 print(metin[0:8:2]) # 0, 2, 4 ve 6 indis numaralı karakterleri dilimler.
-```
-M
 
+>>> M
 aba
-
 Mars
-
 r
-
 Merhaba
-
 Mars
-
 Mraa
+``` 
 
 Liste, demet ve sözlükler kapsamlı konular olduğu için ayrı bölümlerde verilmiştir.
 
