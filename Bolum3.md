@@ -59,16 +59,17 @@ mesajı alınır.
 
 ```python
 print("python)
+
+>>> SyntaxError: EOL while scanning string literal
 ```
-SyntaxError: EOL while scanning string literal
 
 **Örnek 4**
 
 ```python
 print(a)
-```
 
-SyntaxError: unexpected indent
+>>> SyntaxError: unexpected indent
+```
 
 Yukarıdaki durumlarda eksik olan tanımlamalar neticesinde, hata mesajı ile karşılaşılmıştır. Örnek 3’te
 tırnak kapatılmamış, örnek 4’te ise değişken tanımlanmadığı için hata vermiştir. Doğru kullanım:
@@ -77,9 +78,9 @@ tırnak kapatılmamış, örnek 4’te ise değişken tanımlanmadığı için h
 
 ```python
 print("Merhaba, Python!")
-```
 
-Merhaba, Python!
+>>> Merhaba, Python!
+```
 
 **print( )** fonksiyonu kullanılırken, karakter dizilerinde çift tırnak, tek tırnak ya da üç çift tırnak kullanılabi-
 lir. Aslında bu ayrıntının Python’da çok önemli bir yeri vardır.
@@ -89,13 +90,13 @@ lir. Aslında bu ayrıntının Python’da çok önemli bir yeri vardır.
 
 ```python
 print('Türkiye'nin en kalabalık ili İstanbul'dur')
+
+>>> SyntaxError: invalid syntax
 ```
 
 ![Şekil 3.2: Örnek 6’nın çıktısı](istprint.png)
 
 Şekil 3.2: Örnek 6’nın çıktısı
-
-SyntaxError: invalid syntax
 
 ## Şekil 3.2: Örnek 6’nın çıktısı
 
@@ -105,9 +106,9 @@ SyntaxError: invalid syntax
 
 ```python
 print("Türkiye'nin en kalabalık ili İstanbul'dur")
-```
 
-Türkiye'nin en kalabalık ili İstanbul'dur
+>>> Türkiye'nin en kalabalık ili İstanbul'dur
+```
 
 **print( )** fonksiyonu kullanılırken argüman değerleri arasında aritmetiksel işlemler yapılabilir.
 
@@ -115,9 +116,9 @@ Türkiye'nin en kalabalık ili İstanbul'dur
 
 ```python
 print(2+2)
-```
 
-4
+>>> 4
+```
 
 **print( )** fonksiyonu, bu şekilde aritmetik işlemler yapmak amacıyla kullanılabilir.
 
@@ -132,9 +133,9 @@ Bu işaretler karakter dizilerinin nerede başladığını ve bittiğini ifade e
 
 ```python
 print("Merhaba," Python "kullanıyorum")
-```
 
-SyntaxError: invalid syntax
+>>> SyntaxError: invalid syntax
+```
 
 Örnek 9’da çift tırnak işareti arasındaki “Merhaba, ” kelimesi karakter dizisi olarak algılandı ama sonrasında **Python** kelimesi çift tırnak içinde ve argümanlar arasında “,” virgül olmadığı için hata verdi. Bu problemi çözmek için **kaçış parametreleri (escape character)** kullanılmalıdır.
 
