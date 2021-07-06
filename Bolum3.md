@@ -1,6 +1,6 @@
 # Modül 3 
-# YORUM SATIRLARI,DEĞİŞKENLER, VERİ TİPLERİ VE OPERATÖRLER
-## Temel Fonksiyonlar
+# PYTHON'DA TEMEL FONKSİYONLAR
+## 3.1. Temel Fonksiyonlar
 
 Programlama dillerinde fonksiyonlardan sıkça faydalanılmaktadır. Fonksiyonları kendimiz yazabilece-
 ğimiz gibi, programlama dillerinin kütüphanelerinde bulunan hazır fonksiyonlar da kullanılabilir. Pyt-
@@ -166,7 +166,7 @@ print("1. satır\n2. satır\n3. satır")
 2. satır
 3. satır
 
-Örnek 11’de görüldüğü üzere **\n*** parametresi kullanılarak program çıktısının alt alta yazılması sağlandı.
+Örnek 11’de görüldüğü üzere **\n** parametresi kullanılarak program çıktısının alt alta yazılması sağlandı.
 
 ### 3.2.4. Sekme(\t)
 
