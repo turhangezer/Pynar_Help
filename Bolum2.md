@@ -186,7 +186,7 @@ print (yenisayi)
 # yenisayi değişkeni tanımlanmamış olduğu için hata mesajı alınır.
 
 >>> NameError Traceback (most recent call last)
-\<ipython-input-1-9ff08615337f> in \<module>()
+<ipython-input-1-9ff08615337f> in <module>()
 ----> 1 print (yenisayi)
 NameError: name 'yenisayi' is not defined
 ```
@@ -212,7 +212,7 @@ print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.
 
   
 >>> TypeError Traceback (most recent call last)
-\<ipython-input-47-e585c633881d> in \<module>()
+<ipython-input-47-e585c633881d> in <module>()
 1 sayi1=1
 2 metin1='deneme'
 ----> 3 print(sayi1+metin1)
@@ -280,7 +280,7 @@ Python’da hatalı değişken adı kullanımı örneği:
 1sayi=5 #Hatalı değişken adı.
 print (1.sayi)
 
->>> File "\<ipython-input-52-a0b35430cdb5>", line 1
+>>> File "<ipython-input-52-a0b35430cdb5>", line 1
 1sayi=5 #Hatalı değişken adı.
 ^
 SyntaxError: invalid syntax
@@ -335,7 +335,7 @@ sayi2='3'
 print (sayi1+sayi2)
 
 >>> TypeError Traceback (most recent call last)
-\<ipython-input-55-294ee141ba94> in \<module>()
+<ipython-input-55-294ee141ba94> in <module>()
 1 sayi1=5
 2 sayi2='3'
 ----> 3 print (sayi1+sayi2)
