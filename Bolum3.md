@@ -162,8 +162,8 @@ en sık kullanılan kaçış parametresi **\n** parametresidir.
 print("1. satır\n2. satır\n3. satır")
 
 >>> 1. satır
-2. satır
-3. satır
+>>> 2. satır
+>>> 3. satır
 ```
 
 Örnek 11’de görüldüğü üzere **\n** parametresi kullanılarak program çıktısının alt alta yazılması sağlandı.
@@ -193,7 +193,7 @@ print("Merhaba!")
 print("Python")
 
 >>> Merhaba!
-Python
+>>> Python
 ```
 
 Örnek 13’teki gibi bir kullanımda kodların çıktısı alt alta verilmiştir. Ancak bazı durumlarda prog-
@@ -363,7 +363,7 @@ isim=input("isminizi giriniz: ")
 print("merhaba! ",isim)
 
 >>> isminizi giriniz: ahmet
-merhaba! ahmet
+>>> merhaba! ahmet
 ```
 
 Örnek 22’de **input( )** fonksiyonu ile kullanıcıdan bir karakter dizisi girmesi beklenmiş ve sonuç ekrana
@@ -378,8 +378,8 @@ b=input("ikinci sayıyı giriniz: ")
 print("girdiğiniz sayıların toplamı: ",a+b)
 
 >>> birinci sayıyı giriniz: 6
-ikinci sayıyı giriniz: 8
-girdiğiniz sayıların toplamı: 68
+>>> ikinci sayıyı giriniz: 8
+>>> girdiğiniz sayıların toplamı: 68
 ```
 
 Örnek 23’te görüldüğü üzere uygulama bize hatalı bir çıktı vermiştir. Bu kullanımda her iki değer bir
@@ -417,8 +417,8 @@ b=int(input("ikinci sayıyı giriniz: "))
 print("girdiğiniz sayıların toplamı:",a+b)
 
 >>> birinci sayıyı giriniz: 5
-ikinci sayıyı giriniz: 8
-girdiğiniz sayıların toplamı: 13
+>>> ikinci sayıyı giriniz: 8
+>>> girdiğiniz sayıların toplamı: 13
 ```
 
 Görüldüğü üzere burada yapılan işlemle girdiler sayılara dönüştürülmüş ve toplama işlemi yapılmıştır.
@@ -435,11 +435,11 @@ b=int(input("ikinci sayıyı giriniz: "))
 print("girdiğiniz sayıların toplamı:",a+b)
 
 >>> birinci sayıyı giriniz: 8
-ikinci sayıyı giriniz: Ali
-Traceback (most recent call last):
-File "C:/Users/asus/Desktop/1.py", line 2, in <module>
-b=int(input("ikinci sayıyı giriniz: "))
-ValueError: invalid literal for int( ) with base 10: 'Ali'
+>>> ikinci sayıyı giriniz: Ali
+>>> Traceback (most recent call last):
+>>> File "C:/Users/asus/Desktop/1.py", line 2, in <module>
+>>> b=int(input("ikinci sayıyı giriniz: "))
+>>> ValueError: invalid literal for int( ) with base 10: 'Ali'
 ```
 
 Yine benzer şekilde girilen ifadelerden birisi sayısal olup diğer ifade sayıya dönüştürülmezse, sayılarla metinsel ifadeler arasında aritmetiksel işlem yapılamayacağı için Python hata verecektir. Hataların ayıklanmasına yönelik çözümlere modül 13’te detaylı olarak değinilecektir.
@@ -453,11 +453,11 @@ b=input("ikinci sayıyı giriniz: ")
 print("girdiğiniz sayıların toplamı:",a+b)
 
 >> birinci sayıyı giriniz: 6
-ikinci sayıyı giriniz: 9
-Traceback (most recent call last):
-File "C:/Users/asus/Desktop/1.py", line 3, in <module>
-print("girdiğiniz sayıların toplamı:",a+b)
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> ikinci sayıyı giriniz: 9
+>>> Traceback (most recent call last):
+>>> File "C:/Users/asus/Desktop/1.py", line 3, in <module>
+>>> print("girdiğiniz sayıların toplamı:",a+b)
+>>> TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
 Örnek 28’de **integer** ve **string** değerler arasında işlem yapılamayacağı için Python hata vermiştir.
@@ -476,6 +476,6 @@ mesaj=on_mesaj+abone_no+mesaj_sonu+tuketim+" tl dir."
 print(mesaj)
 
 >>> abone numaranız: 123456
-tuketim miktarı: 20
-Sayın 123456 nisan dönemi faturaınız: 20 tl dir.
+>>> tuketim miktarı: 20
+>>> Sayın 123456 nisan dönemi faturaınız: 20 tl dir.
 ```
