@@ -92,6 +92,7 @@ print('Türkiye'nin en kalabalık ili İstanbul'dur')
 ```
 
 ![Şekil 3.2: Örnek 6’nın çıktısı](istprint.png)
+
 Şekil 3.2: Örnek 6’nın çıktısı
 
 SyntaxError: invalid syntax
