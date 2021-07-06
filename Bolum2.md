@@ -88,8 +88,8 @@ Yorum satırları süsleme amacıyla da kullanılabilir. Bazı program dosyalar�
 '''
 #####################################################################
 #******************************************************************##
-# Python Öğreniyorum ##
-# Python 3 ##
+# Python Öğreniyorum                                               ##
+# Python 3                                                         ##
 #******************************************************************##
 #####################################################################
 '''
@@ -128,9 +128,9 @@ sayi1=10.5
 print ('Değişkenin içindeki sayı: ', sayi1, 'oldu')
 
 >>> Değişkenin içindeki sayı: 5
-Değişkenin içindeki sayı: 10 oldu
-Değişkenin içindeki değer: Murat oldu
-Değişkenin içindeki sayı: 10.5 oldu
+>>> Değişkenin içindeki sayı: 10 oldu
+>>> Değişkenin içindeki değer: Murat oldu
+>>> Değişkenin içindeki sayı: 10.5 oldu
 ```
 
 Örnekte aynı değişkene hem karakter dizisi (string) hem de sayısal değerler atanmıştır.
