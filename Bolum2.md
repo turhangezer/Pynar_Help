@@ -518,13 +518,13 @@ sozluk={'adi': 'Çınar','yasi': 24, 'meslekUnvani':'Mühendis', 'askerlikDurumu
 print ("8. değişkenin veri tipi: ", type(sozluk))
 
 >>> 1. değişkenin veri tipi: <class 'int'>
-2. değişkenin veri tipi: <class 'float'>
-3. değişkenin veri tipi: <class 'str'>
-4. değişkenin veri tipi: <class 'complex'>
-5. değişkenin veri tipi: <class 'bool'>
-6. değişkenin veri tipi: <class 'list'>
-7. değişkenin veri tipi: <class 'tuple'>
-8. değişkenin veri tipi: <class 'dict'>
+>>> 2. değişkenin veri tipi: <class 'float'>
+>>> 3. değişkenin veri tipi: <class 'str'>
+>>> 4. değişkenin veri tipi: <class 'complex'>
+>>> 5. değişkenin veri tipi: <class 'bool'>
+>>> 6. değişkenin veri tipi: <class 'list'>
+>>> 7. değişkenin veri tipi: <class 'tuple'>
+>>> 8. değişkenin veri tipi: <class 'dict'>
 ```
 
 ## 2.5. Veri Tiplerini Dönüştürmek
@@ -593,9 +593,9 @@ daireninAlani=((piDegeriInt*2)*yariCap)
 print('Dairenin Alanı (int)=', daireninAlani)
 
 >>> Veri Tipi: <class 'float'>
-Dairenin Alanı (float)= 31.400000000000002
-Int veri tipine dönüştürülen piDegeri: 3
-Dairenin Alanı (int)= 30
+>>> Dairenin Alanı (float)= 31.400000000000002
+>>> Int veri tipine dönüştürülen piDegeri: 3
+>>> Dairenin Alanı (int)= 30
 ```
 
 **Örnek 24**
@@ -612,8 +612,8 @@ print('Askerlik yaptı mı?', askerlikYaptiMiStr)
 #Çıktı olarak True verir ancak bu boolean tipinde değildir.
 
 >>> Askerlik yaptı mı? True
-Askerlik yaptı mı? 1
-Askerlik yaptı mı? True
+>>> Askerlik yaptı mı? 1
+>>> Askerlik yaptı mı? True
 ```
 
 ## 2.6. Operatörler
@@ -654,9 +654,9 @@ sayi2=10.34
 print (sayi1+sayi2+5.5) #farklı veri tiplerindeki sayıları ve değişkenleri de kullanabiliriz
 
 >>> 8
-11
-15
-25.84
+>>> 11
+>>> 15
+>>> 25.84
 ```
 
 **Örnek 26**
@@ -669,7 +669,7 @@ metin1='Merhaba ' + 'Mars' + ' nasılsın?'
 print(metin1)
 
 >>> Merhaba Mars
-Merhaba Mars nasılsın?
+>>> Merhaba Mars nasılsın?
 ```
 
 **Çıkarma Operatörü**
@@ -686,8 +686,8 @@ print(sayi1-sayi2)
 print (3-4-5)
 
 >>> 2
-2
--6
+>>> 2
+>>> -6
 ```
 
 **Çarpma Operatörü**
@@ -704,8 +704,8 @@ sayi2=3
 print(sayi1*sayi2)
 
 >>> 15
-30
-15
+>>> 30
+>>> 15
 ```
 
 Çarpma operatörü, toplama operatöründe olduğu gibi karakter dizilerinde farklı bir amaç için kullanılmaktadır.
@@ -792,7 +792,7 @@ print (5%3) #Sayının 3 ile bölümünden kalan.
 print (9%2) #Kalan 0 ise sayı çifttir.
 
 >>> 2
-1
+>>> 1
 ```
 
 ### 2.6.2. İlişkisel Operatörler
@@ -830,8 +830,8 @@ print(sayi1==sayi2)
 print(sayi1==5)
 
 >>> False
-False
-True
+>>> False
+>>> True
 ```
 
 **Örnek 37**
@@ -847,8 +847,8 @@ print(metin1==metin2)
 print(metin1=='Emre')
 
 >>> False
-False
-True
+>>> False
+>>> True
 ```
 
 **Eşit Değildir Operatörü**
@@ -867,8 +867,8 @@ print(sayi1!=5)
 # Çıktıların == operatörünün tersi olduğuna dikkat ediniz.
 
 >>> True
-True
-False
+>>> True
+>>> False
 ```
 
 **Örnek 39**
@@ -884,8 +884,8 @@ print(metin1!=metin2)
 print(metin1!='Emre')
 
 >>> True
-True
-False
+>>> True
+>>> False
 ```
 
 **Büyüktür Operatörü**
@@ -912,7 +912,7 @@ sayi2=6.06
 print(sayi1>sayi2)
 
 >>> True
-False
+>>> False
 ```
 
 **Küçüktür Operatörü**
@@ -939,8 +939,8 @@ sayi2=6.06
 print(sayi1<sayi2)
 
 >>> True
-False
-False
+>>> False
+>>> False
 ```
 
 Karakter dizileri, alfabetik olarak sıralandığında sonra gelen ifade daha büyük olarak değerlendirilir.
@@ -950,7 +950,7 @@ print ('z'>'a')
 print ('a'<'z')
 
 >>> True
-True
+>>> True
 ```
 
 **Büyük Eşittir (>=) ve Küçük Eşittir Operatörleri**
@@ -980,11 +980,11 @@ print(sayi1<=sayi2)
 #sayi2 değişkeni 6.05 olduğu ve sayi1 sayi2 den büyük olacağı için sadece >= operatörü True değeri döndürür.
 
 >>> True
-True
-False
-True
-True
-False
+>>> True
+>>> False
+>>> True
+>>> True
+>>> False
 ```
 
 **“is” ve “is not” Operatörleri**
@@ -1007,7 +1007,7 @@ print (sayi1 is 5)
 print (sayi1 is not 5) #is operatörünün tersini verir.
 
 >>> True
-False
+>>> False
 ```
 
 “is” operatörü karakter dizisinde de kullanılabilir.
@@ -1020,8 +1020,8 @@ print (adi is 'Elif')
 print (adi is not 'Elif') #is operatörünün tersini verir.
 
 >>> False
-True
-False
+>>> True
+>>> False
 ```
 
 **“in” ve “not in” Operatörleri**
@@ -1042,7 +1042,7 @@ print ('Bil' not in 'Bilişim')
 # in operatörünün tersi sonuç verir.
 
 >>> True
-False
+>>> False
 ```
 
 “in operatörünün” for döngüsünde işlevsel bir kullanımı vardır. “Döngüler” konusunda bu kullanımına yer verilmiştir.
@@ -1082,7 +1082,7 @@ metin1+='Mars' #metin1=metin1+"Mars" koduyla aynı işlevi görür.
 print(metin1)
 
 >>> 8
-Merhaba Mars
+>>> Merhaba Mars
 ```
 
 **Eksilterek Atama Operatörü**
@@ -1217,9 +1217,9 @@ döndürür.
 # İkiden fazla koşul için de kullanılabilir.
 
 >>> True
-True
-False
-True
+>>> True
+>>> False
+>>> True
 ```
 
 **“and” Operatörü**
@@ -1242,9 +1242,9 @@ print (meslekUnvani=='Mühendis' and askerlikDurumu=='Yaptı')
 print (meslekUnvani=='Mühendis' and askerlikDurumu=='Yaptı' and isTecrubeYil>=3)
 
 >>> False
-True
-True
-False
+>>> True
+>>> True
+>>> False
 ```
 
 Meslek unvanı Mühendis ise ve askerliğini yapmışsa “True” değerini döndürür.
@@ -1264,7 +1264,7 @@ print(not(ogrenciDersPuani<45))
 print (ogrenciDersPuani>45) #Yukarıdaki ifade ile aynı işlevi görür.
 
 >>> True
-True
+>>> True
 ```
 
 ### 2.6.5. Operatörlerde Öncelik Sırası
@@ -1289,10 +1289,10 @@ print (6*7/7)
 print (6*3/2+8/2*3)
 
 >>> 16
-13
-18
-6.0
-21.0
+>>> 13
+>>> 18
+>>> 6.0
+>>> 21.0
 ```
 
 Bu bölümde temel operatörler verilmiştir. Python’da bu operatörlerin yanında başka operatörlerde yer
