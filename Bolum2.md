@@ -920,10 +920,9 @@ Küçüktür “<” operatörü iki değeri karşılaştırmak için kullanıl�
 sayi1=6.06
 sayi2=6.07
 print(sayi1<sayi2)
+
+>>> True
 ```
-
-True
-
 
 Programımıza devam edelim. “sayi2” değişkenine yeni bir değer atadığımızı gözden kaçırmayın.
 
@@ -932,25 +931,21 @@ sayi2=6
 print (sayi1<sayi2)
 sayi2=6.06
 print(sayi1<sayi2)
+
+>>> True
+False
+False
 ```
-
-
-True
-
-False
-
-False
 
 Karakter dizileri, alfabetik olarak sıralandığında sonra gelen ifade daha büyük olarak değerlendirilir.
 
 ```python
 print ('z'>'a')
 print ('a'<'z')
+
+>>> True
+True
 ```
-
-True
-
-True
 
 **Büyük Eşittir (>=) ve Küçük Eşittir Operatörleri**
 
@@ -977,19 +972,14 @@ sayi2=6.05
 print(sayi1>=sayi2)
 print(sayi1<=sayi2)
 #sayi2 değişkeni 6.05 olduğu ve sayi1 sayi2 den büyük olacağı için sadece >= operatörü True değeri döndürür.
+
+>>> True
+True
+False
+True
+True
+False
 ```
-
-True
-
-True
-
-False
-
-True
-
-True
-
-False
 
 **“is” ve “is not” Operatörleri**
 
@@ -1009,11 +999,10 @@ neyi referans gösterip göstermediğini kontrol eder.
 sayi1=5
 print (sayi1 is 5)
 print (sayi1 is not 5) #is operatörünün tersini verir.
-```
 
-True
-
+>>> True
 False
+```
 
 “is” operatörü karakter dizisinde de kullanılabilir.
 
@@ -1023,13 +1012,11 @@ print ('elif' is 'Elif')
 adi='Elif'
 print (adi is 'Elif')
 print (adi is not 'Elif') #is operatörünün tersini verir.
-```
 
-False
-
+>>> False
 True
-
 False
+```
 
 **“in” ve “not in” Operatörleri**
 
@@ -1047,11 +1034,10 @@ print ('Bil' in 'Bilişim')
 # 2. karakter dizisi içinde 1. karakter dizisi var mı?
 print ('Bil' not in 'Bilişim')
 # in operatörünün tersi sonuç verir.
-```
 
-True
-
+>>> True
 False
+```
 
 “in operatörünün” for döngüsünde işlevsel bir kullanımı vardır. “Döngüler” konusunda bu kullanımına yer verilmiştir.
 
@@ -1088,10 +1074,10 @@ print (sayi1)
 metin1='Merhaba '
 metin1+='Mars' #metin1=metin1+"Mars" koduyla aynı işlevi görür.
 print(metin1)
-```
-8
 
+>>> 8
 Merhaba Mars
+```
 
 **Eksilterek Atama Operatörü**
 
@@ -1105,8 +1091,9 @@ Aşağıdaki kod “sayi1=sayi1-3” koduyla aynı işlevi görür.
 sayi1=5
 sayi1-=3
 print (sayi1)
+
+>>> 2
 ```
-2
 
 
 **Çarparak Atama Operatörü**
@@ -1125,9 +1112,9 @@ print (sayi1)
 metin1='Merhaba '
 metin1*=3 #metin1=metin1*3 koduyla aynı işlevi görür.
 print(metin1)
-```
 
-15
+>>> 15
+```
 
 Merhaba Merhaba Merhaba
 
@@ -1143,8 +1130,9 @@ Aşağıdaki kod “sayi1=sayi1/3” koduyla aynı işlevi görür.
 sayi1=5
 sayi1/=3
 print(sayi1)
+
+>>> 1.6666666666666667
 ```
-1.6666666666666667
 
 **Kuvvet Alarak Atama Operatörü**
 
@@ -1158,8 +1146,9 @@ Aşağıdaki kod “sayi1=sayi1**3” koduyla aynı işlevi görür.
 sayi1=5
 sayi1**=3
 print (sayi1)
+
+>>> 125
 ```
-125
 
 **Tam Sayı Bölerek Atama Operatörü**
 
@@ -1173,8 +1162,9 @@ Aşağıdaki “kod sayi1=sayi1//3” koduyla aynı işlevi görür.
 sayi1=5
 sayi1//=3
 print (sayi1)
+
+>>> 1
 ```
-1
 
 **Mod Alarak Atama Operatörü**
 
@@ -1188,9 +1178,9 @@ Aşağıdaki kod “sayi1=sayi1%3” koduyla aynı işlevi görür.
 sayi1=5
 sayi1%=3
 print (sayi1)
-```
 
-2
+>>> 2
+```
 
 ### 2.6.4. Mantıksal Operatörler
 
@@ -1219,14 +1209,12 @@ meslekUnvani=='Mühendis')
 #Meslek Ünvanı Öğretmen veya Doktor veya Mühendis'ten biri ise True değerini
 döndürür.
 # İkiden fazla koşul için de kullanılabilir.
-```
-True
 
+>>> True
 True
-
 False
-
 True
+```
 
 **“and” Operatörü**
 
@@ -1246,14 +1234,12 @@ askerlikDurumu='Yaptı'
 isTecrubeYil=2
 print (meslekUnvani=='Mühendis' and askerlikDurumu=='Yaptı')
 print (meslekUnvani=='Mühendis' and askerlikDurumu=='Yaptı' and isTecrubeYil>=3)
+
+>>> False
+True
+True
+False
 ```
-False
-
-True
-
-True
-
-False
 
 Meslek unvanı Mühendis ise ve askerliğini yapmışsa “True” değerini döndürür.
 
@@ -1270,10 +1256,10 @@ puanı 45’ten küçük değilse ifadesi düşünüldüğünde öğrencinin pua
 ogrenciDersPuani=50
 print(not(ogrenciDersPuani<45))
 print (ogrenciDersPuani>45) #Yukarıdaki ifade ile aynı işlevi görür.
-```
-True
 
+>>> True
 True
+```
 
 ### 2.6.5. Operatörlerde Öncelik Sırası
 
@@ -1295,16 +1281,13 @@ print (3+5*2) #Bu işlemin sonucu kaçtır?
 print (3**2*2)
 print (6*7/7)
 print (6*3/2+8/2*3)
-```
-16
 
+>>> 16
 13
-
 18
-
 6.0
-
 21.0
+```
 
 Bu bölümde temel operatörler verilmiştir. Python’da bu operatörlerin yanında başka operatörlerde yer
 almaktadır. Ayrıca kullandığınız Python sürümüne göre farklı operatörler kullanılabilir.  
