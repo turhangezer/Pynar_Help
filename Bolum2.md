@@ -147,8 +147,8 @@ print ('2. sayı=', b)
 print ('3. sayı=', c)
 
 >>> 1. sayı= 1
-2. sayı= 1
-3. sayı= 1
+>>> 2. sayı= 1
+>>> 3. sayı= 1
 ```
 
 **Örnek 8**
@@ -162,8 +162,8 @@ print ("Soyadı=", soyadi,)
 print ("Yaşı=", yasi)
 
 >>> Adı= Canan
-Soyadı= DAĞDEVİREN
-Yaşı= 34
+>>> Soyadı= DAĞDEVİREN
+>>> Yaşı= 34
 ```
 
 **Örnek 9**
@@ -178,8 +178,8 @@ print ("Soyadı=", soyadi,)
 print ("Yaşı=", yasi)
 
 >>> Adı= Aziz
-Soyadı= SANCAR
-Yaşı= 73
+>>> Soyadı= SANCAR
+>>> Yaşı= 73
 ```
 
 **Örnek 10**
@@ -192,9 +192,9 @@ print (yenisayi)
 # yenisayi değişkeni tanımlanmamış olduğu için hata mesajı alınır.
 
 >>> NameError Traceback (most recent call last)
-<ipython-input-1-9ff08615337f> in <module>()
-----> 1 print (yenisayi)
-NameError: name 'yenisayi' is not defined
+>>> <ipython-input-1-9ff08615337f> in <module>()
+>>> ----> 1 print (yenisayi)
+>>> NameError: name 'yenisayi' is not defined
 ```
 
 Değer atamadan tanımlamak için yenisayi=int( ) kodu kullanılabilir. Bu durumda değişkene ilk değer
@@ -218,12 +218,12 @@ print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.
 
   
 >>> TypeError Traceback (most recent call last)
-<ipython-input-47-e585c633881d> in <module>()
-1 sayi1=1
-2 metin1='deneme'
-----> 3 print(sayi1+metin1)
- #Bir sayı ile bir metin, kelime toplanamaz.
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> <ipython-input-47-e585c633881d> in <module>()
+>>> 1 sayi1=1
+>>> 2 metin1='deneme'
+>>> ----> 3 print(sayi1+metin1)
+>>>  #Bir sayı ile bir metin, kelime toplanamaz.
+>>> TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
 ### 2.2.1. Değişken Adlandırmada Kurallar
@@ -273,8 +273,8 @@ sayı1=3
 print(sayı1)
 
 >>> 1
-2
-3
+>>> 2
+>>> 3
 ```
 
 
@@ -287,9 +287,9 @@ Python’da hatalı değişken adı kullanımı örneği:
 print (1.sayi)
 
 >>> File "<ipython-input-52-a0b35430cdb5>", line 1
-1sayi=5 #Hatalı değişken adı.
-^
-SyntaxError: invalid syntax
+>>> 1sayi=5 #Hatalı değişken adı.
+>>> ^
+>>> SyntaxError: invalid syntax
 ```
 
 ### 2.2.2. Değişken Adlandırma için Standartlar
@@ -319,10 +319,10 @@ print('Üniversiteye Başladığı Yıl: ', universiteyeBasladigiYil)
 print('Mezuniyet Notu: ', mezuniyetNotu)
 
 >>> Adı: Elif
-Soyadı: Altun
-Üniversite Mezunu mu? True
-Üniversiteye Başladığı Yıl: 1999
-Mezuniyet Notu: 2.0
+>>> Soyadı: Altun
+>>> Üniversite Mezunu mu? True
+>>> Üniversiteye Başladığı Yıl: 1999
+>>> Mezuniyet Notu: 2.0
 ```
 
 ### 2.3. Veri Tipleri
@@ -341,11 +341,11 @@ sayi2='3'
 print (sayi1+sayi2)
 
 >>> TypeError Traceback (most recent call last)
-<ipython-input-55-294ee141ba94> in <module>()
-1 sayi1=5
-2 sayi2='3'
-----> 3 print (sayi1+sayi2)
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> <ipython-input-55-294ee141ba94> in <module>()
+>>> 1 sayi1=5
+>>> 2 sayi2='3'
+>>> ----> 3 print (sayi1+sayi2)
+>>> TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ``` 
 
 Kod çalıştırıldığında bir hata mesajı alınır. Bir aritmetik operatörü kullanılırken bir sayı ile bir karakter
@@ -414,9 +414,9 @@ karmasikSayi=4+5j
 print('Bir karmaşık sayı=', karmasikSayi+3j)
 
 >>> pi sayısı= 3.14
-Alan= 12.56
-Yarıçapı 2 olan dairenin alanı 12.56 cm 2 dir
-Bir karmaşık sayı= (4+8j)
+>>> Alan= 12.56
+>>> Yarıçapı 2 olan dairenin alanı 12.56 cm 2 dir
+>>> Bir karmaşık sayı= (4+8j)
 ```
 
 ### 2.3.3. Karakter Dizisi (string) Veri Tipi
@@ -439,9 +439,9 @@ print ('metin1 adlı değişkendeki değerin uzunluğu:', len(metin1))
 #Boşluğun da bir karakter olduğunu gözden kaçırmayınız.
 
 >>> Merhaba
-Merhaba Merhaba
-Merhaba Mars
-metin1 adlı değişkendeki değerin uzunluğu: 8
+>>> Merhaba Merhaba
+>>> Merhaba Mars
+>>> metin1 adlı değişkendeki değerin uzunluğu: 8
 ```
 
 #### 2.3.3.1. Karakter Dizilerinde (string) Dilimleme İşlemleri
@@ -477,12 +477,12 @@ print (metin[8:]) # başlangıç indisinden sonra tüm karakterleri yazar.
 print(metin[0:8:2]) # 0, 2, 4 ve 6 indis numaralı karakterleri dilimler.
 
 >>> M
-aba
-Mars
-r
-Merhaba
-Mars
-Mraa
+>>> aba
+>>> Mars
+>>> r
+>>> Merhaba
+>>> Mars
+>>> Mraa
 ``` 
 
 Liste, demet ve sözlükler kapsamlı konular olduğu için ayrı bölümlerde verilmiştir.
