@@ -177,7 +177,7 @@ Klavyeden **tab** tuşuna basıldığındaki gibi belirli karakter boşluk bıra
 
 **Örnek 12**
 
-```pyton
+```python
 print("pazartesi \tsalı \tçarşamba")
 
 >>> pazartesi salı çarşamba
@@ -440,7 +440,7 @@ print("girdiğiniz sayıların toplamı:",a+b)
 >>> birinci sayıyı giriniz: 8
 ikinci sayıyı giriniz: Ali
 Traceback (most recent call last):
-File "C:/Users/asus/Desktop/1.py", line 2, in \<module>
+File "C:/Users/asus/Desktop/1.py", line 2, in <module>
 b=int(input("ikinci sayıyı giriniz: "))
 ValueError: invalid literal for int( ) with base 10: 'Ali'
 ```
@@ -458,7 +458,7 @@ print("girdiğiniz sayıların toplamı:",a+b)
 >> birinci sayıyı giriniz: 6
 ikinci sayıyı giriniz: 9
 Traceback (most recent call last):
-File "C:/Users/asus/Desktop/1.py", line 3, in \<module>
+File "C:/Users/asus/Desktop/1.py", line 3, in <module>
 print("girdiğiniz sayıların toplamı:",a+b)
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
