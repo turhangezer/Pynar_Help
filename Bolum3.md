@@ -63,7 +63,9 @@ print("python)
 ```python
 print(a)
 
->>> SyntaxError: unexpected indent
+>>> Traceback (most recent call last):
+>>> File "<stdin>", line 1, in <module>
+>>> NameError: name 'a' is not defined
 ```
 
 Yukarıdaki durumlarda eksik olan tanımlamalar neticesinde, hata mesajı ile karşılaşılmıştır. Örnek 3’te
