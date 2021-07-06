@@ -29,11 +29,6 @@ ler sonucunu kullanıcıya sunması gerekir. Programda veri print( ) fonksiyonu 
 
 **Örnek 1**
 
-
-print "print sözcüğü yazılır"
-
-print( ) parantez açılır
-
 ```print("değer")``` konsola gönderilecek değer bir metinsel ifade ise bu ifade çift tırnak, tek tırnak ya da
 üç çift tırnak içinde yazılmalıdır.
 
