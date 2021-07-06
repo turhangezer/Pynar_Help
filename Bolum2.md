@@ -31,8 +31,10 @@ satırı olarak dikkate alınmaz.
 
 ```python
 print (2+3) # Bu kod satırı ekrana 2 sayının toplamını yazar.
+
+>>> 5
 ```
-5
+
 
 
 Her satırın başına “#” işareti ekleyerek alt alta yorum satırları oluşturabilirsiniz. Yorum satırlarında özel
@@ -44,7 +46,7 @@ Birden fazla yorum satırı kullanılacaksa yorumlar üçlü tek tırnak veya ü
 yazılır.
 
 ```python
-'''Python'da birden fazla açıklama satırı kullanmak için üçlü tek tırnak veya çift
+>>> '''Python'da birden fazla açıklama satırı kullanmak için üçlü tek tırnak veya çift
 tırnak kullanılır. Açıklama satırını bitirmek için aynı işaretler kullanılır.'''
 ```
 'Python'da birden fazla\naçıklama satırı\nkullanmak için üçlü tek tırnak veya çift\n
@@ -116,14 +118,15 @@ sayi1='Murat'
 print ('Değişkenin içindeki değer: ', sayi1, 'oldu')
 sayi1=10.5
 print ('Değişkenin içindeki sayı: ', sayi1, 'oldu')
-```
-Değişkenin içindeki sayı: 5
+
+>>> Değişkenin içindeki sayı: 5
 
 Değişkenin içindeki sayı: 10 oldu
 
 Değişkenin içindeki değer: Murat oldu
 
 Değişkenin içindeki sayı: 10.5 oldu
+```
 
 Örnekte aynı değişkene hem karakter dizisi (string) hem de sayısal değerler atanmıştır.
 Bir değişkene değer atanırken birden fazla yöntem kullanılabilir. Örnekte buna ilişkin kodlar verilmiştir.
@@ -137,10 +140,11 @@ a = b = c = 1
 print ('1. sayı=', a)
 print ('2. sayı=', b)
 print ('3. sayı=', c)
-```
-1. sayı= 1
+
+>>> 1. sayı= 1
 2. sayı= 1
 3. sayı= 1
+```
 
 **Örnek 8**
 
@@ -151,10 +155,11 @@ adi, soyadi, yasi='Canan', 'DAĞDEVİREN', 34
 print ("Adı=", adi)
 print ("Soyadı=", soyadi,)
 print ("Yaşı=", yasi)
-```
-Adı= Canan
+
+>>> Adı= Canan
 Soyadı= DAĞDEVİREN
 Yaşı= 34
+```
 
 **Örnek 9**
 
@@ -166,10 +171,11 @@ adi='Aziz'; soyadi='SANCAR'; yasi=73
 print ("Adı=", adi)
 print ("Soyadı=", soyadi,)
 print ("Yaşı=", yasi)
-```
-Adı= Aziz
+
+>>> Adı= Aziz
 Soyadı= SANCAR
 Yaşı= 73
+```
 
 **Örnek 10**
 
@@ -179,25 +185,25 @@ Değer atanmayan ve/veya tanımlanmamış bir değişken kullanılırsa Python h
 print (yenisayi)
 #Python değişkenleri değer atandığında tanımlandığı için hata mesajı alırsınız.
 # yenisayi değişkeni tanımlanmamış olduğu için hata mesajı alınır.
-```
-NameError Traceback (most recent call last)
+
+>>> NameError Traceback (most recent call last)
 
 \<ipython-input-1-9ff08615337f> in \<module>()
 
 ----> 1 print (yenisayi)
 
 NameError: name 'yenisayi' is not defined
-  
+```
+
 Değer atamadan tanımlamak için yenisayi=int( ) kodu kullanılabilir. Bu durumda değişkene ilk değer
 olarak “0” sıfır atanır.
   
 ```python
 yenisayi=int( )
 print(yenisayi)
+
+>>> 0
 ```
-
-0
-
   
 **Örnek 11**
   
@@ -207,9 +213,9 @@ Değişkenler veri tiplerine göre kullanılmazsa Python hata verir.
 sayi1=1
 metin1='deneme'
 print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.
-```
+
   
-TypeError Traceback (most recent call last)
+>>> TypeError Traceback (most recent call last)
 \<ipython-input-47-e585c633881d> in \<module>()
 
 1 sayi1=1
@@ -221,6 +227,7 @@ TypeError Traceback (most recent call last)
  #Bir sayı ile bir metin, kelime toplanamaz.
 
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
 
 ### 2.2.1. Değişken Adlandırmada Kurallar
 Değişken adı verilirken uyulması gereken bazı kurallar ve kurallar kadar katı olmasa da yararlı kullanım
@@ -267,14 +274,13 @@ farklı değişkenler olduğunu unutulmamalıdır.
 sayı1=3
 #Python değişken adlandırmada Türkçe karakter kullanımına izin vermektedir.
 print(sayı1)
-```
 
-1
+>>> 1
 
 2
 
 3
-
+```
 
 
 **Örnek 13**
@@ -284,16 +290,16 @@ Python’da hatalı değişken adı kullanımı örneği:
 ```python
 1sayi=5 #Hatalı değişken adı.
 print (1.sayi)
-```
 
-File "\<ipython-input-52-a0b35430cdb5>", line 1
+
+>>> File "\<ipython-input-52-a0b35430cdb5>", line 1
 
 
 1sayi=5 #Hatalı değişken adı.
 
 ^
 SyntaxError: invalid syntax
-
+```
 
 ### 2.2.2. Değişken Adlandırma için Standartlar
 
@@ -320,9 +326,9 @@ print ('Soyadı: ', soyadi)
 print('Üniversite Mezunu mu? ', universiteMezunuMu)
 print('Üniversiteye Başladığı Yıl: ', universiteyeBasladigiYil)
 print('Mezuniyet Notu: ', mezuniyetNotu)
-```
 
-Adı: Elif
+
+>>> Adı: Elif
 
 Soyadı: Altun
 
@@ -331,7 +337,7 @@ Soyadı: Altun
 Üniversiteye Başladığı Yıl: 1999
 
 Mezuniyet Notu: 2.0
-
+```
 
 ### 2.3. Veri Tipleri
 Veri tiplerini anlayabilmek için aşağıdaki kod satırı incelenebilir. Aşağıda bir sayı ile bir karakter dizisi
