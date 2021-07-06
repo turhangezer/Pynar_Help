@@ -64,13 +64,16 @@ Yorum satırlarını Python yorumlayıcı dikkate almaz. Ancak aşağıdaki kod 
 değerlendirilmez.
 
 ```python
-#!/usr/bin/env python3 veya #!c:/Python/python.exe
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
 ```
 "#!/usr/bin/env python3" kodu Python 3 yorumlayıcısının Linux için dosya konumunu belirtir.
-
+```python
+#!c:/Python/python.exe
+```
 "#!c:/Python/python.exe" kodu Python 3 yorumlayıcısının Windows için dosya konumunu belirtir.
-
+```python
+# -*- coding: utf-8 -*-
+```
 "# -*- coding: utf-8 -*- " Kullanacağınız karakter kodlamasını belirtmek için kullanılır. 
 
 utf-8 Türkçe alfabeyi de destekleyen bir karakter kodlama sistemidir.
