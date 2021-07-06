@@ -146,8 +146,9 @@ burada ters taksim ( \ ) işareti kullanılarak da bu sorun çözülebilir.
 
 ```python
 print('Bursa\'nın iskenderi meşhurdur.')
+
+>>> Bursa'nın iskenderi meşhurdur.
 ```
-Bursa'nın iskenderi meşhurdur.
 
 Örnek 10’da ters taksim işareti kullanılmamış olsaydı önceki bölümdeki gibi hata ile karşılaşılırdı. Burada \ karakteri kendinden sonra gelen kesme ‘ işaretinin dikkate alınmaması gerektiği anlamı vermektedir. Aynı işlem çift tırnak içinde de yapılabilir.
 
@@ -162,11 +163,11 @@ en sık kullanılan kaçış parametresi **\n** parametresidir.
 
 ```python
 print("1. satır\n2. satır\n3. satır")
-```
 
-1. satır
+>>> 1. satır
 2. satır
 3. satır
+```
 
 Örnek 11’de görüldüğü üzere **\n** parametresi kullanılarak program çıktısının alt alta yazılması sağlandı.
 
@@ -178,9 +179,9 @@ Klavyeden **tab** tuşuna basıldığındaki gibi belirli karakter boşluk bıra
 
 ```pyton
 print("pazartesi \tsalı \tçarşamba")
-```
 
-pazartesi salı çarşamba
+>>> pazartesi salı çarşamba
+```
 
 ### 3.2.5. end( ) Parametresi
 
@@ -193,11 +194,10 @@ belirtmektedir.
 ```python
 print("Merhaba!")
 print("Python")
-```
 
-Merhaba!
-
+>>> Merhaba!
 Python
+```
 
 Örnek 13’teki gibi bir kullanımda kodların çıktısı alt alta verilmiştir. Ancak bazı durumlarda prog-
 ramın çıktısı birleştirilmek istenebilir. İlerleyen bölümlerde döngü konusunda, döngü değerini her seferinde konsola yazdırılmak istendiğinde bu değerler alt alta yazılacaktır. Döngünün büyük olduğu düşünülürse program sayfalar dolusu çıktı verebilir. İşte bu gibi durumlarda end parametresi çok işe yaramaktadır.
@@ -209,8 +209,9 @@ ramın çıktısı birleştirilmek istenebilir. İlerleyen bölümlerde döngü 
 ```python
 print("Merhaba!",end=" ")
 print("Python")
+
+>>> Merhaba! Python
 ```
-Merhaba! Python
 
 Örnek 14’te görüldüğü üzere **end** parametresi içinde iki tırnak arasında boşluk karakteri kullanıldığı için program çıktısını birleştirerek araya boşluk eklendi. Aynı işlem virgül kullanılarak yapılabilir:
 
@@ -219,9 +220,9 @@ Merhaba! Python
 ```python
 print("Merhaba!",end=",")
 print("Python")
-```
 
-Merhaba!,Python
+>>> Merhaba!,Python
+```
 
 Aslında **end** parametresinin içerisinde standart olarak **\n** parametresi vardır. Burada değer atanarak
 varsayılan değer değiştirilmiştir.
@@ -236,8 +237,9 @@ parametresi ile yapılabilir.
 
 ```python
 print("pazartesi","salı","çarşamba","perşembe","cuma")
+
+>>> pazartesi salı çarşamba perşembe cuma
 ```
-pazartesi salı çarşamba perşembe cuma
 
 Örnek 16’daki gibi bir kullanımda, her bir argüman birbirinden virgül işareti ile ayrılmış ve program
 çıktısı olarak tüm argümanların arasına birer boşluk bırakılarak ekrana yazdırılmıştır. Burada dikkat
@@ -248,8 +250,9 @@ edilmesi gereken bir başka nokta, **print( )** fonksiyonu içerisine gönderile
 
 ```python
 print("pazartesi","salı","çarşamba","perşembe","cuma",sep="-")
+
+>>> pazartesi-salı-çarşamba-perşembe-cuma
 ```
-pazartesi-salı-çarşamba-perşembe-cuma
 
 ### 3.2.7. Format( ) Metodu ile Biçimlendirme İşlemleri
 
@@ -263,9 +266,10 @@ a=5
 b=6
 c=9
 print("girdiğiniz",a, b, "ve",c,"değerlerinin toplamı: ",a+b+c,"dir")
+
+>>> girdiğiniz 5 6 ve 9 değerlerinin toplamı: 20 dir
 ```
 
-girdiğiniz 5 6 ve 9 değerlerinin toplamı: 20 dir
 Örnek 18'deki gibi bir kullanım ve hata yapmaya müsait bir kullanımdır. Python bu gibi durumlar için
 **print( )** fonksiyonunda format metodunun kullanımına olanak sağlar.
 
@@ -275,8 +279,9 @@ Kullanımı aşağıdaki şekildedir:
 
 ```python
 print("çıktı işlemi {} {} {}".format(1,2,3))
+
+>>> çıktı işlemi 1 2 3
 ```
-çıktı işlemi 1 2 3
 
 Burada **print( )** fonksiyonunda kullanılan her bir **{}** ifadesine karşılık olarak format( ) metoduna bir
 adet argüman verilmelidir. Önceki örnek bu şekilde yapılmak istenirse.
@@ -288,8 +293,9 @@ a=5
 b=6
 c=9
 print("girdiğiniz {} , {} ve {} değerlerinin toplamı= {} dir".format(a,b,c,a+b+c))
+
+>>> girdiğiniz 5 , 6 ve 9 değerlerinin toplamı= 20 dir
 ```
-girdiğiniz 5 , 6 ve 9 değerlerinin toplamı= 20 dir
 
 Süslü parantez içine sayılar girerek format metodu ile hangi sıradaki değerin geleceği belirlenebilir.
 
@@ -298,8 +304,9 @@ Süslü parantez içine sayılar girerek format metodu ile hangi sıradaki değe
 
 ```python
 print("{1} {0} {2}".format(10,"Python",20))
+
+>>> Python 10 20
 ```
-Python 10 20
 
 Uygulama
 Aşağıdaki örnekleri etkileşimli kabuk üzerinde yaparak çıktılarını gözlemleyiniz.
@@ -357,12 +364,10 @@ yonu kullanılırken kullanıcıdan alınan değer bir değişkene atanmalıdır
 ```python
 isim=input("isminizi giriniz: ")
 print("merhaba! ",isim)
-```
 
-isminizi giriniz: ahmet
-
+>>> isminizi giriniz: ahmet
 merhaba! ahmet
-
+```
 
 Örnek 22’de **input( )** fonksiyonu ile kullanıcıdan bir karakter dizisi girmesi beklenmiş ve sonuç ekrana
 yazdırılmıştır. Peki, Python girilen değerin sayısal bir değer mi yoksa bir karakter dizisi mi olduğunu nasıl
@@ -374,14 +379,11 @@ anlayacak?
 a=input("birinci sayıyı giriniz: ")
 b=input("ikinci sayıyı giriniz: ")
 print("girdiğiniz sayıların toplamı: ",a+b)
-```
 
-birinci sayıyı giriniz: 6
-
-
+>>> birinci sayıyı giriniz: 6
 ikinci sayıyı giriniz: 8
-
 girdiğiniz sayıların toplamı: 68
+```
 
 Örnek 23’te görüldüğü üzere uygulama bize hatalı bir çıktı vermiştir. Bu kullanımda her iki değer bir
 karakter dizisi olarak algılanmış ve Python iki değer üzerinde toplama işlemi yapamadığı için yan yana
@@ -391,8 +393,9 @@ yazarak birleştirmiştir. Aşağıdaki örnekle bu durum daha iyi anlaşılacak
 
 ```python
 print("ahmet"+"şahin")
+
+>>> ahmetşahin
 ```
-ahmetşahin
 
 Burada yapılan işlemle gerçekte bir toplama işlemi yapılmamış iki argüman birbirleriyle birleştirilmiştir.
 **input( )** fonksiyonu kullanılırken girdi olarak sayısal ifadeler kullanılacağı zaman bu durumun Python’a
@@ -402,8 +405,9 @@ bildirilmesi gerekmektedir. Bunun için Örnek 25’teki kullanım uygulanmalıd
 
 ```python
 a=int(input("Bir sayı giriniz: "))
+
+>>> Bir sayı giriniz: 5
 ```
-Bir sayı giriniz: 5
 
 Örnek 25’te görüldüğü üzere **input( )** fonksiyonu, **int( )** fonksiyonunun içerisine alınarak girdi sayısal
 ifadeye çevrilmiştir.
@@ -414,13 +418,11 @@ ifadeye çevrilmiştir.
 a=int(input("birinci sayıyı giriniz: "))
 b=int(input("ikinci sayıyı giriniz: "))
 print("girdiğiniz sayıların toplamı:",a+b)
-```
 
-birinci sayıyı giriniz: 5
-
+>>> birinci sayıyı giriniz: 5
 ikinci sayıyı giriniz: 8
-
 girdiğiniz sayıların toplamı: 13
+```
 
 Görüldüğü üzere burada yapılan işlemle girdiler sayılara dönüştürülmüş ve toplama işlemi yapılmıştır.
 
@@ -434,19 +436,14 @@ Görüldüğü üzere burada yapılan işlemle girdiler sayılara dönüştürü
 a=int(input("birinci sayıyı giriniz: "))
 b=int(input("ikinci sayıyı giriniz: "))
 print("girdiğiniz sayıların toplamı:",a+b)
-```
 
-birinci sayıyı giriniz: 8
-
+>>> birinci sayıyı giriniz: 8
 ikinci sayıyı giriniz: Ali
-
-
 Traceback (most recent call last):
-
 File "C:/Users/asus/Desktop/1.py", line 2, in \<module>
 b=int(input("ikinci sayıyı giriniz: "))
-
 ValueError: invalid literal for int( ) with base 10: 'Ali'
+```
 
 Yine benzer şekilde girilen ifadelerden birisi sayısal olup diğer ifade sayıya dönüştürülmezse, sayılarla metinsel ifadeler arasında aritmetiksel işlem yapılamayacağı için Python hata verecektir. Hataların ayıklanmasına yönelik çözümlere modül 13’te detaylı olarak değinilecektir.
 
@@ -457,17 +454,14 @@ Yine benzer şekilde girilen ifadelerden birisi sayısal olup diğer ifade sayı
 a=int(input("birinci sayıyı giriniz: "))
 b=input("ikinci sayıyı giriniz: ")
 print("girdiğiniz sayıların toplamı:",a+b)
-```
 
-birinci sayıyı giriniz: 6
-
+>> birinci sayıyı giriniz: 6
 ikinci sayıyı giriniz: 9
-
 Traceback (most recent call last):
 File "C:/Users/asus/Desktop/1.py", line 3, in \<module>
 print("girdiğiniz sayıların toplamı:",a+b)
-
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
 
 Örnek 28’de **integer** ve **string** değerler arasında işlem yapılamayacağı için Python hata vermiştir.
 
@@ -483,9 +477,8 @@ tuketim=input("tuketim miktarı")
 tuketim_tutari=int(tuketim)*4.0
 mesaj=on_mesaj+abone_no+mesaj_sonu+tuketim+" tl dir."
 print(mesaj)
-```
-abone numaranız: 123456
 
+>>> abone numaranız: 123456
 tuketim miktarı: 20
-
 Sayın 123456 nisan dönemi faturaınız: 20 tl dir.
+```
