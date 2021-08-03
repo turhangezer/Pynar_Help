@@ -9,6 +9,7 @@ uyarı mesajı verilerek sisteme giriş izni verilmez.
 # Örnek 1
 
 ```python
+# bu python yorumu
 print("merhaba dünya")
 ```
 
