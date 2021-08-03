@@ -7,7 +7,7 @@ olan kişilerin sisteme erişimine izin veren kodlar yazılır. Bunun için prog
 gerekir. Koşul sağlanıyorsa menülere erişim izni verecek kodlar çalışmaya başlar. Koşul sağlanmıyorsa
 uyarı mesajı verilerek sisteme giriş izni verilmez.
 
-** Örnek 1 **
+*Örnek 1 *
 ```python
 print("merhaba dünya")
 ```
