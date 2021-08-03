@@ -13,3 +13,4 @@ uyarı mesajı verilerek sisteme giriş izni verilmez.
 print("merhaba dünya")
 ```
 
+![image](https://user-images.githubusercontent.com/854154/128015741-badef27b-f557-436d-a652-2a6905bbd476.png)
