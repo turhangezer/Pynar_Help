@@ -264,3 +264,17 @@ kolaylıkla yapabilmesini sağlamaktadır.
 
 **Tablo 3.** Temel liste metotları
 
+| Sıra No | Metot Adı | Görevi                                                                                                                                                                           |
+|---------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1       | ‘append’  | Listeye yeni eleman ekleme işlemini yapar. Bu metot ile listeye sadece bir eleman eklenebilir ve eklenen eleman listenin sonunda yer alır.                                       |
+| 2       | ‘clear’   | Listeyi değil içindeki tüm ifadeleri silmeye yarar.                                                                                                                              |
+| 3       | ‘copy’    | Listeden listeye kopyalama işlevine yaramaktadır                                                                                                                                 |
+| 4       | ‘count’   | Listenin içinde sorgulanan elemandan kaç adet olduğunu bulmamızı sağlar.                                                                                                         |
+| 5       | ‘extend’  | Listeler arası genişletme işlevini görür.                                                                                                                                        |
+| 6       | ‘indis’   | Listedeki elemanları almamızı sağlar                                                                                                                                             |
+| 7       | ‘insert’  | Listenin istenilen indis numarasına eleman eklenebilir                                                                                                                           |
+| 8       | ‘pop’     | Listedeki elemanın indisi ile silme işlem yapar. indis belirtmediğinizde ise varsayılan olarak listenin son elemanını siler. Ayrıca bu metot silinen elemanı ekrana yazmaktadır. |
+| 9       | ‘remove’  | Listede istenilen elemanın değerini yazarak silme işlemi yarar                                                                                                                   |
+| 10      | ‘sort’    | Listenin elemanlarını alfabetik olarak sıralar                                                                                                                                   |
+| 11      | ‘reverse’ | Bu metot sort metodunun aksine listedeki elemanları ters alfabetik olarak sıralar.                                                                                               |
+| 12      | ‘del’     | Liste içerisinden bir elemanı silmek için kullanılır. Silme işlemi indis numarasına göre yapılmaktadır.****
