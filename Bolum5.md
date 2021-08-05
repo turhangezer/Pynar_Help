@@ -126,11 +126,12 @@ print(liste1)
 liste1[0] ='a' liste1[1] ='b' liste1[2] ='c' liste[3] ='d'
 liste1[4] ='e' liste1[5] ='f'
 
-```Listeler hem string hem de sayı türünde veriler barındırabilir. Örnek 6 incelendiğinde 7 elemanlı bir liste
+```
+Listeler hem string hem de sayı türünde veriler barındırabilir. Örnek 6 incelendiğinde 7 elemanlı bir liste
 tanımlıdır. 6 ve 7. elamanları sayı diğerleri metin olan bir listedir.
 ```
 
-** Örnek 6 **
+**Örnek 6**
 ```
 liste2=['python','geleceği','olan','bir','dil',500,0.567]
 print(liste2)
