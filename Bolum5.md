@@ -570,7 +570,7 @@ bilgiler girildikçe listeye kaydedecektir. Listeye 4 adet öge girilmiş ve lis
 ```
 bilgi=input("bilgilerinizi araya virgül koyarak yazınız: ")
 liste=bilgi.split(",")
-print (liste)
+print(liste)
 bilgilerinizi araya virgül koyarak yazınız: Hafsa,Meva,Konya,1
 ['Hafsa', 'Meva', 'Konya', '1']
 ```
