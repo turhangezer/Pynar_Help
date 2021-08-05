@@ -310,3 +310,58 @@ print(iller2)
 ['konya', 'karaman', 'kocaeli', 'kayseri', 'kahramanmaraş']
 ```
 Örnek 16’da iller1 listesi copy metodu ile iller2 listesine aktarılmıştır.
+
+## 5.4.4. ‘count’ kullanımı
+**Örnek 17**
+```
+takimlar = ['GS','FB','BJK','TS']
+print(takimlar.count('FB'))
+1
+```
+Örnek 17’de takimlar listesinde ‘FB’ ögesinin kaç adet olduğu count metodu bulunmuştur.
+## 5.4.5. ‘extend’ kullanımı
+**Örnek 18**
+```
+kus1=["bıldırcın","papağan","kartal","akbaba","şahin"]
+kus2=["baykuş","muhabbet"]
+kus1.extend(kus2)
+print(kus1)
+['bıldırcın', 'papağan', 'kartal', 'akbaba', 'şahin', 'baykuş', 'muhabbet']
+```
+Örnek 18’de extend komutu listelerdeki ögelerin kendi elemanlarını koruyarak genişletme işlemi yapılmıştır.
+## 5.4.6. ‘indis’ kullanımı
+**Örnek 19**
+```
+sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
+print(sebzeler.indis("ıspanak"))
+3
+```
+İndis metodu yardımıyla Örnek 19’da görüldüğü gibi verilen bir ögenin indis numarasını vermektedir.
+
+## 5.4.7. ‘clear’ kullanımı
+**Örnek 20**
+```
+liste =["ayva","nar","kiraz","kayısı","Üzüm"]
+liste.clear()
+print(liste)
+[]
+clear(  ) metodu kullanılarak örnek 20’deki listenin tüm ögeleri silinmiştir.
+```
+## 5.4.8. ‘pop’ kullanımı
+**Örnek 21**
+```
+sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
+sebzeler.pop(2)
+print(sebzeler)
+['lahana', 'marul', 'ıspanak', 'fasulye']
+```
+Örnek 21’de pop metodu ile sebzeler listesinden 2.indis numarasına ait olan “pırasa” adlı öge silinmiştir.
+## 5.4.9. ‘remove’ kullanımı
+**Örnek 22**
+```
+sehirler =["adana","ağrı","bursa","konya","ankara"]
+sehirler.remove("konya")
+print(sehirler)
+['adana', 'ağrı', 'bursa', 'ankara']
+```
+Örnek 22’de öge adına göre silme işlemi yapılmıştır ve “konya” adlı öge sehirler listesinden silinmiştir
