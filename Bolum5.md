@@ -282,7 +282,7 @@ kolaylıkla yapabilmesini sağlamaktadır.
 
 ### 5.4.1. ‘append’ kullanımı
 **Örnek 14**
-```pythonpython
+```python
 takimlar=["gs","fb","bjk"]
 takimlar.append("ts")
 print(takimlar)
@@ -313,7 +313,7 @@ print(iller2)
 
 ### 5.4.4. ‘count’ kullanımı
 **Örnek 17**
-```pythonpython
+```python
 takimlar = ['GS','FB','BJK','TS']
 print(takimlar.count('FB'))
 1
@@ -321,7 +321,7 @@ print(takimlar.count('FB'))
 Örnek 17’de takimlar listesinde ‘FB’ ögesinin kaç adet olduğu count metodu bulunmuştur.
 ### 5.4.5. ‘extend’ kullanımı
 **Örnek 18**
-```pythonpython
+```python
 kus1=["bıldırcın","papağan","kartal","akbaba","şahin"]
 kus2=["baykuş","muhabbet"]
 kus1.extend(kus2)
@@ -331,7 +331,7 @@ print(kus1)
 Örnek 18’de extend komutu listelerdeki ögelerin kendi elemanlarını koruyarak genişletme işlemi yapılmıştır.
 ### 5.4.6. ‘indis’ kullanımı
 **Örnek 19**
-```pythonpython
+```python
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
 print(sebzeler.indis("ıspanak"))
 3
@@ -340,7 +340,7 @@ print(sebzeler.indis("ıspanak"))
 
 ### 5.4.7. ‘clear’ kullanımı
 **Örnek 20**
-```pythonpython
+```python
 liste =["ayva","nar","kiraz","kayısı","Üzüm"]
 liste.clear()
 print(liste)
