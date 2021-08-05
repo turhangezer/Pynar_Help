@@ -384,7 +384,7 @@ print(isimler)
 ['ayşe', 'elif', 'hafsa', 'kaan', 'kemal']
 ```
 Sort metodu ile Örnek 24’te isimler listesi ögeleri alfabetik olarak sıralanmıştır.
-#### 5.4.12. ‘del’ kullanımı
+### 5.4.12. ‘del’ kullanımı
 **Örnek 25**
 ```
 takimlar = ['GS','FB','BJK','TS']
