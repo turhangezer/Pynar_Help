@@ -200,3 +200,66 @@ tebrikler 3 seferde sayıyı bulabildin
 ``` 
 Yine burada **while** **True** yapısına benzer bir yapı kullanarak while 1==1: şeklinde bir yapı ile sonsuz
 döngü oluşturulmuştur.
+
+**Örnek 10**
+```python
+Girilen sayının faktöriyelini hesaplayan programı yazınız.
+i=1
+f=int(input("faktöriyeli alınacak sayıyı giriniz: "))
+sonuc=1
+while i<=f:
+ sonuc=sonuc*i
+ i+=1
+print(sonuc)
+faktöriyeli alınacak sayıyı giriniz: 5
+120
+```
+Örnek 10’da i isimli değişkeni 1 değerinden başlayarak while döngüsünü i değeri girilen sayıdan küçük
+olduğu sürece çalıştırılmış, daha sonra i değeri arttırarak sonuç isimli değişkenle çarpma işlemi yapılmış, i değeri f değerine eşit olduğunda döngüden çıkılarak, sonuç isimli değişkenin değeri gösterilmiştir.
+
+## 6.2. For Döngüsü
+**For** döngüsü, Python’da genellikle döngünün **tekrar sayısı programcı tarafından belirlenmiş veya
+öngörülmüş ve** belli ise kullanılır. Hatırlanacağı üzere **while** döngüsü ile sonsuz döngüler yapılabiliyor
+ve istenilen bir anda döngüden çıkılabiliyordu. **For** döngüsü daha çok belirli sayıdaki işlemi gerçekleştirmek için kullanılır. Bunun yanında Python’da for döngüsünün **iterasyon** denilen önemli bir özelliği
+bulunmaktadır. **İterasyon** işlemi sayesinde karakter dizileri ve listeler üzerinde gezinme işlemi, yani ilk
+elemandan son elemana kadar işlem yapabilmektedir. **For** döngüsü kullanmak için **“in”** işlecinden faydalanmak gerekmektedir.
+
+![image](https://user-images.githubusercontent.com/56341239/128350342-67f9a886-c172-4853-a84c-4eea2d2adfde.png)
+
+**Şekil 6.3:** İterasyon işlemi
+
+## 6.2.1. in İşleci
+
+**in** işleci bir değerin, bir liste ya da karakter dizisi içerisinde olup olmadığını kontrol eder. Önce karakter
+dizisi içinde bir karakter olup olmadığına bakar. Eğer değer karakter dizisi içerisinde varsa **True**, yoksa
+**False** değeri döndürecektir. Aşağıdaki kodları etkileşimli kabuk üzerinde çalıştırabilirsiniz.
+**Örneğin**:
+
+```python
+“p” in “python”
+>>> True
+“a” in “python”
+>>> False
+```
+aynı işlemi listeler üzerinde de yapılabilir.
+
+```python
+"a" in "python"
+>>> False
+liste=[1,2,3,4,5,6]
+3 in liste
+>>> True
+10 in liste
+>>> False
+```
+### 6.2.2. Karakter Dizileri Üzerinde İterasyon İşlemi
+Python’da for döngüsü ile karakter dizileri üzerinde kolaylıkla iterasyon işlemi yapılabilir.
+**Örnek 11**
+```python
+isim="Mustafa"
+for i in isim:
+ print(i,end=",")
+M,u,s,t,a,f,a,
+```
+Örnek 11’de yapılan işlemle isim adlı değişken üzerinde ilk karakterden son karaktere kadar tüm değerleri hiçbir harf kalmayana kadar sırayla i değişkenine atayarak ekrana yazdırılmıştır.
+Aynı işlemi while döngüsü ile yapılmak istenirse,
