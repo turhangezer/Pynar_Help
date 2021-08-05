@@ -400,3 +400,122 @@ for i in liste:
  print(j,end=",")
 3,4,7,8,10,11,14,15,
 ```
+### 6.2.4. range Fonksiyonu ile For Döngüsü Kullanımı
+
+Python’da **for** döngüsüyle belirli değerler arasında döngü kurmak istenirse **range** fonksiyonu kullanılmalıdır. **range** fonksiyonu bir sayı dizisi oluşturur ve bu sayede oluşturulan sayı dizisi üzerinde **for**
+döngüsünün iterasyon yapması sağlanır.
+**Örnek 23**
+```python
+print(*range(10))
+0 1 2 3 4 5 6 7 8 9
+range fonksiyonu, girilen aralık arasında integer değerler oluşturur. Örnek 23’te aralık belirtilmediği
+için başlangıç değeri 0 alınmıştır. Başlangıç değeri verilerek girilen değerler arasında sayı dizisi oluşturulması sağlanabilir.
+Örnek 24
+print(*range(5,20))
+5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Ayrıca range fonksiyonuna üçüncü bir parametre verilerek atlama değeri de verilebilir.
+```
+**Örnek 25**
+```python
+print(*range(1,20,3))
+1 4 7 10 13 16 19
+```
+
+**Örnek 26**
+
+for döngüsü ile girilen sayıya kadar olan sayıların toplamını bulunuz.
+```python
+toplam=0
+for i in range(20):
+ toplam=toplam+i
+print("girdiğiniz sayıların toplamı:",toplam)
+girdiğiniz sayıların toplamı: 190
+Örnek 27
+20’den geriye doğru 0’a kadar olan sayıları ekrana yazdırınız.
+for i in range(20,0,-1):
+ print(i,end=",")
+20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,
+Örnek 28
+100’e kadar 5’in katları olan sayıyı bulunuz.
+for i in range(0,100,5):
+ print(i,end=",")
+0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,
+```
+
+**Örnek 29**
+Kullanıcıdan satır ve sütun sayısı değerlerini alarak sayıları tablo şeklinde yazan programı yazınız.
+```python
+a=int(input("tablonun satır uzunluğunu giriniz"))
+b=int(input("tablonun sütun uzunluğu giriniz"))
+for i in range(1,a+1):
+ for j in range(1,b+1):
+ print(j,end=" ")
+ print(  )
+tablonun satır uzunluğunu giriniz5
+tablonun sütun uzunluğu giriniz4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+```
+**Örnek 29**
+Girilen bir metindeki sesli harf, sayı ve özel karakterlerin sayısını bulan programı yazınız.
+```python
+sesli_harfler=["a","e","ı","i","o","ö","u","ü"]
+rakamlar="1234567890"
+ozel_harf=["@","!","&","?"]
+ozel_harf_sayısı,rakam_sayısı,sesli_sayısı=0,0,0
+kelime=input("lütfen incelemek için bir metin giriniz: ")
+for harf in kelime:
+ if harf in sesli_harfler:
+ sesli_sayısı+=1
+ if harf in rakamlar:
+ rakam_sayısı+=1
+ if harf in ozel_harf:
+ ozel_harf_sayısı+=1
+ print("girdiğiniz metinde {} adet sesli harf {} adet rakam ve {} adet özel karakter
+bulunmaktadır. ".format(sesli_sayısı,rakam_sayısı,ozel_harf_sayısı) )
+lütfen incelemek için bir metin giriniz: girilen metindeki sesli harf sayı ve özel
+karakterli bulan program123456!@&
+girdiğiniz metinde 23 adet sesli harf 6 adet rakam ve 3 adet özel karakter
+bulunmaktadır.
+```
+## 6.3. Continue İfadesi
+Hatırlanacağı üzere break ifadesi döngünün dışına çıkılmasını sağlamaktadır. Döngülerde kullanılan
+continue ifadesi, döngünün baştan sona kadar çalışmasını engellemeyen ancak belirli durumlar sağlandığında o adımı atlamamızı sağlayan yapılardır. Döngü sona ermez ancak verilen koşulun sağlanması durumunda döngüyü direk başa alır.
+**Örnek 30**
+```python
+for i in range(1,6):
+ if i ==2 or i==4:
+ continue
+ print(i)
+1
+3
+5
+```
+Görüldüğü üzere Python, 2 veya 4 değerlerini görünce döngünün başına gitmiş ve alt satırdaki ifadeler
+çalıştırılmamıştır.
+**Örnek 31**
+Aynı işlem while döngüsü ile yapılmak istenirse,
+```python
+i=0
+while i < 5:
+ i=i+1
+ if i == 2 or i==4:
+ continue
+ print(i)
+1
+3
+5
+```
+while döngüsü ile continue deyimi kullanırken döngü, sonsuz döngüye girebilir. Eğer i=i+1 ifadesi
+continue deyiminin altında kullanılırsa i değeri sürekli 2 olarak kalır. Değişkenin değeri artmaz ve uygulama sonsuz döngüye girer. Örnek 32’de hatalı kullanım şekli gösterilmiştir.
+**Örnek 32**
+```python
+while i < 5:
+ if i == 2 or i==4:
+ continue
+ i=i+1
+ print(i)
+```
