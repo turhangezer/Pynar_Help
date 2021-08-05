@@ -118,3 +118,71 @@ while i<=100:
 print("sayıların toplamı",toplam)
 sayıların toplamı 5050
 ```
+Örnek 6’da yapılan işlemde toplam isimli bir değişken oluşturularak başlangıç değeri 0 olarak belirlenmiştir. Çünkü toplam değerini hesaplarken toplam=toplam+i şeklinde bir işlem yapılmaktadır.
+Eğer toplam tanımlı olmasaydı, tanımlanmamış_değer=tanımlanmamış_değer+sayı şeklinde bir işlem yapılmaya çalışacak ve hata verecekti. Yani bir değişken ile işlem yapılmadan önce tanımlanması
+gerekmektedir.
+
+### 6.1.2. While True – Break İfadeleri ve Sonsuz Döngüler
+
+Program yazarken bazen döngünün ne zaman sonlanacağı bilinmeyebilir. Örnek olarak bir markette
+müşterilerin alışveriş yaparak sepetlerini doldurdukları ve sepette kaç adet ürün olduğu bilinmeyebilir.
+O müşteriye ait tüm ürünler barkod okuyucu ile okutulmalı ve toplam tutar hesaplanmalıdır. İşte bu gibi
+belirsiz durumlar için while döngüsü ile beraber **True** ifadesi ya da benzer yapılar kullanılabilir. **Break**
+ifadesi ise döngü sürekli çalışırken istenilen bir anda döngüden çıkmak için kullanılır.
+
+**Örnek 7**
+
+```python
+i=1
+while True:
+ print(i)
+ i+=1
+ if i==6:
+ break
+print("döngü sonlandı")
+1
+2
+3
+4
+5
+döngü sonlandı
+```
+while döngüsü ile kullanılan True ifadesinin yerine farklı kullanımlarla da karşılaşılabilir. Örneğin, bir
+alışveriş yapıldığını ve sürekli ürün girişi yapıldığını düşünülürse “q” harfi girilene kadar yapılan alışverişler listeye eklensin, eğer “q” harfi girilirse döngüyü sonlandırılsın.
+
+**Örnek 8**
+
+```python
+liste=[]
+while 1:
+ ürün=input("ürün adı giriniz:")
+ if ürün=="q":
+ break
+ liste.append(ürün)
+print("girdiğiniz meyveler:",liste)
+ürün adı giriniz:elma
+ürün adı giriniz:armut
+ürün adı giriniz:peynir
+ürün adı giriniz:su
+ürün adı giriniz:q
+girdiğiniz meyveler: ['elma', 'armut', 'peynir', 'su']
+```
+**Örnek 9**
+
+while döngüsü kullanarak sayı tahmin oyunu yapınız. Kullanıcıdan 1-100 arası bir sayı istenmektedir.
+Girilen sayı, tahmin edilen sayıdan büyükse daha küçük bir sayı girmesi, büyükse daha küçük bir sayı
+girmesi istensin. Kullanıcı sayıyı bulana kadar bu işlem tekrar etsin. Ayrıca bir sayaç eklenerek kaç defa
+da tahmin ettiğini bulunuz.
+
+```python
+Sayi=45
+sayaç=0
+print("1-100 arası bir sayı tuttum tahmin et")
+while 1==1:
+ sayaç+=1
+ cevap=int(input("1-100 arası bir sayı girin: "))
+ if cevap>sayi:
+ print("daha küçük bir sayı girmelisin")
+ elif cevap<sayi:
+ print("daha büyük bir sayı girmelisin")
+``` 
