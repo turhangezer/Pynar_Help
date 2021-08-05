@@ -345,3 +345,131 @@ Installing collected packages: sqlparse, asgiref, django
 Successfully installed asgiref-3.2.7 django-3.0.5 sqlparse-0.3.1
 Note: you may need to restart the kernel to use updated packages.
 ```
+
+**Örnek 11**
+
+pip install django ile kurduğunuz paketi yükseltmeye çalışabilirsiniz.
+
+```python
+pip install django --upgrade
+Requirement already up-to-date: django in c:\programdata\anaconda3\lib\site-packages
+(3.0.5)
+Requirement already satisfied, skipping upgrade: pytz in c:\programdata\anaconda3\
+lib\site-packages (from django) (2019.3)
+Requirement already satisfied, skipping upgrade: asgiref~=3.2 in c:\programdata\
+anaconda3\lib\site-packages (from django) (3.2.7)
+Requirement already satisfied, skipping upgrade: sqlparse>=0.2.2 in c:\programdata\
+anaconda3\lib\site-packages (from django) (0.3.1)
+Note: you may need to restart the kernel to use updated packages.
+```
+
+**Örnek 12**
+
+Yüklediğiniz django paketini kaldırabilirsiniz.
+
+```python
+pip uninstall django
+10.5. Time Modülü
+Time modülü zaman değerlerini düzenlemekle ilgili birçok görevi yerine getirebilmektedir. Zamanı
+göstermek için iki standart bulunmaktadır. Birincisi zamanı Epoch’tan itibaren saniye olarak vermektir.
+Epoch Unix zaman başlangıcı olarak alınır ve takvime göre 1 Ocak 1970’e denk gelmektedir. Eğer
+Epoch türünden şimdiki zaman saniye biçiminde alınmak istenirse şu yöntemi kullanabilirsiniz.
+
+```
+
+**Örnek 13**
+
+```python
+import time
+print (time.time())
+1587590353.7686868
+```
+
+Ekran çıktısı bize 1 Ocak 1970’ten itibaren kaç saniye geçtiğini vermektedir. Elde edilen değeri gmtime(  )
+fonksiyonu kullanarak okunabilir tarih formatına çevrilebilir. Örnek 14’te saniye cinsinden elde edilen
+zaman değeri, okunabilir tarih formatına çevrilmiştir.
+
+**Örnek 14**
+
+```python
+import time
+print (time.gmtime(time.time()))
+time.struct_time(tm_year=2020, tm_mon=4, tm_mday=22, tm_hour=21, tm_min=44, tm_
+sec=9, tm_wday=2, tm_yday=113, tm_isdst=0)
+```
+**Localtime**, zaman bilgilerini sıralı bir tüp şeklinde vermektedir. Örnek 15’te time modülünde localtime
+nesnesini kullanarak zaman bilgilerini sıralı bir şekilde işlemi yapmaktadır.
+
+**Örnek 15**
+
+```python
+import time
+print (time.localtime())
+time.struct_time(tm_year=2020, tm_mon=4, tm_mday=23, tm_hour=0, tm_min=25, tm_
+sec=31, tm_wday=3, tm_yday=114, tm_isdst=0)
+```
+
+**ctime fonksiyonu**, içinde bulunulan zaman bilgilerini vermektedir. Örnek 16’da ctime fonksiyonu ile
+güncel tarih bilgilerini yazmaktadır.
+
+**Örnek 16**
+
+```python
+import time
+print (time.ctime())
+Thu Apr 23 00:36:07 2020
+```
+
+**strftime(  )** fonksiyonu ile kendimize ait zaman cümlesi oluşturabilirsiniz. Bu zaman cümlesinin belirlediğimiz duruma göre ekran çıktısının verilmesini sağlar. Tablo 1’de strftime() fonksiyonuna ait yönergeler
+verilmektedir. Bu yönergeler ister tek başına istersek yönergeleri birleştirerek de kullanabiliriz.
+
+| **Yönerge** | **Anlamı**                            |
+|:-----------:|:-------------------------------------:|
+| %a          | Kısaltılmış gün adı                   |
+| %A          | Gün adı                               |
+| %b          | Ayın kısaltılmış adı                  |
+| %B          | Ayın adı                              |
+| %c          | Tam tarih ve saat                     |
+| %d          | Ayın günü (01-31)                     |
+| %H          | Saat (00-24)                          |
+| %I          | Saat (01-12)                          |
+| %j          | Gün (01-366)                          |
+| %m          | Ay (00-12)                            |
+| %M          | Dakika (00-59)                        |
+| %p          | Öğleden önce (ÖÖ), öğleden sonra (ÖS) |
+| %S          | Saniye (00-59)                        |
+| %U          | Yılın kaçıncı haftası (00-53)         |
+| %w          | Haftanın kaçıncı günü (0-6)           |
+| %y          | Yılın son iki hanesi (15)             |
+| %d          | Ayın günü (örnek: Nisan için 13)      |
+| %Y          | Yıl                                   |
+
+Örnek 17’de gün ay yıl yönergelerini kullanarak yan yana yazımı verilmiştir. Bu şekilde yönergeleri ekleyerek, güncel tarih bilgilerini **strftime(  )** fonksiyonu ile alabiliriz
+
+**Örnek 17**
+
+```python
+import time
+print (time.strftime("%d/%m/%Y"))
+23/04/2020
+```
+**sleep() Fonksiyonu**, programın belirlenen süre boyunca durdurulmasına olanak sağlar. Aldığı argüman saniye cinsindendir. Örnek 18’deki kodlar çalıştırıldığında 10 saniye program duraklar.
+
+**Örnek 18**
+
+```python
+import time
+time.sleep(10)
+```
+Örnek 19’da ise bugünün tarihini saniyede içinde olacak şekilde verilmiştir. Ekran çıktısı olarak başlangıç tarihi ile bitiş tarihi arasında 5 saniye olduğu görülmektedir.
+
+**Örnek 19**
+
+```python
+import time
+print ("Başlangıç : %s" % time.ctime())
+time.sleep( 5 )
+print ("Bitiş : %s" % time.ctime())
+Başlangıç : Thu Apr 23 01:19:27 2020
+Bitiş : Thu Apr 23 01:19:32 2020
+```
