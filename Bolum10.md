@@ -26,7 +26,7 @@ devam edecektir. Bunların her biri ayrı klasörlerdir. Bu klasörlerin içine 
 yazınca otomatik atmaktadır.
 
 
-![image](https://user-images.githubusercontent.com/56341239/128363546-ef4c7834-2647-4f71-8eb4-fb5d0b66afca.png)
+![image](https://user-images.githubusercontent.com/56341239/128363546-ef4c7834-2647-4f71-8eb4-fb5d0b66afca.png) {.center}
 
 **Şekil 10.2:** Klasör yapısı
 
@@ -323,7 +323,7 @@ Python2’de pipi kullanmak için pip2 ve Python3‘te kullanmak için de pip3 k
 kullanılarak Şekil 10.5’te görüldüğü üzere “face_recognition” paketini yükleyebiliriz. Kaldırmak içinde
 aynı şekilde “uninstall” komutu kullanılır.
 
-![image](https://user-images.githubusercontent.com/56341239/128365547-a858ef16-221c-4c28-b8f3-f022b1e99fe7.png?style=centerme)
+![image](https://user-images.githubusercontent.com/56341239/128365547-a858ef16-221c-4c28-b8f3-f022b1e99fe7.png)
 
 **Şekil 10.5:** face_recognition paketini yükleme ekranı
 
