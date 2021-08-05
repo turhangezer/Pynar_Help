@@ -92,7 +92,3 @@ Harfler[0]|Harfler[1]|Harfler[2]|...
 | col 2 is      | centered      |   $12 |
 
 
-|
-|----------|-----------|
-| cell 1   | cell 2    |
-| another  | a fourth  |
