@@ -105,6 +105,7 @@ Kara Murat
 Bir sayının asal bir sayı olup olmadığını bulan bir fonksiyon yazabilirsiniz. Fonksiyon, sayı asal ise “True”;
 değilse “False” değerini döndürecektir.
 
+
 **NOT**
 >  “for” döngüsünde sayının yarısına kadar bakmamızın nedeni bir sayının kendi değerinin yarısından önce böleni yok ise sonrasında da olmayacağı kuralıdır.
 
@@ -136,4 +137,41 @@ def faktoriyelAl(sayi):
  sonuc*=i
  print ('sonuc=', sonuc)
  else: print ('0 veya daha büyük sayısal bir değer girmelisiniz')
+```
+
+Yukarıda tanımlanan fonksiyonu çağırmak için kullanıcıdan argüman almanız gerekmektedir.
+
+```python
+faktoriyelAl(int(input('Faktöriyeli alınacak sayıyı giriniz: ')))
+Faktöriyeli alınacak sayıyı giriniz: 5
+sonuc= 120
+```
+
+## 7.3. Fonksiyonlarda Parametre Türleri
+“faktoriyelAl” olarak tanımlanan fonksiyon “sayi” parametresiyle çalışmaktadır. Argüman olarak bir sayı
+verildiğinde sayının faktöriyelini hesaplamaktadır. Fonksiyonlar yaptıkları işlemlere göre farklı parametre
+türlerini kullanır.
+
+**Örnek 6**
+
+Döngülerde örnek olarak verilen ağaç çizme kodlarını bir fonksiyon hâline getirebilirsiniz.
+
+```python
+def agacCiz(agacinYuksekligi, karakter='\*'):
+ b=agacinYuksekligi
+ for i in range(1,agacinYuksekligi+1):
+ print(b\*' ',(2\*i-1)\*karakter)
+ b-=1
+```
+
+Şimdi, fonksiyonu kullanıcıdan aldığınız parametrelerle çağırabilirsiniz.
+
+```python
+agacYuksekligi=int(input("Ağacın yüksekliği kaç satır olsun? : "))
+agacKarakteri=input("Ağaç için bir sembol veya karakter girin? : ")
+if agacKarakteri!='' and agacYuksekligi>=1:
+ agacCiz(agacYuksekligi, agacKarakteri[0])
+elif agacKarakteri=='' and agacYuksekligi>=1:
+ agacCiz(agacYuksekligi)
+else: print('Hatalı giriş')
 ```
