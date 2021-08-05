@@ -92,11 +92,7 @@ Harfler[0]|Harfler[1]|Harfler[2]|...
 | col 2 is      | centered      |   $12 |
 
 
-| <!-- -->    | <!-- -->    |
-|-------------|-------------|
-| Foo         | Bar         |
-
-
-|-|-|-|
-|__Bold Key__| Value1 |
-| Normal Key | Value2 |
+|
+|----------|-----------|
+| cell 1   | cell 2    |
+| another  | a fourth  |
