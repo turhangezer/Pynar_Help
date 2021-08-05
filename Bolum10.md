@@ -25,9 +25,7 @@ bir modüldür. “modul.py” adında bir Python dosyası oluşturup kaydedilir
 devam edecektir. Bunların her biri ayrı klasörlerdir. Bu klasörlerin içine Python dosyaları oluşturulur.Örnek 1’in klasör yapısı Şekil 10.2’deki gibi düzenlenir. __pycache__ klasörünü Python’un kendisi modül
 yazınca otomatik atmaktadır.
 
-<p align="center">
- <img src="[https://user-images.githubusercontent.com/56341239/128363546-ef4c7834-2647-4f71-8eb4-fb5d0b66afca.png]" alt="[YOUR_ALT]"/>
-</p>
+![image](https://user-images.githubusercontent.com/56341239/128363546-ef4c7834-2647-4f71-8eb4-fb5d0b66afca.png)
 
 **Şekil 10.2:** Klasör yapısı
 
