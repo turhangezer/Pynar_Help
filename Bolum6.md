@@ -460,13 +460,21 @@ for i in range(20):
  toplam=toplam+i
 print("girdiğiniz sayıların toplamı:",toplam)
 girdiğiniz sayıların toplamı: 190
-Örnek 27
+```
+
+**Örnek 27**
+
+```python
 20’den geriye doğru 0’a kadar olan sayıları ekrana yazdırınız.
 for i in range(20,0,-1):
  print(i,end=",")
 20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,
-Örnek 28
+```
+
+**Örnek 28**
+
 100’e kadar 5’in katları olan sayıyı bulunuz.
+```python
 for i in range(0,100,5):
  print(i,end=",")
 0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,
