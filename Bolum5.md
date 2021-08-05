@@ -90,4 +90,8 @@ Harfler[0]|Harfler[1]|Harfler[2]|...
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+
+
+| <!-- -->    | <!-- -->    |
+|-------------|-------------|
+| Foo         | Bar         |
