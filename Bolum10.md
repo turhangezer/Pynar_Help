@@ -26,7 +26,7 @@ devam edecektir. Bunların her biri ayrı klasörlerdir. Bu klasörlerin içine 
 yazınca otomatik atmaktadır.
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/56341239/128363546-ef4c7834-2647-4f71-8eb4-fb5d0b66afca.png)
+ <img src="[https://user-images.githubusercontent.com/56341239/128363546-ef4c7834-2647-4f71-8eb4-fb5d0b66afca.png]" alt="[YOUR_ALT]"/>
 </p>
 
 **Şekil 10.2:** Klasör yapısı
