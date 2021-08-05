@@ -539,3 +539,47 @@ değeri ‘ankara’dır. Liste[5]’e int veri tipinde bir değer kaydedilerek 
 Herhangi bir string türünde veriyi parçalayarak da liste oluşturulabilir. Örnek 36’da string veri türünde
 adı meyve olan bir değişken olarak tanımlanmış ve veri olarak elmayı atanmıştır. Meyve adlı değişken
 liste yardımıyla parçalanmıştır.
+
+
+**Örnek 36**
+```
+meyve="elma"
+liste=list(meyve)
+print (liste)
+['e', 'l', 'm', 'a']
+```
+Örnek 37’de 1 ile 15 arasındaki sayılardan oluşan liste oluşturulmuştur. Listenin ögeleri ekrana listelenmiştir. Ekrana listeleme işleminde sort(  ) metodu ile ögeler küçükten büyüğe, reverse ile büyükten küçüğe
+doğru sıralanmıştır.
+**Örnek 37**
+```
+liste=list(range(1,15,2))
+print(liste)
+liste.sort()
+print(liste)
+liste.reverse()
+print(liste)
+[1, 3, 5, 7, 9, 11, 13]
+[1, 3, 5, 7, 9, 11, 13]
+[13, 11, 9, 7, 5, 3, 1]
+```
+split(  ) metodu, listeyi belirtilen ayıracı kullanarak yeniden döndürmeye yarar. Yani split(  ) karakter
+dizilerini istenen şekilde böler. -ayırıcı diye tanımladığımız ilk parametre, karakter dizisinin nereden bölüneceğini seçer. Eğer ayırıcı tanımlanmazsa karakter dizisi her boşluk gördüğünde ayırır. Örnek 38’de
+bilgiler girildikçe listeye kaydedecektir. Listeye 4 adet öge girilmiş ve listeleme işlemi yapılmıştır.
+
+**Örnek 38**
+```
+bilgi=input("bilgilerinizi araya virgül koyarak yazınız: ")
+liste=bilgi.split(",")
+print (liste)
+bilgilerinizi araya virgül koyarak yazınız: Hafsa,Meva,Konya,1
+['Hafsa', 'Meva', 'Konya', '1']
+```
+Örnek 39’da ise cümle değişkenindeki kelimeler split metodu ile kelimeler listesine aktarılmıştır. Len(  )
+metodu ile de kaç adet öge olduğu ekrana listelenmiştir.
+**Örnek 39**
+```
+cumle="23 nisan herkese mutlu olsun"
+kelimeler=cumle.split(" ")
+print("cümlenizde ",len(kelimeler),"adet kelime vardır")
+cümlenizde 5 adet kelime vardır
+```
