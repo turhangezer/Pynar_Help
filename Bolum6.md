@@ -355,6 +355,7 @@ for i in sayılar:
 print(kareler)
 [1, 4, 9, 16, 25]
 ```
+
 **Örnek 18**
 Bir liste içerisinde bulunan değerlerin ortalamasını bulun.
 ```python
@@ -383,6 +384,7 @@ for i in liste:
  [3, 4],[7, 8],[10, 11],[14, 15],
 Listeye erişildi ancak alt listelere erişilebilmesi için aşağıdaki gibi bir yapının kullanılması gerekmektedir.
 ```
+
 **Örnek 21**
 ```python
 liste = [[3,4],[7,8],[10,11],[14,15]]
@@ -404,6 +406,7 @@ for i in liste:
 
 Python’da **for** döngüsüyle belirli değerler arasında döngü kurmak istenirse **range** fonksiyonu kullanılmalıdır. **range** fonksiyonu bir sayı dizisi oluşturur ve bu sayede oluşturulan sayı dizisi üzerinde **for**
 döngüsünün iterasyon yapması sağlanır.
+
 **Örnek 23**
 ```python
 print(*range(10))
@@ -459,6 +462,7 @@ tablonun sütun uzunluğu giriniz4
 1 2 3 4
 1 2 3 4
 ```
+
 **Örnek 29**
 Girilen bir metindeki sesli harf, sayı ve özel karakterlerin sayısını bulan programı yazınız.
 ```python
@@ -482,8 +486,10 @@ girdiğiniz metinde 23 adet sesli harf 6 adet rakam ve 3 adet özel karakter
 bulunmaktadır.
 ```
 ## 6.3. Continue İfadesi
+
 Hatırlanacağı üzere break ifadesi döngünün dışına çıkılmasını sağlamaktadır. Döngülerde kullanılan
 continue ifadesi, döngünün baştan sona kadar çalışmasını engellemeyen ancak belirli durumlar sağlandığında o adımı atlamamızı sağlayan yapılardır. Döngü sona ermez ancak verilen koşulun sağlanması durumunda döngüyü direk başa alır.
+
 **Örnek 30**
 ```python
 for i in range(1,6):
@@ -496,6 +502,7 @@ for i in range(1,6):
 ```
 Görüldüğü üzere Python, 2 veya 4 değerlerini görünce döngünün başına gitmiş ve alt satırdaki ifadeler
 çalıştırılmamıştır.
+
 **Örnek 31**
 Aynı işlem while döngüsü ile yapılmak istenirse,
 ```python
@@ -511,6 +518,7 @@ while i < 5:
 ```
 while döngüsü ile continue deyimi kullanırken döngü, sonsuz döngüye girebilir. Eğer i=i+1 ifadesi
 continue deyiminin altında kullanılırsa i değeri sürekli 2 olarak kalır. Değişkenin değeri artmaz ve uygulama sonsuz döngüye girer. Örnek 32’de hatalı kullanım şekli gösterilmiştir.
+
 **Örnek 32**
 ```python
 while i < 5:
