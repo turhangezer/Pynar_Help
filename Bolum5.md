@@ -280,7 +280,7 @@ kolaylıkla yapabilmesini sağlamaktadır.
 | 12      | ‘del’     | Liste içerisinden bir elemanı silmek için kullanılır. Silme işlemi indis numarasına göre yapılmaktadır.****
 
 
-## 5.4.1. ‘append’ kullanımı
+#### 5.4.1. ‘append’ kullanımı
 **Örnek 14**
 ```
 takimlar=["gs","fb","bjk"]
@@ -290,7 +290,7 @@ print(takimlar)
 ```
 Örnek 14’te takimlar listesine “ts” ögesi eklenmiş ve son indis numarasında yer almıştır.
 
-## 5.4.2. ‘insert’ kullanımı
+#### 5.4.2. ‘insert’ kullanımı
 Örnek 15
 ```
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
@@ -300,7 +300,7 @@ print(sebzeler)
 ```
 Örnek 15’te insert metodu kullanılarak 2. indis numarasına “patlıcan” ögesi eklenerek, listeleme işlemi
 yapılmıştır.
-## 5.4.3. ‘copy’ kullanımı
+#### 5.4.3. ‘copy’ kullanımı
 ```
 Örnek 16
 iller1 =["konya","karaman","kocaeli","kayseri","kahramanmaraş"]
@@ -311,7 +311,7 @@ print(iller2)
 ```
 Örnek 16’da iller1 listesi copy metodu ile iller2 listesine aktarılmıştır.
 
-## 5.4.4. ‘count’ kullanımı
+#### 5.4.4. ‘count’ kullanımı
 **Örnek 17**
 ```
 takimlar = ['GS','FB','BJK','TS']
@@ -329,7 +329,7 @@ print(kus1)
 ['bıldırcın', 'papağan', 'kartal', 'akbaba', 'şahin', 'baykuş', 'muhabbet']
 ```
 Örnek 18’de extend komutu listelerdeki ögelerin kendi elemanlarını koruyarak genişletme işlemi yapılmıştır.
-## 5.4.6. ‘indis’ kullanımı
+#### 5.4.6. ‘indis’ kullanımı
 **Örnek 19**
 ```
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
@@ -338,7 +338,7 @@ print(sebzeler.indis("ıspanak"))
 ```
 İndis metodu yardımıyla Örnek 19’da görüldüğü gibi verilen bir ögenin indis numarasını vermektedir.
 
-## 5.4.7. ‘clear’ kullanımı
+#### 5.4.7. ‘clear’ kullanımı
 **Örnek 20**
 ```
 liste =["ayva","nar","kiraz","kayısı","Üzüm"]
@@ -347,7 +347,7 @@ print(liste)
 []
 clear(  ) metodu kullanılarak örnek 20’deki listenin tüm ögeleri silinmiştir.
 ```
-## 5.4.8. ‘pop’ kullanımı
+#### 5.4.8. ‘pop’ kullanımı
 **Örnek 21**
 ```
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
@@ -356,7 +356,7 @@ print(sebzeler)
 ['lahana', 'marul', 'ıspanak', 'fasulye']
 ```
 Örnek 21’de pop metodu ile sebzeler listesinden 2.indis numarasına ait olan “pırasa” adlı öge silinmiştir.
-## 5.4.9. ‘remove’ kullanımı
+#### 5.4.9. ‘remove’ kullanımı
 **Örnek 22**
 ```
 sehirler =["adana","ağrı","bursa","konya","ankara"]
@@ -365,3 +365,44 @@ print(sehirler)
 ['adana', 'ağrı', 'bursa', 'ankara']
 ```
 Örnek 22’de öge adına göre silme işlemi yapılmıştır ve “konya” adlı öge sehirler listesinden silinmiştir
+
+#### 5.4.10. ‘reverse’ kullanımı
+**Örnek 23**
+```
+sayilar=[10,20,30,40,50,60,70]
+sayilar.reverse()
+print(sayilar)
+[70, 60, 50, 40, 30, 20, 10]
+```
+Örnek 23’te reverse metodu ile liste öge elemanları tersten sıralanmıştır.
+#### 5.4.11. ‘sort’ kullanımı
+**Örnek 24**
+```
+isimler=["elif","ayşe","kemal","kaan","hafsa"]
+isimler.sort()
+print(isimler)
+['ayşe', 'elif', 'hafsa', 'kaan', 'kemal']
+```
+Sort metodu ile Örnek 24’te isimler listesi ögeleri alfabetik olarak sıralanmıştır.
+#### 5.4.12. ‘del’ kullanımı
+**Örnek 25**
+```
+takimlar = ['GS','FB','BJK','TS']
+del takimlar[2]
+print(takimlar)
+['GS', 'FB', 'TS']
+```
+Örnek 25’te del metodu ile takimlar listesine ait ‘BJK’ ögesi indis numarasına göre silinmiştir.
+
+```
+Yukarıdaki örneklerde temel liste metotlarının her birine yönelik örnek ve çıktıları verilmiştir. Ayrıca
+__xxx__ şeklinde özel metotlar da bulunmaktadır. Bu metotlarda dir(list) şeklinde komut satırına yazıldığında aşağıdaki şekilde çıktı alınır.
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__',
+'__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__',
+'__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__',
+'__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__',
+'__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__',
+'__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy',
+'count', 'extend', 'indis', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+## 5.5. Len() Fonksiyonu ile Uzunluk Bilgisi
