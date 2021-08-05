@@ -575,3 +575,44 @@ while i < 5:
  i=i+1
  print(i)
 ```
+
+**Örnek 33**
+
+```python
+dersler = ["Ders 1", "Ders 2", "Ders 3"]
+konular = ["Konu 1", "Konu 2", "Konu 3"]
+for x in dersler:
+ for y in konular:
+ print(x, y)
+Ders 1 Konu 1
+Ders 1 Konu 2
+Ders 1 Konu 3
+Ders 2 Konu 1
+Ders 2 Konu 2
+Ders 2 Konu 3
+Ders 3 Konu 1
+Ders 3 Konu 2
+Ders 3 Konu 3
+```
+
+**Örnek 34**
+
+İç içe while döngüsü kullanarak, i ve j olarak tanımlanan iki değişkenin değerlerini ekrana yazdırınız.
+```python
+i=1
+while i<4:
+ j=1
+ while j<4:
+ print("i nin değeri: {} j nin değeri: {} ".format(i,j))
+ j=j+1
+ i=i+1
+i nin değeri: 1 j nin değeri: 1
+i nin değeri: 1 j nin değeri: 2
+i nin değeri: 1 j nin değeri: 3
+i nin değeri: 2 j nin değeri: 1
+i nin değeri: 2 j nin değeri: 2
+i nin değeri: 2 j nin değeri: 3
+i nin değeri: 3 j nin değeri: 1
+i nin değeri: 3 j nin değeri: 2
+i nin değeri: 3 j nin değeri: 3
+```
