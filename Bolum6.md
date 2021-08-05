@@ -185,4 +185,18 @@ while 1==1:
  print("daha küçük bir sayı girmelisin")
  elif cevap<sayi:
  print("daha büyük bir sayı girmelisin")
+ else:
+ print("tebrikler tuttuğum sayıyı bildin")
+ break
+print("tebrikler {} seferde sayıyı bulabildin".format(sayaç))
+1-100 arası bir sayı tuttum tahmin et
+1-100 arası bir sayı girin: 50
+daha küçük bir sayı girmelisin
+1-100 arası bir sayı girin: 40
+daha büyük bir sayı girmelisin
+1-100 arası bir sayı girin: 45
+tebrikler tuttuğum sayıyı bildin
+tebrikler 3 seferde sayıyı bulabildin
 ``` 
+Yine burada **while** **True** yapısına benzer bir yapı kullanarak while 1==1: şeklinde bir yapı ile sonsuz
+döngü oluşturulmuştur.
