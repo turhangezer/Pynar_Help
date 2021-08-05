@@ -474,6 +474,6 @@ print(sebzeler[0])
 **Tablo 4.** Sebzeler listesi elemanları
 | Liste adı      | sebzeler            |                    |                     |                  |                      |
 |:--------------:|:-------------------:|:------------------:|:-------------------:|:----------------:|:--------------------:|
-Span <td colspan=3>triple  <td colspan=2>double
+Span <td colspan=5>triple
 | Eleman değeri  | ‘yeşil’, ‘ıspanak’  | ‘beyaz’, ‘lahana’  | ‘turuncu’, ‘havuç’  | ‘siyah’, ‘turp’  | ‘kırmızı’, ‘domates’ |
 | İndis numarası | 0                   | 1                  | 2                   | 3                | 4                    |
