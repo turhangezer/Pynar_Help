@@ -23,7 +23,7 @@ Bir listede her veri tipinden eleman saklanabilir. Bu anlamda sıralı bir diziy
 
 **Örnek 1**
 
-```
+```python
 liste=[1,2,'ali',0.25]
 print(liste)
 [1, 2, 'ali', 0.25]
@@ -33,7 +33,7 @@ print(liste)
 Örnek 1’de int, string ve float gibi farklı veri tiplerini içerisinde barındıran 4 elemanlı bir listedir.
 Karakter dizilerin indis değerleri değiştirilmek istendiğinde aşağıdaki gibi hata mesajı alınır.
 
-```
+```python
 meyve="erik"
 meyve = 5 +meyve[0:]
 print(meyve)
@@ -45,7 +45,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 **Örnek 2**
 
-```
+```python
 Örnek 2
 meyve ="erik"
 meyve = "ayva-" +meyve[0:]
@@ -66,7 +66,7 @@ olarak boş liste vermektedir.
 
 **Örnek 3**
 
-```
+```python
 liste=[ ] #veya liste=list()
 print(liste)
 [ ]
@@ -89,7 +89,7 @@ Tablo 1. Listelerde indis numarasına göre veri sıralaması
 | Harfler[0] | Harfler[1]  | Harfler[2]  | …                |
 
 
-```
+```python
 renkler = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
 print('listeyi ekrana yazdırıyoruz')
 print(renkler)
@@ -114,7 +114,7 @@ Başlangıç elemanları belli olan bir listenin tanımlanması ve yazdırılmas
 
 
 **Örnek 5**
-```
+```python
 #liste1 adında bir liste tanımladık. İçine verileri girdik
 #bu verileri ekrana yazdırdık
 liste1 = ['a','b','c','d','e','f']
@@ -126,13 +126,13 @@ print(liste1)
 liste1[0] ='a' liste1[1] ='b' liste1[2] ='c' liste[3] ='d'
 liste1[4] ='e' liste1[5] ='f'
 
-```
+```python
 Listeler hem string hem de sayı türünde veriler barındırabilir. Örnek 6 incelendiğinde 7 elemanlı bir liste
 tanımlıdır. 6 ve 7. elamanları sayı diğerleri metin olan bir listedir.
 ```
 
 **Örnek 6**
-```
+```python
 liste2=['python','geleceği','olan','bir','dil',500,0.567]
 print(liste2)
 ['python', 'geleceği', 'olan', 'bir', 'dil', 500,0.567]
@@ -149,14 +149,14 @@ dilimleme denir. Liste dilimlerken adımlama da başlangıç indisi alır ama bi
 
 
 **Kullanımı:**
-```
+```python
 eleman = liste[indis]
 dilim = liste[baslangic:bitis]
 ```
 Liste, elemanlarına erişim için tamamını veya indis numarasına göre çağırmaktadır.
 
 **Örnek 7**
-```
+```python
 liste=["birinici veri","ikinci veri","üçüncü veri ","dördüncü veri","beşinci veri"]
 #beş elemenlı listenin ilk verisi
 print(liste[0])
@@ -168,7 +168,7 @@ beşinci veri
 Örnek 7’de listenin indis numaraları yazılarak, başlangıç ve bitiş ögelerine ulaşılmıştır.
 
 **Örnek 8**
-```
+```python
 liste=["ayva","armut","kiraz","vişne"]
 print(liste)
 print(liste[1])
@@ -179,7 +179,7 @@ armut
 Liste içindeki ögeleri kontrol edilebilir. Eşya adında bir liste var. Liste tanımlanır, daha sonra if karar yapısı ile içindeki ögeler de “perde” olup olmadığı kontrol edilir.
 
 **Örnek 9**
-```
+```python
 esya = ["ayna", "televizyon", "perde"]
 if("perde" in esya):
  print("Bu değer listede var.")
@@ -189,14 +189,14 @@ Bu değer listede var.
 ```
 Aşağıdaki örnekte 5 elemanlı bir liste tanımlanmıştır. İndis numaralarını kullanarak, listenin 1. indisten
 başlayarak, 3. indise kadar öge listesine aktarıp listeleme işlemi yapılmıştır.
-```
+```python
 liste = [1,2,3,4,5]
 öge = listem[1:3]
 print(öge)
 [2,3]
 ```
 **Örnek 10**
-```
+```python
 listem=[10,20,30,40,50]
 eleman = listem[3]
 print(eleman)
@@ -206,7 +206,7 @@ print(eleman)
 numarasına ait ifade eleman adlı değişkene atama işlemi yapılmıştır. Eleman adlı değişken de ekrana
 yazdırılarak 40 sonucu elde edilmiştir.
 **Örnek 11**
-```
+```python
 listem = [10,20,30,40,50]
 eleman = listem[1:3]
 print(eleman)
@@ -216,7 +216,7 @@ print(eleman)
 3. indis numarasının dâhil edilmediği atama işlemi yapılmıştır. Eleman adlı değişken de ekrana yazdırılarak 20 ve 30 değerleri listelenmiştir.
 
 **Örnek 12**
-```
+```python
 liste = [1,2,3,4,5,6,7,8,9,10]
 print(liste)
 # 1. eleman
@@ -244,7 +244,7 @@ olarak, sondan ikinciye ise [-2] olarak ulaşılır. Güle güle elemanı liste 
 Merhaba ise geriye doğru sayıldığında -4. indis’tir.
 
 **Örnek 13**
-```
+```python
 liste = [ "merhaba", "dünya", "merhaba", "güle güle" ]
 print (liste [- 1 ]) #son ögeyi listeler
 print( liste [- 3 ]) #sondan üçüncü ögeyi listeler
@@ -282,7 +282,7 @@ kolaylıkla yapabilmesini sağlamaktadır.
 
 ### 5.4.1. ‘append’ kullanımı
 **Örnek 14**
-```
+```pythonpython
 takimlar=["gs","fb","bjk"]
 takimlar.append("ts")
 print(takimlar)
@@ -292,7 +292,7 @@ print(takimlar)
 
 ### 5.4.2. ‘insert’ kullanımı
 Örnek 15
-```
+```python
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
 sebzeler.insert(2,"patlıcan")
 print(sebzeler)
@@ -301,7 +301,7 @@ print(sebzeler)
 Örnek 15’te insert metodu kullanılarak 2. indis numarasına “patlıcan” ögesi eklenerek, listeleme işlemi
 yapılmıştır.
 ### 5.4.3. ‘copy’ kullanımı
-```
+```python
 Örnek 16
 iller1 =["konya","karaman","kocaeli","kayseri","kahramanmaraş"]
 iller2=[]
@@ -313,7 +313,7 @@ print(iller2)
 
 ### 5.4.4. ‘count’ kullanımı
 **Örnek 17**
-```
+```pythonpython
 takimlar = ['GS','FB','BJK','TS']
 print(takimlar.count('FB'))
 1
@@ -321,7 +321,7 @@ print(takimlar.count('FB'))
 Örnek 17’de takimlar listesinde ‘FB’ ögesinin kaç adet olduğu count metodu bulunmuştur.
 ### 5.4.5. ‘extend’ kullanımı
 **Örnek 18**
-```
+```pythonpython
 kus1=["bıldırcın","papağan","kartal","akbaba","şahin"]
 kus2=["baykuş","muhabbet"]
 kus1.extend(kus2)
@@ -331,7 +331,7 @@ print(kus1)
 Örnek 18’de extend komutu listelerdeki ögelerin kendi elemanlarını koruyarak genişletme işlemi yapılmıştır.
 ### 5.4.6. ‘indis’ kullanımı
 **Örnek 19**
-```
+```pythonpython
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
 print(sebzeler.indis("ıspanak"))
 3
@@ -340,7 +340,7 @@ print(sebzeler.indis("ıspanak"))
 
 ### 5.4.7. ‘clear’ kullanımı
 **Örnek 20**
-```
+```pythonpython
 liste =["ayva","nar","kiraz","kayısı","Üzüm"]
 liste.clear()
 print(liste)
@@ -349,7 +349,7 @@ clear(  ) metodu kullanılarak örnek 20’deki listenin tüm ögeleri silin
 ```
 ### 5.4.8. ‘pop’ kullanımı
 **Örnek 21**
-```
+```python
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
 sebzeler.pop(2)
 print(sebzeler)
@@ -358,7 +358,7 @@ print(sebzeler)
 Örnek 21’de pop metodu ile sebzeler listesinden 2.indis numarasına ait olan “pırasa” adlı öge silinmiştir.
 ### 5.4.9. ‘remove’ kullanımı
 **Örnek 22**
-```
+```python
 sehirler =["adana","ağrı","bursa","konya","ankara"]
 sehirler.remove("konya")
 print(sehirler)
@@ -368,7 +368,7 @@ print(sehirler)
 
 ### 5.4.10. ‘reverse’ kullanımı
 **Örnek 23**
-```
+```python
 sayilar=[10,20,30,40,50,60,70]
 sayilar.reverse()
 print(sayilar)
@@ -377,7 +377,7 @@ print(sayilar)
 Örnek 23’te reverse metodu ile liste öge elemanları tersten sıralanmıştır.
 ### 5.4.11. ‘sort’ kullanımı
 **Örnek 24**
-```
+```python
 isimler=["elif","ayşe","kemal","kaan","hafsa"]
 isimler.sort()
 print(isimler)
@@ -386,7 +386,7 @@ print(isimler)
 Sort metodu ile Örnek 24’te isimler listesi ögeleri alfabetik olarak sıralanmıştır.
 ### 5.4.12. ‘del’ kullanımı
 **Örnek 25**
-```
+```python
 takimlar = ['GS','FB','BJK','TS']
 del takimlar[2]
 print(takimlar)
@@ -394,7 +394,7 @@ print(takimlar)
 ```
 Örnek 25’te del metodu ile takimlar listesine ait ‘BJK’ ögesi indis numarasına göre silinmiştir.
 
-```
+```python
 Yukarıdaki örneklerde temel liste metotlarının her birine yönelik örnek ve çıktıları verilmiştir. Ayrıca
 __xxx__ şeklinde özel metotlar da bulunmaktadır. Bu metotlarda dir(list) şeklinde komut satırına yazıldığında aşağıdaki şekilde çıktı alınır.
 ['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__',
@@ -410,7 +410,7 @@ __xxx__ şeklinde özel metotlar da bulunmaktadır. Bu metotlarda dir(list) şek
 len(  ) fonksiyonu, İngilizce length’in (uzunluk) kısaltılmış hâlidir. String ifadesinin uzunluğunu yani karakter sayısını verir. Örnek 14’te a adlı string değişkene değer atadığımızda değişkendeki karakterlerin
 sayısını vermektedir.
 **Örnek 26**
-```
+```python
 a="Galatasaray"
 print(len(a))
 11
@@ -419,7 +419,7 @@ print(len(a))
 27’de len(  ) fonksiyonu ile takimlar listesinin eleman listesi 4 olarak verilmiştir.
 
 **Örnek 27**
-```
+```python
 takimlar = ['GS','FB','BJK','TS']
 print( len(takimlar))
 4
@@ -427,7 +427,7 @@ print( len(takimlar))
 Örnek 28’de 2 adet liste1 ve liste2 adında liste tanımlanmıştır. Bu listelere elemanlar girilerek, len()
 komutu ile kaç elemanlı olduğu bulunmuştur.
 **Örnek 28**
-```
+```python
 liste1, liste2 = ['abc',56,74 ,'python'], [12, 'opencv','a']
 print ("İlk liste uzunlugu : ", len(liste1))
 print( "İkinci listenin uzunluğu : ", len(liste2))
@@ -440,7 +440,7 @@ Bir liste herhangi bir sıralama nesnesi içerebilir, hatta başka bir liste (al
 alt listeler içerebilir ve bu şekilde devam eder. Bu yuvalanmış liste olarak bilinir. Hiyerarşik yapılara veri
 düzenlemek için bunlar kullanılabilir.
 **Örnek 29**
-```
+```python
 liste1 = [1,2,3]
 liste2 = [4,5,6]
 liste3 = [7,8,9]
@@ -453,7 +453,8 @@ liste oluşturuldu ve ekrana yazdırıldı.
 Örnek 30’da sebzeler adında boş şekilde liste oluşturuldu.
 
 **Örnek 30**
-```sebzeler=[]
+```python
+sebzeler=[]
 sebzeler.append(['yeşil','ıspanak'])
 sebzeler.append(['beyaz','lahana'])
 sebzeler.append(['turuncu','havuç'])
@@ -461,13 +462,13 @@ sebzeler.append(['siyah','turp'])
 sebzeler.append(['kırmızı','domates'])
 ```
 Append(  ) metodunu kullanarak sebzeler adlı listeye 5 adet eleman girildi. Girilen verilerin listelenmesi:
-```
+```pythonpython
 print(sebzeler)
 [['yeşil', 'ıspanak'], ['beyaz', 'lahana'], ['turuncu', 'havuç'], ['siyah', 'turp'],
 ['kırmızı', 'domates']]
 ```
 Sebzeler adında listede 4 adet eleman bulunmaktadır. Bunları teker teker sıralanırsa:
-```
+```pythonpython
 print(sebzeler[0])
 ['yeşil', 'ıspanak']
 ```
@@ -478,7 +479,7 @@ print(sebzeler[0])
 | İndis numarası | 0                   | 1                  | 2                   | 3                | 4                    |
 
 **Örnek 31**
-```
+```pythonpython
 sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
 sebze=sebzeler[1]
 print(sebze)
@@ -487,7 +488,7 @@ print(sebze)
 Örnek 31’e bakıldığı zaman, sebze değişkenine sadece sebzeler [1] matrisindeki değer atanmıştır. Tablo
 4’te sebzeler listesinde sadece havuç değeri listelenmek isteniyorsa indis numarasından faydalanılır.
 **Örnek 32**
-```
+```pythonpython
 sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
 print(sebzeler[2][1])
 havuç
@@ -497,7 +498,7 @@ ekrana yazdırılmıştır.
 
 **Örnek 33**
 # 3 Adet liste oluşturalım.
-```
+```pythonpython
 birinci_liste = [1,2,3]
 ikinci_liste = ['a','b','c']
 ucuncu_liste= [40,50,60]
@@ -510,7 +511,7 @@ sadece a ve 50 değerlerini yan yana listelemek için aşağıdaki kodlar kullan
 
 **Örnek 34**
 # 3 Adet liste oluşturalım.
-```
+```pythonpython
 birinci_liste = [1,2,3]
 ikinci_liste = ['a','b','c']
 ucuncu_liste= [40,50,60]
@@ -522,7 +523,7 @@ a 50
 Listelerde veri tipi dönüşümleri için, elemanlara yeni değer ataması yapıldığında string, int, float vb. veri
 tipleri arasında değer alabilir.
 **Örnek 35**
-```
+```pythonpython
 liste=[1,2,3,4,5,'ankara']
 print(liste)
 liste[0]=str("kocaeli")
@@ -542,7 +543,7 @@ liste yardımıyla parçalanmıştır.
 
 
 **Örnek 36**
-```
+```python
 meyve="elma"
 liste=list(meyve)
 print (liste)
@@ -551,7 +552,7 @@ print (liste)
 Örnek 37’de 1 ile 15 arasındaki sayılardan oluşan liste oluşturulmuştur. Listenin ögeleri ekrana listelenmiştir. Ekrana listeleme işleminde sort(  ) metodu ile ögeler küçükten büyüğe, reverse ile büyükten küçüğe
 doğru sıralanmıştır.
 **Örnek 37**
-```
+```python
 liste=list(range(1,15,2))
 print(liste)
 liste.sort()
@@ -567,7 +568,7 @@ dizilerini istenen şekilde böler. -ayırıcı diye tanımladığımız ilk par
 bilgiler girildikçe listeye kaydedecektir. Listeye 4 adet öge girilmiş ve listeleme işlemi yapılmıştır.
 
 **Örnek 38**
-```
+```python
 bilgi=input("bilgilerinizi araya virgül koyarak yazınız: ")
 liste=bilgi.split(",")
 print(liste)
@@ -577,7 +578,7 @@ bilgilerinizi araya virgül koyarak yazınız: Hafsa,Meva,Konya,1
 Örnek 39’da ise cümle değişkenindeki kelimeler split metodu ile kelimeler listesine aktarılmıştır. Len(  )
 metodu ile de kaç adet öge olduğu ekrana listelenmiştir.
 **Örnek 39**
-```
+```python
 cumle="23 nisan herkese mutlu olsun"
 kelimeler=cumle.split(" ")
 print("cümlenizde ",len(kelimeler),"adet kelime vardır")
