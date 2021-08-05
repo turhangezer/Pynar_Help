@@ -18,6 +18,7 @@ Yukarıdaki şekilde koşul sağlandığı sürece döngü devam edecektir. Ne z
 Python’da **while** ve **for** döngüleri olmak üzere iki tür döngü bulunur.
 
 ## 6.1. While Döngüsü
+
 While döngüsü, koşul gerçekleştiği sürece çalışan bir döngü çeşididir. Genellikle döngünün kaç defa
 çalışacağı belirli değilse while döngüsü tercih edilir. Ancak koşullar verilerek de while döngüsünün belirli
 sayıda çalışması sağlanabilir. Döngülerde koşullu ifadelerde olduğu gibi blok yapısı kullanılmaktadır.
@@ -202,6 +203,7 @@ Yine burada **while** **True** yapısına benzer bir yapı kullanarak while 1==1
 döngü oluşturulmuştur.
 
 **Örnek 10**
+
 ```python
 Girilen sayının faktöriyelini hesaplayan programı yazınız.
 i=1
@@ -218,6 +220,7 @@ faktöriyeli alınacak sayıyı giriniz: 5
 olduğu sürece çalıştırılmış, daha sonra i değeri arttırarak sonuç isimli değişkenle çarpma işlemi yapılmış, i değeri f değerine eşit olduğunda döngüden çıkılarak, sonuç isimli değişkenin değeri gösterilmiştir.
 
 ## 6.2. For Döngüsü
+
 **For** döngüsü, Python’da genellikle döngünün **tekrar sayısı programcı tarafından belirlenmiş veya
 öngörülmüş ve** belli ise kullanılır. Hatırlanacağı üzere **while** döngüsü ile sonsuz döngüler yapılabiliyor
 ve istenilen bir anda döngüden çıkılabiliyordu. **For** döngüsü daha çok belirli sayıdaki işlemi gerçekleştirmek için kullanılır. Bunun yanında Python’da for döngüsünün **iterasyon** denilen önemli bir özelliği
@@ -254,7 +257,9 @@ liste=[1,2,3,4,5,6]
 ```
 ### 6.2.2. Karakter Dizileri Üzerinde İterasyon İşlemi
 Python’da for döngüsü ile karakter dizileri üzerinde kolaylıkla iterasyon işlemi yapılabilir.
+
 **Örnek 11**
+
 ```python
 isim="Mustafa"
 for i in isim:
@@ -265,6 +270,7 @@ M,u,s,t,a,f,a,
 Aynı işlemi while döngüsü ile yapılmak istenirse,
 
 **Örnek 12**
+
 ```python
 isim="Mustafa"
 i=0
@@ -277,7 +283,9 @@ M,u,s,t,a,f,a,
 kod yazılması hem de daha karışık bir yapı kullanılması gerekmektedir. Python’da genellikle listeler veya
 karakter dizileri üzerinde işlem yapılmak istenildiği zaman yani iterasyon yapılacağı zaman **for** döngüsü
 kullanılmaktadır.
+
 **Örnek 13**
+
 Bir cümle içerisinde geçen bir harfin kaç defa geçtiğini bulunuz.
 ```python
 yazi="Python üst düzey basit sözdizimine sahip, öğrenmesi oldukça kolay,
@@ -291,7 +299,9 @@ for i in yazi:
 print("cümle içerisinde geçen a harfi sayısı: ",sayac)
 cümle içerisinde geçen a harfi sayısı: 9
 ```
+
 **Örnek 14**
+
 Bir cümle içerisinde geçen sesli harfleri bulan programı yazınız.
 ```python
 yazi="Python üst düzey basit söz dizimine sahip, öğrenmesi oldukça kolay,
@@ -304,7 +314,9 @@ for i in yazi:
 o,ü,ü,e,a,i,ö,i,i,i,e,a,i,ö,e,e,i,o,u,a,o,a,o,ü,e,i,i,o,u,a,i,i,i,i,e,e,e,e,a,o,a,ı,
 ı,e,e,ö,e,i,i,o,u,a,a,i,i,i,i,i,i,i,
 ```
+
 **Örnek 15**
+
 İki farklı karakter dizisi belirleyerek, birinci de olup, diğerinde olmayan karakterleri bulunuz.
 ```python
 cumle1="Python üst düzey basit sözdizimine sahip, öğrenmesi oldukça kolay,
@@ -318,6 +330,7 @@ for i in cumle2:
 ```
 
 **Örnek 16**
+
 Kullanıcı tarafından girilen bir karakter dizisi içerisinde geçen sesli ve sessiz harfleri ayrı ayrı listelere
 atayan programı yazınız.
 ```python
@@ -340,12 +353,15 @@ sesli harfler oüüeaiöiiieaiöeeiouaoaoüeiiouaiiiieeeeaoaııeeöeiiouaaiiiii
 sessiz harfler ythnstdzybstszdzmnshpğrnmsldkçklymdlrlğknblrlğdsktkynpltfrmbğmsznsnynl
 mlyrmlnblrbrscrptdldr
 ```
+
 ### 6.2.3. Listeler Üzerinde İterasyon İşlemi
+
 Python’da karakter dizilerinde yapılan işlem gibi listeler üzerinde de iterasyon işlemi yapılabilir. Örnek
 olarak elimizde bir liste olduğunu ve içerisinde sayısal ifadeler (integer tanımlanmış) olduğunu düşünelim. Bu değeri toplayabilir, ortalamasını bulabilir ya da farklı bir listeye atayabilirsiniz. Kullanım şekli
 itibariyle karakter dizilerinde yapılan işlemlerin aynısı yapılabilir.
 
 **Örnek 17**
+
 İçerisinde sayısal değerler olan bir listedeki değerlerin karesini alarak başka bir listeye atayınız.
 ```python
 sayılar = [1,2,3,4,5]
@@ -357,6 +373,7 @@ print(kareler)
 ```
 
 **Örnek 18**
+
 Bir liste içerisinde bulunan değerlerin ortalamasını bulun.
 ```python
 sayılar = [1,2,3,4,5,6,7,8,9]
@@ -375,6 +392,7 @@ for i in sayılar:
 ```
 
 **Örnek 20**
+
 İç içe listeler üzerinde gezinme işlemi yapılabilir. [[3,4],[7,8],[10,11],[14,15]] şeklinde bir liste olduğunu
 varsayalım. Liste elemanları üzerinde klasik bir şekilde gezinme işlemi yapılmak istenirse:
 ```python
@@ -386,6 +404,7 @@ Listeye erişildi ancak alt listelere erişilebilmesi için aşağıdaki gibi bi
 ```
 
 **Örnek 21**
+
 ```python
 liste = [[3,4],[7,8],[10,11],[14,15]]
 for i,j in liste:
@@ -394,6 +413,7 @@ for i,j in liste:
 3,4,7,8,10,11,14,15,
 ```
 **Örnek 22**
+
 Ya da iç içe for düngüsü kullanarak aynı işlem gerçekleştirilebilir.
 ```python
 liste = [[3,4],[7,8],[10,11],[14,15]]
@@ -402,12 +422,14 @@ for i in liste:
  print(j,end=",")
 3,4,7,8,10,11,14,15,
 ```
+
 ### 6.2.4. range Fonksiyonu ile For Döngüsü Kullanımı
 
 Python’da **for** döngüsüyle belirli değerler arasında döngü kurmak istenirse **range** fonksiyonu kullanılmalıdır. **range** fonksiyonu bir sayı dizisi oluşturur ve bu sayede oluşturulan sayı dizisi üzerinde **for**
 döngüsünün iterasyon yapması sağlanır.
 
 **Örnek 23**
+
 ```python
 print(*range(10))
 0 1 2 3 4 5 6 7 8 9
@@ -419,6 +441,7 @@ print(*range(5,20))
 Ayrıca range fonksiyonuna üçüncü bir parametre verilerek atlama değeri de verilebilir.
 ```
 **Örnek 25**
+
 ```python
 print(*range(1,20,3))
 1 4 7 10 13 16 19
@@ -446,6 +469,7 @@ for i in range(0,100,5):
 ```
 
 **Örnek 29**
+
 Kullanıcıdan satır ve sütun sayısı değerlerini alarak sayıları tablo şeklinde yazan programı yazınız.
 ```python
 a=int(input("tablonun satır uzunluğunu giriniz"))
@@ -464,6 +488,7 @@ tablonun sütun uzunluğu giriniz4
 ```
 
 **Örnek 29**
+
 Girilen bir metindeki sesli harf, sayı ve özel karakterlerin sayısını bulan programı yazınız.
 ```python
 sesli_harfler=["a","e","ı","i","o","ö","u","ü"]
@@ -491,6 +516,7 @@ Hatırlanacağı üzere break ifadesi döngünün dışına çıkılmasını sa�
 continue ifadesi, döngünün baştan sona kadar çalışmasını engellemeyen ancak belirli durumlar sağlandığında o adımı atlamamızı sağlayan yapılardır. Döngü sona ermez ancak verilen koşulun sağlanması durumunda döngüyü direk başa alır.
 
 **Örnek 30**
+
 ```python
 for i in range(1,6):
  if i ==2 or i==4:
@@ -504,6 +530,7 @@ Görüldüğü üzere Python, 2 veya 4 değerlerini görünce döngünün başı
 çalıştırılmamıştır.
 
 **Örnek 31**
+
 Aynı işlem while döngüsü ile yapılmak istenirse,
 ```python
 i=0
@@ -520,6 +547,7 @@ while döngüsü ile continue deyimi kullanırken döngü, sonsuz döngüye gire
 continue deyiminin altında kullanılırsa i değeri sürekli 2 olarak kalır. Değişkenin değeri artmaz ve uygulama sonsuz döngüye girer. Örnek 32’de hatalı kullanım şekli gösterilmiştir.
 
 **Örnek 32**
+
 ```python
 while i < 5:
  if i == 2 or i==4:
