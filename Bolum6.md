@@ -263,3 +263,140 @@ M,u,s,t,a,f,a,
 ```
 Örnek 11’de yapılan işlemle isim adlı değişken üzerinde ilk karakterden son karaktere kadar tüm değerleri hiçbir harf kalmayana kadar sırayla i değişkenine atayarak ekrana yazdırılmıştır.
 Aynı işlemi while döngüsü ile yapılmak istenirse,
+
+**Örnek 12**
+```python
+isim="Mustafa"
+i=0
+while i<len(isim):
+ print(isim[i],end=",")
+ i=i+1
+M,u,s,t,a,f,a,
+```
+Örnek 12’de **while** döngüsü ile karakter dizileri üzerinde işlem yapılmak istendiğinde hem daha fazla
+kod yazılması hem de daha karışık bir yapı kullanılması gerekmektedir. Python’da genellikle listeler veya
+karakter dizileri üzerinde işlem yapılmak istenildiği zaman yani iterasyon yapılacağı zaman **for** döngüsü
+kullanılmaktadır.
+**Örnek 13**
+Bir cümle içerisinde geçen bir harfin kaç defa geçtiğini bulunuz.
+```python
+yazi="Python üst düzey basit sözdizimine sahip, öğrenmesi oldukça kolay,
+modülerliği, okunabilirliği desktekeyen, platform bağımsız nesne yönelimli
+yorumlanabilir bir script dilidir."
+harf="a"
+sayac=0
+for i in yazi:
+ if i=="a":
+ sayac=sayac+1
+print("cümle içerisinde geçen a harfi sayısı: ",sayac)
+cümle içerisinde geçen a harfi sayısı: 9
+```
+**Örnek 14**
+Bir cümle içerisinde geçen sesli harfleri bulan programı yazınız.
+```python
+yazi="Python üst düzey basit söz dizimine sahip, öğrenmesi oldukça kolay,
+modülerliği, okunabilirliği destekleyen, platform bağımsız nesne yönelimli
+yorumlanabilir bir script dilidir."
+sesli="aeıioöuü"
+for i in yazi:
+ if i in sesli:
+ print(i,end=",")
+o,ü,ü,e,a,i,ö,i,i,i,e,a,i,ö,e,e,i,o,u,a,o,a,o,ü,e,i,i,o,u,a,i,i,i,i,e,e,e,e,a,o,a,ı,
+ı,e,e,ö,e,i,i,o,u,a,a,i,i,i,i,i,i,i,
+```
+**Örnek 15**
+İki farklı karakter dizisi belirleyerek, birinci de olup, diğerinde olmayan karakterleri bulunuz.
+```python
+cumle1="Python üst düzey basit sözdizimine sahip, öğrenmesi oldukça kolay,
+modülerliği, okunabilirliği destekleyen, platform bağımsız nesne yönelimli
+yorumlanabilir bir script dilidir."
+cumle2=" Python interaktif yani etkileşimli bir programlama dilidir."
+for i in cumle2:
+ if not i in cumle1:
+ print(i,end=",")
+ş,g,
+```
+
+**Örnek 16**
+Kullanıcı tarafından girilen bir karakter dizisi içerisinde geçen sesli ve sessiz harfleri ayrı ayrı listelere
+atayan programı yazınız.
+```python
+sesli_harfler = "aeıioöuü"
+sessiz_harfler = "bcçdfgğhjklmnprsştvyz"
+sesliler=""
+sessizler=""
+a=input("bir metin giriniz")
+for i in a:
+ if i in sesli_harfler:
+ sesliler=sesliler+i
+ if i in sessiz_harfler:
+ sessizler=sessizler+i
+print("sesli harfler",sesliler)
+print("sessiz harfler",sessizler)
+bir metin giriniz Python üst düzey basit söz dizimine sahip, öğrenmesi oldukça
+kolay, modülerliği, okunabilirliği destekleyen, platform bağımsız nesne yönelimli
+yorumlanabilir bir script dilidir.
+sesli harfler oüüeaiöiiieaiöeeiouaoaoüeiiouaiiiieeeeaoaııeeöeiiouaaiiiiiii
+sessiz harfler ythnstdzybstszdzmnshpğrnmsldkçklymdlrlğknblrlğdsktkynpltfrmbğmsznsnynl
+mlyrmlnblrbrscrptdldr
+```
+### 6.2.3. Listeler Üzerinde İterasyon İşlemi
+Python’da karakter dizilerinde yapılan işlem gibi listeler üzerinde de iterasyon işlemi yapılabilir. Örnek
+olarak elimizde bir liste olduğunu ve içerisinde sayısal ifadeler (integer tanımlanmış) olduğunu düşünelim. Bu değeri toplayabilir, ortalamasını bulabilir ya da farklı bir listeye atayabilirsiniz. Kullanım şekli
+itibariyle karakter dizilerinde yapılan işlemlerin aynısı yapılabilir.
+
+**Örnek 17**
+İçerisinde sayısal değerler olan bir listedeki değerlerin karesini alarak başka bir listeye atayınız.
+```python
+sayılar = [1,2,3,4,5]
+kareler = []
+for i in sayılar:
+ kareler.append(i*i)
+print(kareler)
+[1, 4, 9, 16, 25]
+```
+**Örnek 18**
+Bir liste içerisinde bulunan değerlerin ortalamasını bulun.
+```python
+sayılar = [1,2,3,4,5,6,7,8,9]
+toplam=0
+for i in sayılar:
+ toplam=toplam+i
+print("sayıların ortalaması: ",toplam/len(sayılar))
+sayıların ortalaması: 5.0
+Örnek 19
+Listedeki değerlerden 3’ün katları olan sayıları ekrana yazdırın.
+sayılar = [5,8,12,17,25,36,41,49,60,72]
+for i in sayılar:
+ if i%3==0:
+ print(i,end=",")
+12,36,60,72,
+```
+
+**Örnek 20**
+İç içe listeler üzerinde gezinme işlemi yapılabilir. [[3,4],[7,8],[10,11],[14,15]] şeklinde bir liste olduğunu
+varsayalım. Liste elemanları üzerinde klasik bir şekilde gezinme işlemi yapılmak istenirse:
+```python
+liste = [[3,4],[7,8],[10,11],[14,15]]
+for i in liste:
+ print(i,end=",")
+ [3, 4],[7, 8],[10, 11],[14, 15],
+Listeye erişildi ancak alt listelere erişilebilmesi için aşağıdaki gibi bir yapının kullanılması gerekmektedir.
+```
+**Örnek 21**
+```python
+liste = [[3,4],[7,8],[10,11],[14,15]]
+for i,j in liste:
+ print(i,end=",")
+ print(j,end=",")
+3,4,7,8,10,11,14,15,
+```
+**Örnek 22**
+Ya da iç içe for düngüsü kullanarak aynı işlem gerçekleştirilebilir.
+```python
+liste = [[3,4],[7,8],[10,11],[14,15]]
+for i in liste:
+ for j in i:
+ print(j,end=",")
+3,4,7,8,10,11,14,15,
+```
