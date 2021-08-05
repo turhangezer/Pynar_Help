@@ -303,19 +303,27 @@ pip install PaketAdi==1.0.4 # istenilen versiyonu kurar
 $ pip install 'PaketAdi>=1.0.4' # alt limit ile verilen versiyonu kurar
 ```
 **install** : Yeni bir paket yükler.
+
 **Uninstall** : Varolan bir paketi siler.
+
 **Freze** : Yüklü tüm paketleri requirements formatında listesini çıktıya verir.
+
 **List** : Yüklü tüm paketleri normal listesini çıktıya verir.
+
 **Show** : Yüklü paketler hakkında bilgi verir.
+
 **Search** : Paketler içinde arama yapar.
+
 **Wheel** : Paketler içinde requirements için bir arşiv yapar.
+
 **Upgrade** : Kurulu bir paketi güncellemek için kullanılır.
+
 
 Python2’de pipi kullanmak için pip2 ve Python3‘te kullanmak için de pip3 komutu kullanılır. Cmd ekranı
 kullanılarak Şekil 10.5’te görüldüğü üzere “face_recognition” paketini yükleyebiliriz. Kaldırmak içinde
 aynı şekilde “uninstall” komutu kullanılır.
 
-![image](https://user-images.githubusercontent.com/56341239/128365547-a858ef16-221c-4c28-b8f3-f022b1e99fe7.png)
+![image](https://user-images.githubusercontent.com/56341239/128365547-a858ef16-221c-4c28-b8f3-f022b1e99fe7.png?style=centerme)
 
 **Şekil 10.5:** face_recognition paketini yükleme ekranı
 
