@@ -278,3 +278,35 @@ kolaylıkla yapabilmesini sağlamaktadır.
 | 10      | ‘sort’    | Listenin elemanlarını alfabetik olarak sıralar                                                                                                                                   |
 | 11      | ‘reverse’ | Bu metot sort metodunun aksine listedeki elemanları ters alfabetik olarak sıralar.                                                                                               |
 | 12      | ‘del’     | Liste içerisinden bir elemanı silmek için kullanılır. Silme işlemi indis numarasına göre yapılmaktadır.****
+
+
+## 5.4.1. ‘append’ kullanımı
+**Örnek 14**
+```
+takimlar=["gs","fb","bjk"]
+takimlar.append("ts")
+print(takimlar)
+['gs', 'fb', 'bjk', 'ts']
+```
+Örnek 14’te takimlar listesine “ts” ögesi eklenmiş ve son indis numarasında yer almıştır.
+
+## 5.4.2. ‘insert’ kullanımı
+Örnek 15
+```
+sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
+sebzeler.insert(2,"patlıcan")
+print(sebzeler)
+['lahana', 'marul', 'patlıcan', 'pırasa', 'ıspanak', 'fasulye']
+```
+Örnek 15’te insert metodu kullanılarak 2. indis numarasına “patlıcan” ögesi eklenerek, listeleme işlemi
+yapılmıştır.
+## 5.4.3. ‘copy’ kullanımı
+```
+Örnek 16
+iller1 =["konya","karaman","kocaeli","kayseri","kahramanmaraş"]
+iller2=[]
+iller2 = iller1.copy()
+print(iller2)
+['konya', 'karaman', 'kocaeli', 'kayseri', 'kahramanmaraş']
+```
+Örnek 16’da iller1 listesi copy metodu ile iller2 listesine aktarılmıştır.
