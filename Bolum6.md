@@ -95,11 +95,15 @@ değerini arttırma işleminin unutulmasıdır. Bu durumda koşul sürekli sağl
 sayac=1
 while sayac<6:
  print(sayac)
+ ```
 Yukarıdaki örnekte bilinçli olarak sayaç isimli değişkenin değeri arttırılmamıştır. Uygulamayı çalıştırıldığında görüleceği üzere program hiç durmadan çalışacak ve ekrana sürekli 1 değeri yazacaktır. Bu işlem
 sırasında klavyeden “ctrl + c” tuşuna basarak Python’a kesme gönderebilir ve uygulama sonlandırılabilir.
+
 **Örnek 5**
+
 while döngüsü kullanarak 1-100 arasındaki (100 dâhil) çift sayıları bularak ekrana yan yana yazan
 programı yazınız.
+```python
 a=1
 while a<=100:
  if a%2==0:
