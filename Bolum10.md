@@ -171,7 +171,7 @@ print(dir(math))
 
 Örnek 3’teki math modülüne ait nesneleri adlarını kullanarak projeye ekleyebilirsiniz.
 
-**Math Kütüphaneleri**
+### Math Kütüphaneleri
 
 **Math.pi**, bize pi sayısını ve **math.pow** ise sayının üssünü alarak değerini vermektedir. Bu değerleri
 kullanarak dairenin alanını Örnek 4’te bulmaya çalışınız. Örnekte önce math modülümüzü çağırdık.
@@ -293,7 +293,7 @@ açıp python yorumlayıcısını çalıştırarak Python yorumlayıcısına aş
 
 **Şekil 10.4:** Pip Paket yükleyici ekranı
 
-**Pip ile Paket Nasıl Yüklenir ve Kaldırılır?**
+### Pip ile Paket Nasıl Yüklenir ve Kaldırılır?
 
 Pip ile paket kurmak için cmd açılmalı ve cmd ekranına şu kod yazılmalıdır:
 ```python
