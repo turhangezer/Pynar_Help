@@ -7,7 +7,7 @@ kaydedilebilen veri yapılardır. Verilere döngü gibi yapılarla sıralı olar
 avantaj sağlayıp, iki köşeli parantez arasında tanımlanırlar. Listelerde sözlüklerden farklı olarak dilimlenebilir ve elemanları sonradan değiştirilebilir. Aşağıda görüldüğü üzere boş liste ve int, string ve float
 verilerini bulunduran listeler tanımlanmıştır.
 
-``` 
+```python
 liste= [] #boş list
 liste=list()
 liste1=[1,2,3,4,5,6]
