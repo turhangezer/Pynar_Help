@@ -83,10 +83,9 @@ eksiğidir.
 
 Tablo 1. Listelerde indis numarasına göre veri sıralaması
 
- 
-||||
-| ------------- |:-------------:| -----:|-----:|
-| Başlangıç      |  s  |  a |Bitiş(Uzunluk-1)|
-| Harfler[0]      | Harfler[1]      |   Harfler[2] | s |
+|            |             |             |                  |
+|------------|-------------|-------------|------------------|
+| Başlangıç  |             |             | Bitiş(Uzunluk-1) |
+| Harfler[0] | Harfler[1]  | Harfler[2]  | …                |
 
 
