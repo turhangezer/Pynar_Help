@@ -187,3 +187,58 @@ else:
  print("Bu değer listede yok")
 Bu değer listede var.
 ```
+Aşağıdaki örnekte 5 elemanlı bir liste tanımlanmıştır. İndis numaralarını kullanarak, listenin 1. indisten
+başlayarak, 3. indise kadar öge listesine aktarıp listeleme işlemi yapılmıştır.
+```
+liste = [1,2,3,4,5]
+öge = listem[1:3]
+print(öge)
+[2,3]
+```
+**Örnek 10**
+```
+listem=[10,20,30,40,50]
+eleman = listem[3]
+print(eleman)
+40
+```
+Örnek 10’da listem adında bir liste tanımlanarak 5 elemanlı ifade girilmiştir. Listem adlı liste için 3. indis
+numarasına ait ifade eleman adlı değişkene atama işlemi yapılmıştır. Eleman adlı değişken de ekrana
+yazdırılarak 40 sonucu elde edilmiştir.
+**Örnek 11**
+```
+listem = [10,20,30,40,50]
+eleman = listem[1:3]
+print(eleman)
+[20, 30]
+```
+Örnek 11’de listem adlı listede eleman adlı değişkene sadece 1 ve 2. indis numaralarının dâhil edildiği
+3. indis numarasının dâhil edilmediği atama işlemi yapılmıştır. Eleman adlı değişken de ekrana yazdırılarak 20 ve 30 değerleri listelenmiştir.
+
+**Örnek 12**
+```
+liste = [1,2,3,4,5,6,7,8,9,10]
+print(liste)
+# 1. eleman
+print(liste[0])
+# 6. eleman
+print(liste[5])
+# Baştan 5. indekse kadar (dahil değil)
+print(liste[:5])
+# 1.indisten 5.indise kadar
+print(liste[1:7])
+print(liste[5:])
+print(liste[::2])
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+1
+7
+[1, 2, 3, 4, 5]
+[2, 3, 4, 5, 6, 7]
+[6, 7, 8, 9, 10]
+[1, 3, 5, 7, 9]
+```
+Örnek 12’de, 10 elemanlı bir liste tanımlanmış ve indis numaraları kullanılarak ekrana listeleme işlemi
+yapılmıştır.
+Listelerde *negatif indisler* de kullanılabilir. Negatif indis numarası listenin sonuncu elemanından başlayarak sayıldığında (sondan başa) sıra numarasını verir. Örnek 13’te listenin sonuncu elemanına liste[-1]
+olarak, sondan ikinciye ise [-2] olarak ulaşılır. Güle güle elemanı liste de -1.indis olarak görülmektedir.
+Merhaba ise geriye doğru sayıldığında -4. indis’tir.
