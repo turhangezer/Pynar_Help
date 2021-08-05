@@ -79,6 +79,8 @@ def yazdir(metin,kacKere):
  print (metin, end='\n')
 #Fonksiyon çağırma
 yazdir('Merhaba', 5)
+```
+```
 Merhaba
 Merhaba
 Merhaba
