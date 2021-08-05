@@ -12,6 +12,7 @@ akşam güneş batar. Bu işlem süreklilik arz etmektedir.
 
 ![image](https://user-images.githubusercontent.com/56341239/128348610-25d701b9-9ee8-48cb-826b-75a86122c219.png)
 **Şekil 6.2:** Döngü Yapısı
+
 Yukarıdaki şekilde koşul sağlandığı sürece döngü devam edecektir. Ne zaman ki koşul şartı gerçekleşmezse o durumda döngüden çıkılacaktır.
 Python’da **while** ve **for** döngüleri olmak üzere iki tür döngü bulunur.
 
@@ -63,6 +64,7 @@ while sayac<6:
 ### 6.1.1. Döngünün Kapsamı
 Hatırlanacağı üzere döngü koşulunun sağlandığı sürece daha içteki bloklarda bulunan kodların çalışacağı belirtilmişti. Döngü bittiği zaman Python bir üstteki bloğa dönerek çalışmasına devam eder.
 **Örnek 3**
+
 ```python
 # şartın başlangıç değeri
 sayac=1
@@ -83,6 +85,7 @@ while döngüsü ile çalışırken sık yapılan hatalardan birisi döngü içe
 değerini arttırma işleminin unutulmasıdır. Bu durumda koşul sürekli sağlanacağı için döngü sürekli çalışır ve dışarıdan bir müdahale ile sonlandırılması gerekir.
 
 **Örnek 4**
+
 ```python
 sayac=1
 while sayac<6:
@@ -100,6 +103,7 @@ while a<=100:
 2,4,6,8…..,100
 ```
 **Örnek 6**
+
 while döngüsü kullanarak 1 – 100 arasındaki sayıların toplamını bulan programı yazınız.
 ```python
 toplam=0
