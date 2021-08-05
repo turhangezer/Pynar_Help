@@ -239,6 +239,28 @@ print(liste[::2])
 ```
 Örnek 12’de, 10 elemanlı bir liste tanımlanmış ve indis numaraları kullanılarak ekrana listeleme işlemi
 yapılmıştır.
-Listelerde *negatif indisler* de kullanılabilir. Negatif indis numarası listenin sonuncu elemanından başlayarak sayıldığında (sondan başa) sıra numarasını verir. Örnek 13’te listenin sonuncu elemanına liste[-1]
+Listelerde **negatif indisler** de kullanılabilir. Negatif indis numarası listenin sonuncu elemanından başlayarak sayıldığında (sondan başa) sıra numarasını verir. Örnek 13’te listenin sonuncu elemanına liste[-1]
 olarak, sondan ikinciye ise [-2] olarak ulaşılır. Güle güle elemanı liste de -1.indis olarak görülmektedir.
 Merhaba ise geriye doğru sayıldığında -4. indis’tir.
+
+**Örnek 13**
+```
+liste = [ "merhaba", "dünya", "merhaba", "güle güle" ]
+print (liste [- 1 ]) #son ögeyi listeler
+print( liste [- 3 ]) #sondan üçüncü ögeyi listeler
+print(liste [- 4 ]) #sondan dördüncü ögeyi listeler
+print(liste[::-1]) #sondan başa doğru listeleme yapmak için kullanılır
+güle güle
+dünya
+merhaba
+['güle güle', 'merhaba', 'dünya', 'merhaba']
+```
+
+## 5.4. Temel Liste Metotları
+
+Metotlar listelerin işlevlerine erişilmesini sağlar. Listenin metotları için dir(  ) fonksiyonunu kullanarak tüm
+metotlar görülebilir. Bu metotlar yardımıyla listeler ekleme, çıkarma, arama, sıralama vb. birçok işlemin
+kolaylıkla yapabilmesini sağlamaktadır.
+
+**Tablo 3.** Temel liste metotları
+
