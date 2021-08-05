@@ -11,6 +11,7 @@ söz konusu ise **while döngü yapısı** tercih edilir. Örnek verilecek olurs
 akşam güneş batar. Bu işlem süreklilik arz etmektedir.
 
 ![image](https://user-images.githubusercontent.com/56341239/128348610-25d701b9-9ee8-48cb-826b-75a86122c219.png)
+
 **Şekil 6.2:** Döngü Yapısı
 
 Yukarıdaki şekilde koşul sağlandığı sürece döngü devam edecektir. Ne zaman ki koşul şartı gerçekleşmezse o durumda döngüden çıkılacaktır.
@@ -31,6 +32,7 @@ while (koşul durumu):
 Bu durum bir örnekle incelenmek istenirse,
 
 **Örnek 1**
+
 ```python
 # şartın başlangıç değeri
 sayac=1
@@ -50,6 +52,7 @@ ve sayaç değeri 6’ya eşit olana kadar bu durum devam eder. Aynı işlemi ek
 değeri yazılarak yapmak istenirse,
 
 **Örnek 2**
+
 ```python
 sayac=1
 while sayac<6:
@@ -63,6 +66,7 @@ while sayac<6:
 ```
 ### 6.1.1. Döngünün Kapsamı
 Hatırlanacağı üzere döngü koşulunun sağlandığı sürece daha içteki bloklarda bulunan kodların çalışacağı belirtilmişti. Döngü bittiği zaman Python bir üstteki bloğa dönerek çalışmasına devam eder.
+
 **Örnek 3**
 
 ```python
