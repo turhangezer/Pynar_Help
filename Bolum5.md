@@ -86,7 +86,8 @@ Tablo 1. Listelerde indis numarasına göre veri sıralaması
 Başlangıç|    |   |Bitiş(Uzunluk-1)
 Harfler[0]|Harfler[1]|Harfler[2]|...
  
-
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
