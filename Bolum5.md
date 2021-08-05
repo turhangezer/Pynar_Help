@@ -472,7 +472,7 @@ print(sebzeler[0])
 ['yeşil', 'ıspanak']
 ```
 **Tablo 4.** Sebzeler listesi elemanları
-| Liste adı      |<td colspan=5> sebzeler            |                    |                     |                  |                      |
+| Liste adı      |<td colspan=4> sebzeler                                      |
 |:--------------:|:-------------------:|:------------------:|:-------------------:|:----------------:|:--------------------:| 
 | Eleman değeri  | ‘yeşil’, ‘ıspanak’  | ‘beyaz’, ‘lahana’  | ‘turuncu’, ‘havuç’  | ‘siyah’, ‘turp’  | ‘kırmızı’, ‘domates’ |
 | İndis numarası | 0                   | 1                  | 2                   | 3                | 4                    |
