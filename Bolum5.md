@@ -280,7 +280,7 @@ kolaylıkla yapabilmesini sağlamaktadır.
 | 12      | ‘del’     | Liste içerisinden bir elemanı silmek için kullanılır. Silme işlemi indis numarasına göre yapılmaktadır.****
 
 
-#### 5.4.1. ‘append’ kullanımı
+### 5.4.1. ‘append’ kullanımı
 **Örnek 14**
 ```
 takimlar=["gs","fb","bjk"]
@@ -290,7 +290,7 @@ print(takimlar)
 ```
 Örnek 14’te takimlar listesine “ts” ögesi eklenmiş ve son indis numarasında yer almıştır.
 
-#### 5.4.2. ‘insert’ kullanımı
+### 5.4.2. ‘insert’ kullanımı
 Örnek 15
 ```
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
@@ -300,7 +300,7 @@ print(sebzeler)
 ```
 Örnek 15’te insert metodu kullanılarak 2. indis numarasına “patlıcan” ögesi eklenerek, listeleme işlemi
 yapılmıştır.
-#### 5.4.3. ‘copy’ kullanımı
+### 5.4.3. ‘copy’ kullanımı
 ```
 Örnek 16
 iller1 =["konya","karaman","kocaeli","kayseri","kahramanmaraş"]
@@ -311,7 +311,7 @@ print(iller2)
 ```
 Örnek 16’da iller1 listesi copy metodu ile iller2 listesine aktarılmıştır.
 
-#### 5.4.4. ‘count’ kullanımı
+### 5.4.4. ‘count’ kullanımı
 **Örnek 17**
 ```
 takimlar = ['GS','FB','BJK','TS']
@@ -319,7 +319,7 @@ print(takimlar.count('FB'))
 1
 ```
 Örnek 17’de takimlar listesinde ‘FB’ ögesinin kaç adet olduğu count metodu bulunmuştur.
-## 5.4.5. ‘extend’ kullanımı
+### 5.4.5. ‘extend’ kullanımı
 **Örnek 18**
 ```
 kus1=["bıldırcın","papağan","kartal","akbaba","şahin"]
@@ -329,7 +329,7 @@ print(kus1)
 ['bıldırcın', 'papağan', 'kartal', 'akbaba', 'şahin', 'baykuş', 'muhabbet']
 ```
 Örnek 18’de extend komutu listelerdeki ögelerin kendi elemanlarını koruyarak genişletme işlemi yapılmıştır.
-#### 5.4.6. ‘indis’ kullanımı
+### 5.4.6. ‘indis’ kullanımı
 **Örnek 19**
 ```
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
@@ -338,7 +338,7 @@ print(sebzeler.indis("ıspanak"))
 ```
 İndis metodu yardımıyla Örnek 19’da görüldüğü gibi verilen bir ögenin indis numarasını vermektedir.
 
-#### 5.4.7. ‘clear’ kullanımı
+### 5.4.7. ‘clear’ kullanımı
 **Örnek 20**
 ```
 liste =["ayva","nar","kiraz","kayısı","Üzüm"]
@@ -347,7 +347,7 @@ print(liste)
 []
 clear(  ) metodu kullanılarak örnek 20’deki listenin tüm ögeleri silinmiştir.
 ```
-#### 5.4.8. ‘pop’ kullanımı
+### 5.4.8. ‘pop’ kullanımı
 **Örnek 21**
 ```
 sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
@@ -356,7 +356,7 @@ print(sebzeler)
 ['lahana', 'marul', 'ıspanak', 'fasulye']
 ```
 Örnek 21’de pop metodu ile sebzeler listesinden 2.indis numarasına ait olan “pırasa” adlı öge silinmiştir.
-#### 5.4.9. ‘remove’ kullanımı
+### 5.4.9. ‘remove’ kullanımı
 **Örnek 22**
 ```
 sehirler =["adana","ağrı","bursa","konya","ankara"]
@@ -366,7 +366,7 @@ print(sehirler)
 ```
 Örnek 22’de öge adına göre silme işlemi yapılmıştır ve “konya” adlı öge sehirler listesinden silinmiştir
 
-#### 5.4.10. ‘reverse’ kullanımı
+### 5.4.10. ‘reverse’ kullanımı
 **Örnek 23**
 ```
 sayilar=[10,20,30,40,50,60,70]
@@ -375,7 +375,7 @@ print(sayilar)
 [70, 60, 50, 40, 30, 20, 10]
 ```
 Örnek 23’te reverse metodu ile liste öge elemanları tersten sıralanmıştır.
-#### 5.4.11. ‘sort’ kullanımı
+### 5.4.11. ‘sort’ kullanımı
 **Örnek 24**
 ```
 isimler=["elif","ayşe","kemal","kaan","hafsa"]
@@ -406,3 +406,73 @@ __xxx__ şeklinde özel metotlar da bulunmaktadır. Bu metotlarda dir(list) şek
 'count', 'extend', 'indis', 'insert', 'pop', 'remove', 'reverse', 'sort']
 ```
 ## 5.5. Len() Fonksiyonu ile Uzunluk Bilgisi
+
+len(  ) fonksiyonu, İngilizce length’in (uzunluk) kısaltılmış hâlidir. String ifadesinin uzunluğunu yani karakter sayısını verir. Örnek 14’te a adlı string değişkene değer atadığımızda değişkendeki karakterlerin
+sayısını vermektedir.
+**Örnek 26**
+```
+a="Galatasaray"
+print(len(a))
+11
+```
+Örnek 26’da “len(  )” kullanımına bakıldığında, takimlar adında bir liste tanımlanmış. Bu listeye veri girişi yapılmıştır. Len(  ) komutu ile listenin adı yazılarak, kaç elemanlı olduğu ekrana yazdırılmıştır. Örnek
+27’de len(  ) fonksiyonu ile takimlar listesinin eleman listesi 4 olarak verilmiştir.
+
+**Örnek 27**
+```
+takimlar = ['GS','FB','BJK','TS']
+print( len(takimlar))
+4
+```
+Örnek 28’de 2 adet liste1 ve liste2 adında liste tanımlanmıştır. Bu listelere elemanlar girilerek, len()
+komutu ile kaç elemanlı olduğu bulunmuştur.
+**Örnek 28**
+```
+liste1, liste2 = ['abc',56,74 ,'python'], [12, 'opencv','a']
+print ("İlk liste uzunlugu : ", len(liste1))
+print( "İkinci listenin uzunluğu : ", len(liste2))
+İlk liste uzunlugu : 4
+İkinci listenin uzunluğu : 3
+```
+
+## 5.6. İç İçe Listeler
+Bir liste herhangi bir sıralama nesnesi içerebilir, hatta başka bir liste (alt liste) içerebilir, alt listeler de
+alt listeler içerebilir ve bu şekilde devam eder. Bu yuvalanmış liste olarak bilinir. Hiyerarşik yapılara veri
+düzenlemek için bunlar kullanılabilir.
+**Örnek 29**
+```
+liste1 = [1,2,3]
+liste2 = [4,5,6]
+liste3 = [7,8,9]
+yeniliste = [liste1,liste2,liste3]
+print(yeniliste)
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+```
+Örnek 29’da 3 adet liste oluşturuldu. Bu listelerin her biri ayrı öge olacak şekilde birleştirilerek iç içe
+liste oluşturuldu ve ekrana yazdırıldı.
+Örnek 30’da sebzeler adında boş şekilde liste oluşturuldu.
+
+**Örnek 30**
+```sebzeler=[]
+sebzeler.append(['yeşil','ıspanak'])
+sebzeler.append(['beyaz','lahana'])
+sebzeler.append(['turuncu','havuç'])
+sebzeler.append(['siyah','turp'])
+sebzeler.append(['kırmızı','domates'])
+```
+Append(  ) metodunu kullanarak sebzeler adlı listeye 5 adet eleman girildi. Girilen verilerin listelenmesi:
+```
+print(sebzeler)
+[['yeşil', 'ıspanak'], ['beyaz', 'lahana'], ['turuncu', 'havuç'], ['siyah', 'turp'],
+['kırmızı', 'domates']]
+```
+Sebzeler adında listede 4 adet eleman bulunmaktadır. Bunları teker teker sıralanırsa:
+```
+print(sebzeler[0])
+['yeşil', 'ıspanak']
+```
+**Tablo 4.** Sebzeler listesi elemanları
+| Liste adı      | sebzeler            |                    |                     |                  |                      |
+|:--------------:|:-------------------:|:------------------:|:-------------------:|:----------------:|:--------------------:|
+| Eleman değeri  | ‘yeşil’, ‘ıspanak’  | ‘beyaz’, ‘lahana’  | ‘turuncu’, ‘havuç’  | ‘siyah’, ‘turp’  | ‘kırmızı’, ‘domates’ |
+| İndis numarası | 0                   | 1                  | 2                   | 3                | 4                    |
