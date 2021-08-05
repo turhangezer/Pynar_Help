@@ -439,8 +439,12 @@ print(*range(10))
 0 1 2 3 4 5 6 7 8 9
 range fonksiyonu, girilen aralık arasında integer değerler oluşturur. Örnek 23’te aralık belirtilmediği
 için başlangıç değeri 0 alınmıştır. Başlangıç değeri verilerek girilen değerler arasında sayı dizisi oluşturulması sağlanabilir.
-Örnek 24
-print(*range(5,20))
+```
+
+**Örnek 24**
+
+```python
+range(5,20))
 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 Ayrıca range fonksiyonuna üçüncü bir parametre verilerek atlama değeri de verilebilir.
 ```
