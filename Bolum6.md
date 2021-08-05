@@ -386,8 +386,12 @@ for i in sayılar:
  toplam=toplam+i
 print("sayıların ortalaması: ",toplam/len(sayılar))
 sayıların ortalaması: 5.0
-Örnek 19
+```
+
+**Örnek 19**
+
 Listedeki değerlerden 3’ün katları olan sayıları ekrana yazdırın.
+```python
 sayılar = [5,8,12,17,25,36,41,49,60,72]
 for i in sayılar:
  if i%3==0:
