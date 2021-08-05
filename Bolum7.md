@@ -157,10 +157,10 @@ türlerini kullanır.
 Döngülerde örnek olarak verilen ağaç çizme kodlarını bir fonksiyon hâline getirebilirsiniz.
 
 ```python
-def agacCiz(agacinYuksekligi, karakter='\*'):
+def agacCiz(agacinYuksekligi, karakter='*'):
  b=agacinYuksekligi
  for i in range(1,agacinYuksekligi+1):
- print(b\*' ',(2\*i-1)\*karakter)
+ print(b*' ',(2*i-1)*karakter)
  b-=1
 ```
 
@@ -174,4 +174,29 @@ if agacKarakteri!='' and agacYuksekligi>=1:
 elif agacKarakteri=='' and agacYuksekligi>=1:
  agacCiz(agacYuksekligi)
 else: print('Hatalı giriş')
+
+Ağacın yüksekliği kaç satır olsun? : 10
+Ağaç için bir sembol veya karakter giriniz :
+            *
+           ***
+          *****
+         *******
+        *********
+       ***********
+      *************
+     ***************
+    *****************
+   *******************
 ```
+Yukarıda bir “agacCiz” fonksiyonu tanımlanmıştır. Bu fonksiyonun “agacinyuksekligi” ve karakter adlarında iki adet parametresi bulunmaktadır. “agacinYuksekligi” ağacın satır sayısını belirten bir parametredir. Bu parametreye bir argüman (değer) verilmezse fonksiyon hata verir. Böyle parametrelere
+“zorunlu parametre” denir. Karakter parametresi ise parametre olarak tanımlanırken bir değerle birlikte
+tanımlanmıştır, bu değer parametrenin varsayılan değeridir. Varsayılan değer olarak “None” boş değer
+verilebilir. Zorunlu parametreler dışında fonksiyonlarda kullanılan diğer parametreler için varsayılan
+değerler tanımlanabilir. Eğer kullanıcı karakter olarak bir giriş yapmazsa yani boş bırakırsa fonksiyon
+ağacı varsayılan olarak “\*” karakterini kullanarak oluşturur.
+
+
+## 7.4. Değer Döndüren ve Döndürmeyen Fonksiyonlar
+Python’da fonksiyonlardan bazıları sadece bir işlevi yerine getirir ve görevi orada biter. Ama bazı fonksiyonlar bir değer döndürür. “int(  )” fonksiyonu verilen argümanı sayıya çevirerek döndürür. Yukarıdaki örneklerde “faktoriyelAl” ve “agacCiz” fonksiyonları bir değer döndürmemektedir. Değer döndüren
+fonksiyonlarda “return” ifadesi yer alır. Bir fonksiyonun sadece ekrana yazı yazdırması değer döndürdüğü anlamına gelmez. Eğer bir fonksiyonun çıktısı uygun bir değişkene atanabiliyorsa bu fonksiyon değer
+döndüren bir fonksiyondur.
