@@ -462,13 +462,13 @@ sebzeler.append(['siyah','turp'])
 sebzeler.append(['kırmızı','domates'])
 ```
 Append(  ) metodunu kullanarak sebzeler adlı listeye 5 adet eleman girildi. Girilen verilerin listelenmesi:
-```pythonpython
+```python
 print(sebzeler)
 [['yeşil', 'ıspanak'], ['beyaz', 'lahana'], ['turuncu', 'havuç'], ['siyah', 'turp'],
 ['kırmızı', 'domates']]
 ```
 Sebzeler adında listede 4 adet eleman bulunmaktadır. Bunları teker teker sıralanırsa:
-```pythonpython
+```python
 print(sebzeler[0])
 ['yeşil', 'ıspanak']
 ```
@@ -479,7 +479,7 @@ print(sebzeler[0])
 | İndis numarası | 0                   | 1                  | 2                   | 3                | 4                    |
 
 **Örnek 31**
-```pythonpython
+```python
 sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
 sebze=sebzeler[1]
 print(sebze)
@@ -488,7 +488,7 @@ print(sebze)
 Örnek 31’e bakıldığı zaman, sebze değişkenine sadece sebzeler [1] matrisindeki değer atanmıştır. Tablo
 4’te sebzeler listesinde sadece havuç değeri listelenmek isteniyorsa indis numarasından faydalanılır.
 **Örnek 32**
-```pythonpython
+```python
 sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
 print(sebzeler[2][1])
 havuç
@@ -498,7 +498,7 @@ ekrana yazdırılmıştır.
 
 **Örnek 33**
 # 3 Adet liste oluşturalım.
-```pythonpython
+```python
 birinci_liste = [1,2,3]
 ikinci_liste = ['a','b','c']
 ucuncu_liste= [40,50,60]
@@ -511,7 +511,7 @@ sadece a ve 50 değerlerini yan yana listelemek için aşağıdaki kodlar kullan
 
 **Örnek 34**
 # 3 Adet liste oluşturalım.
-```pythonpython
+```python
 birinci_liste = [1,2,3]
 ikinci_liste = ['a','b','c']
 ucuncu_liste= [40,50,60]
@@ -523,7 +523,7 @@ a 50
 Listelerde veri tipi dönüşümleri için, elemanlara yeni değer ataması yapıldığında string, int, float vb. veri
 tipleri arasında değer alabilir.
 **Örnek 35**
-```pythonpython
+```python
 liste=[1,2,3,4,5,'ankara']
 print(liste)
 liste[0]=str("kocaeli")
