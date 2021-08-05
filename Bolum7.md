@@ -197,6 +197,197 @@ ağacı varsayılan olarak “\*” karakterini kullanarak oluşturur.
 
 
 ## 7.4. Değer Döndüren ve Döndürmeyen Fonksiyonlar
+
 Python’da fonksiyonlardan bazıları sadece bir işlevi yerine getirir ve görevi orada biter. Ama bazı fonksiyonlar bir değer döndürür. “int(  )” fonksiyonu verilen argümanı sayıya çevirerek döndürür. Yukarıdaki örneklerde “faktoriyelAl” ve “agacCiz” fonksiyonları bir değer döndürmemektedir. Değer döndüren
 fonksiyonlarda “return” ifadesi yer alır. Bir fonksiyonun sadece ekrana yazı yazdırması değer döndürdüğü anlamına gelmez. Eğer bir fonksiyonun çıktısı uygun bir değişkene atanabiliyorsa bu fonksiyon değer
 döndüren bir fonksiyondur.
+
+**Örnek 7**
+
+Örnekte kullanılan faktoriyelAl() fonksiyonunu değer döndüren bir fonksiyon hâline getirebilirsiniz.
+
+```python
+def faktoriyelAl(sayi):
+ sonuc=1
+ if (sayi==0 or sayi==1):
+ sonuc=1
+ elif sayi>1:
+ for i in range(1, sayi+1, 1):
+ sonuc*=i
+ else: sonuc=-1 #hatalı bir işlem olduğunu anlamak için -1 değerini veriyoruz
+ return sonuc
+```
+
+Değer döndüren fonksiyonu aşağıdaki gibi çağırabilirsiniz.
+
+
+```python
+sonucumuz=faktoriyelAl(5)
+#fonksiyonu bir değişkene atayabiliyoruz.
+if sonucumuz!=-1: # bir hata olup olmadığını kontrol edelim
+ print(sonucumuz)
+else:print('Bir hata oluştu')
+120
+```
+Kendi tanımladığınız fonksiyonların içinde temel fonksiyonları ya da tanımladığınız başka fonksiyonları
+da kullanabilirsiniz
+
+
+**Örnek 8**
+
+Kullanıcıdan liste olarak aldığı sayıların ortalamasını bulan bir fonksiyon tanımlayabilir ve bunun içinde
+len(  ) fonksiyonunu çağırabilirsiniz.
+
+```python
+def ortalamaBul(sayilar):
+ sayilarinToplami=0
+ sayilarinOrtalamasi=0
+ for i in range(len(sayilar)):
+ sayilarinToplami+=sayilar[i]
+ sayilarinOrtalamasi=sayilarinToplami/len(sayilar)
+ return sayilarinOrtalamasi
+```
+Sayıları kullanıcıdan alarak fonksiyonunuzu çağırabilirsiniz.
+
+```python
+sayiAdedi=int(input('Kaç adet sayının ortalamasını alacaksınız: '))
+sayilarim=[]
+for i in range(0,sayiAdedi):
+ print (i+1, '. sayıyı giriniz?')
+ # indis sıfırdan başladığı için +1 kullandık
+ sayi=int(input())
+ sayilarim.append(sayi)
+ortalamaBul(sayilarim)
+Kaç adet sayının ortalamasını alacaksınız: 4
+1 . sayıyı giriniz?
+10
+2 . sayıyı giriniz?
+20
+3 . sayıyı giriniz?
+30
+4 . sayıyı giriniz?
+40
+25.0
+```
+
+**NOT**
+>  Fonksiyonlar bir fonksiyon da dâhil olmak üzere değer olarak her türlü veri tipini döndürebilirler.
+
+## 7.5. Global ve Lokal Değişkenler
+
+Python’da blok yapısından ve girintilerden söz etmiştik. Python’da tanımlanan ve değer atanan değişkenler tanımlandıkları blok içinde geçerlidir. Bir değişken aynı düzeydeki veya daha içerideki girintilerde
+de değerini korur.
+
+**Örnek 9**
+
+```python
+for i in range (1,3):
+ print ('i değişkenin değeri=', i)
+print ('i değişkenin son değeri=', i)
+i değişkenin değeri= 1
+i değişkenin değeri= 2
+i değişkenin son değeri= 2
+```
+
+“for” bloğu en dışta yer aldığı için i değeri onunla aynı hizada ve daha içerideki girintilerde tanınmakta
+ve değerini korumaktadır. Ancak sadece iç girintideki bir blokta değer atanan değişken dış bloklarda
+tanımsızdır. Bu tür değişkenlere yani kendi bloğu ve daha içerideki girintilerde tanınan değişkenlere yerel
+değişken denir. Bu özellik program yazarken dikkat edilmesi gereken bir durumdur.
+
+**Örnek 10**
+
+“if” bloğu içinde tanımlanan bir değişkene erişebilirsiniz.
+
+```python
+yas=35
+if yas ==35:
+ deger='yolun yarısı'
+print (deger)
+yolun yarısı
+```
+
+**Örnek 11**
+
+Şart sağlanmazsa “if” bloğunun içindeki kodlar çalışmayacaktır. Örnekte bunu deneyebilirsiniz.
+
+```python
+yas=34
+if yas ==35:
+ deger2='yolun yarısı'
+print (deger2)
+NameError Traceback (most recent call last)
+<ipython-input-126-3f455a188ff0> in <module>()
+ 2 if yas ==35:
+ 3 deger2='yolun yarısı'
+----> 4 print (deger2)
+```
+
+Hata mesajında deger2 adında bir değişkenin tanımlı olmadığı ifade edilmektedir.
+En dışta tanımlanan (girintisiz) değişkenler global değişkenlerdir. Global değişkenler ilk değerlerini tüm
+alt bloklara taşırlar.
+
+**Örnek 12**
+
+Alt bloklarda (iç girintide) aynı değişkene farklı bir değer atanabilir.
+
+```python
+yas=34 # global bir değişken
+dogumGunuMu=True
+if dogumGunuMu==True:
+ yas+=1 #yerelde aynı değişken 1 artırılmıştır.
+ print ('Nice yıllara! Yaş:', yas)
+Nice yıllara! Yaş: 35
+```
+ 
+ 
+**Örnek 13**
+
+if koşulu sağlanamazsa bloğun içindeki kodlar atlanır. Global değişken olarak tanımlanan yas2 değerini korur.
+
+```python
+yas2=34 # global bir değişken
+dogumGunuMu=False
+if dogumGunuMu==True:
+ yas2+=1 #yerelde aynı değişken 1 artırılmıştır.
+ print ('Nice yıllara! Yaş:', yas2)
+print ('Yaşınız: ', yas2)
+Yaşınız: 34
+```
+
+**Örnek 14**
+
+Aynı şekilde fonksiyonlar içinde tanımlanmış değişkenler yerel (lokal) değişkenler olduğu için fonksiyon
+çağrılmazsa hata ile karşılaşılır.
+
+```python
+def toplamBul (sayiListesi):
+ toplam=0
+ for i in range (len(sayiListesi)):
+ topla+=sayiListesi[i]
+ return topla
+print (topla)
+NameError Traceback (most recent call last)
+<ipython-input-132-e72b6ce4bac6> in <module>()
+----> 1 print (topla)
+NameError: name 'topla' is not defined
+```
+ 
+ **Örnek 15**
+ 
+Programınızda global bir değişken yazarak işlemi tekrarlayabilirsiniz.
+topla=0
+
+```python
+def toplamBul (sayiListesi):
+ topla=0
+ for i in range (len(sayiListesi)):
+ topla+=sayiListesi[i]
+ return topla
+Fonksiyonu tanımlanmasına rağmen global değişkene atanan değer ekrana yazdırılabilir.
+print (topla)
+0
+Şimdi de fonksiyonunuzu çağırabilirsiniz.
+toplamBul([1, 2, 3, 4, 5])
+15
+```
+Değişkene atanan yeni değer yani fonksiyonun sonucu görülmektedir.
