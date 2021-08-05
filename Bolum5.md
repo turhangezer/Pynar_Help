@@ -89,3 +89,100 @@ Tablo 1. Listelerde indis numarasına göre veri sıralaması
 | Harfler[0] | Harfler[1]  | Harfler[2]  | …                |
 
 
+```
+renkler = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+print('listeyi ekrana yazdırıyoruz')
+print(renkler)
+listeyi ekrana yazdırıyoruz
+['black', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+```
+
+Örnek 4’te görüldüğü üzere renkler listesindeki tüm ögeleri listelenmiştir.
+Python’da listeler üzerinde değişik türden veriler bir arada tutulabilir. Python’ı güçlü kılan özelliklerden
+biri olan listelerde, her bir eleman bir indis (indis) numarasına sahiptir. Bir listenin başlangıç indisi 0
+(sıfır)’dır.
+
+Tablo 2. İndis numarasına göre liste örneği
+
+|                 |             |            |            |              |
+|-----------------|-------------|------------|------------|--------------|
+| İndis numarası  | Liste[0]    | Liste[1]   | Liste[2]   | Liste[3]     |
+| Öge sıralaması  | Birinci öge | İkinci öge | Üçüncü öge | Dördüncü öge |
+| Liste =         | ‘ali’,      | 5,         | 3.14,      | ‘ayşe’       |
+
+Başlangıç elemanları belli olan bir listenin tanımlanması ve yazdırılması:
+
+
+**Örnek 5**
+```
+#liste1 adında bir liste tanımladık. İçine verileri girdik
+#bu verileri ekrana yazdırdık
+liste1 = ['a','b','c','d','e','f']
+print(liste1)
+['a', 'b', 'c', 'd', 'e', 'f']
+```
+
+Örnek 5’te liste1 adında liste tanımlandı ve char(karakter) olarak ögeleri bulunmaktadır. İndis numarasına bakıldığı zaman; aşağıdaki şekilde ögeler vardır.
+liste1[0] ='a' liste1[1] ='b' liste1[2] ='c' liste[3] ='d'
+liste1[4] ='e' liste1[5] ='f'
+
+```Listeler hem string hem de sayı türünde veriler barındırabilir. Örnek 6 incelendiğinde 7 elemanlı bir liste
+tanımlıdır. 6 ve 7. elamanları sayı diğerleri metin olan bir listedir.
+```
+
+** Örnek 6 **
+```
+liste2=['python','geleceği','olan','bir','dil',500,0.567]
+print(liste2)
+['python', 'geleceği', 'olan', 'bir', 'dil', 500,0.567]
+```
+Örnek 6’da sayı, float ve string ögelerine sahip liste ekrana yazdırılmıştır.
+
+## 5.3. Liste Elemanlarına Erişim
+
+Listedeki ögelere ulaşmak için bir değer, listenin indis numarasına göre atanıp çağrılabilir. Liste oluştururken içine herhangi bir değer girilmeden de oluşturulup, sonradan değer ataması yapılabilir ya
+da herhangi bir indis numarasından başlanıp belirlenen indis numarasına kadar olan ögelere ulaşılır.
+Aşağıdaki örneklerde görüldüğü gibi hem indis numarasından hem de başlangıcı ve bitişi belli olan
+indis numarası aralıklarına kadar ifadelere erişilmiştir. Listenin belirli aralıktaki öğelerini alma işlemine
+dilimleme denir. Liste dilimlerken adımlama da başlangıç indisi alır ama bitiş indisi almaz.
+
+
+**Kullanımı:**
+```
+eleman = liste[indis]
+dilim = liste[baslangic:bitis]
+```
+Liste, elemanlarına erişim için tamamını veya indis numarasına göre çağırmaktadır.
+
+**Örnek 7**
+```
+liste=["birinici veri","ikinci veri","üçüncü veri ","dördüncü veri","beşinci veri"]
+#beş elemenlı listenin ilk verisi
+print(liste[0])
+#beş elemenlı listenin son verisi
+print(liste[4])
+birinici veri
+beşinci veri
+```
+Örnek 7’de listenin indis numaraları yazılarak, başlangıç ve bitiş ögelerine ulaşılmıştır.
+
+**Örnek 8**
+```
+liste=["ayva","armut","kiraz","vişne"]
+print(liste)
+print(liste[1])
+['ayva', 'armut', 'kiraz', 'vişne']
+armut
+```
+Örnek 8’de ise listenin tüm ögeleri ve 1. indis numarasındaki öge olan “armut” değeri listelenmiştir.
+Liste içindeki ögeleri kontrol edilebilir. Eşya adında bir liste var. Liste tanımlanır, daha sonra if karar yapısı ile içindeki ögeler de “perde” olup olmadığı kontrol edilir.
+
+**Örnek 9**
+```
+esya = ["ayna", "televizyon", "perde"]
+if("perde" in esya):
+ print("Bu değer listede var.")
+else:
+ print("Bu değer listede yok")
+Bu değer listede var.
+```
