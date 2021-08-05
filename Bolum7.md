@@ -105,6 +105,7 @@ Kara Murat
 Bir sayının asal bir sayı olup olmadığını bulan bir fonksiyon yazabilirsiniz. Fonksiyon, sayı asal ise “True”;
 değilse “False” değerini döndürecektir.
 
+**NOT**
 >  “for” döngüsünde sayının yarısına kadar bakmamızın nedeni bir sayının kendi değerinin yarısından önce böleni yok ise sonrasında da olmayacağı kuralıdır.
 
 ```python
