@@ -262,7 +262,7 @@ Metotlar listelerin işlevlerine erişilmesini sağlar. Listenin metotları içi
 metotlar görülebilir. Bu metotlar yardımıyla listeler ekleme, çıkarma, arama, sıralama vb. birçok işlemin
 kolaylıkla yapabilmesini sağlamaktadır.
 
-**Tablo 3.** Temel liste metotları
+   **Tablo 3.** Temel liste metotları
 
 | Sıra No | Metot Adı | Görevi                                                                                                                                                                           |
 |---------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
