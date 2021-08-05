@@ -29,8 +29,10 @@ while (koşul durumu):
  2. adım
  3. adım
  .
+ 
  .
-Bu durum bir örnekle incelenmek istenirse,
+ 
+ Bu durum bir örnekle incelenmek istenirse,
 
 **Örnek 1**
 
