@@ -477,12 +477,65 @@ print(sebzeler[0])
 | Eleman değeri  | ‘yeşil’, ‘ıspanak’  | ‘beyaz’, ‘lahana’  | ‘turuncu’, ‘havuç’  | ‘siyah’, ‘turp’  | ‘kırmızı’, ‘domates’ |
 | İndis numarası | 0                   | 1                  | 2                   | 3                | 4                    |
 
-| Main Header Cell||||
-| Sub Header Cell || Sub Header Cell ||
-| Name | Name | Name | Name |
-| --- | --- | --- | --- |
-| Cell | Cell | Cell | Cell |
-| Cell | Cell | Cell | Cell |
-| Cell | Cell | Cell | Cell |
-| Cell | Cell | Cell | Cell |
-[*Caption*]
+**Örnek 31**
+```
+sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
+sebze=sebzeler[1]
+print(sebze)
+['beyaz', 'lahana']
+```
+Örnek 31’e bakıldığı zaman, sebze değişkenine sadece sebzeler [1] matrisindeki değer atanmıştır. Tablo
+4’te sebzeler listesinde sadece havuç değeri listelenmek isteniyorsa indis numarasından faydalanılır.
+**Örnek 32**
+```
+sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
+print(sebzeler[2][1])
+havuç
+```
+Örnek 33’te 4 adet liste oluşturulmuştur. İlk üç listenin tüm ögeleri son_liste adında listeye aktarılarak,
+ekrana yazdırılmıştır.
+
+**Örnek 33**
+# 3 Adet liste oluşturalım.
+```
+birinci_liste = [1,2,3]
+ikinci_liste = ['a','b','c']
+ucuncu_liste= [40,50,60]
+son_liste= [birinci_liste,ikinci_liste,ucuncu_liste]
+print(son_liste)
+[[1, 2, 3], ['a', 'b', 'c'], [40, 50, 60]]
+```
+Örnek 34’te 3 adet liste oluşturulmuştur. Bunlara birinci_liste, ikinci_liste, ucuncu_liste isimleri verilmiştir. Son_liste adında liste oluşturularak diğer üç listenin elemanları bu listeye kaydedilmiştir. Ekrana
+sadece a ve 50 değerlerini yan yana listelemek için aşağıdaki kodlar kullanılır.
+
+**Örnek 34**
+# 3 Adet liste oluşturalım.
+```
+birinci_liste = [1,2,3]
+ikinci_liste = ['a','b','c']
+ucuncu_liste= [40,50,60]
+son_liste= [birinci_liste,ikinci_liste,ucuncu_liste]
+print(son_liste[1][0],son_liste[2][1])
+a 50
+```
+## 5.7. Veri Tipi Dönüşümleri
+Listelerde veri tipi dönüşümleri için, elemanlara yeni değer ataması yapıldığında string, int, float vb. veri
+tipleri arasında değer alabilir.
+**Örnek 35**
+```
+liste=[1,2,3,4,5,'ankara']
+print(liste)
+liste[0]=str("kocaeli")
+liste[2]=float(1.5)
+liste[5]=int(20)
+print(liste)
+[1,2,3,4,5,'ankara']
+['kocaeli', 2, 1.5, 4, 5, 20]
+```
+Örnek 35’te liste adında bir liste örneği tanımlanmıştır. İçindeki elemanları 1,2,3,4,5,’ankara’ ‘dır. İndis
+numarasına göre liste [0] değeri önce 1 iken veri tipi dönüşümünden dolayı ‘kocaeli’ olmuştur. Liste
+[2]’in değeri ise ilk başta 3’tür. Daha sonra float veri tipinde 1.5 değerini almıştır. Son olarak liste[5]’in
+değeri ‘ankara’dır. Liste[5]’e int veri tipinde bir değer kaydedilerek 20 olmuştur.
+Herhangi bir string türünde veriyi parçalayarak da liste oluşturulabilir. Örnek 36’da string veri türünde
+adı meyve olan bir değişken olarak tanımlanmış ve veri olarak elmayı atanmıştır. Meyve adlı değişken
+liste yardımıyla parçalanmıştır.
