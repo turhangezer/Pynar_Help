@@ -64,6 +64,8 @@ otomatik olarak ayarlanacaktır. Kullanılan geliştirme ortamında ayarlar böl
 karakter olacağının belirlendiği ayarlar bulunmaktadır. Bir karakter boşluk ile oluşturulan girinti bile
 yeni blok yapısını oluşturur. Bir kod bloğu kendi içinde tutarlı bir yapıdır. Döngüler, fonksiyonlar ve koşul
 ifadeleri kod blokları kullanılarak oluşturulur
+
+
 ![image](https://user-images.githubusercontent.com/56628866/128361655-232d3db5-9ec4-4db2-bec0-d60b99f8aa38.png)
 
 Şekil 4.3’te “if” ifadesinin altında girinti oluşturularak bir blok (1. Blok) oluşturulmuştur. “yasi>=18”
