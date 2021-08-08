@@ -133,10 +133,9 @@ kisi_bilgileri= {"Adı": "Ekrem","Soyadı": "Yıldırır",”Yaşı": 40 } print
 bilgileri)
 kisi_bilgileri.pop("Yaşı")
 print(kisi_bilgileri) 
-```
-```
-{'Adı': 'Ekrem', 'Soyadı': 'Yıldırır', 'Yaşı': 40}
-{‘Adı': 'Ekrem', 'Soyadı': 'Yıldırır'}
+
+>>> {'Adı': 'Ekrem', 'Soyadı': 'Yıldırır', 'Yaşı': 40}
+>>> {‘Adı': 'Ekrem', 'Soyadı': 'Yıldırır'}
 ```
 
 Örnek 6’yı incelediğimizde Yaşı anahtarı pop metodu ile kaldırılmıştır. Kisi_bilgileri sözlüğü listelenerek
@@ -155,10 +154,9 @@ kisi_bilgileri= {
 print(kisi_bilgileri)
 kisi_bilgileri.popitem()
 print(kisi_bilgileri)
-```
-```
-{'Adı': 'Ekrem', 'Soyadı': 'Yıldırır', 'Yaşı': 40}
-{'Adı': 'Ekrem', 'Soyadı': 'Yıldırır'}
+
+>>> {'Adı': 'Ekrem', 'Soyadı': 'Yıldırır', 'Yaşı': 40}
+>>> {'Adı': 'Ekrem', 'Soyadı': 'Yıldırır'}
 ```
 
 **del (parametre)** anahtar sözcüğü, belirtilen anahtar adına sahip öğeyi kaldırmak için kullanılmaktadır.
@@ -174,9 +172,8 @@ kisi_bilgileri= {
 }
 del kisi_bilgileri["Yaşı"]
 print(kisi_bilgileri)
-```
-```
-{'Adı': 'Ekrem', 'Soyadı': 'Yıldırır'}
+
+>>> {'Adı': 'Ekrem', 'Soyadı': 'Yıldırır'}
 ```
 
 **clear(  )** anahtar sözcüğü sözlüğü boşaltırken, **del** anahtar sözcüğü ise ayrıca sözlüğü tamamen silmektedir. Aşağıdaki örnekte clear(  ) anahtar sözcüğü kullanılmış ve sözlüğün içi boşaltılarak ekrana
@@ -187,10 +184,9 @@ sozluk ={"black":"siyah", "green":"yeşil", "white":"beyaz",}
 print(sozluk)
 sozluk.clear()
 print(sozluk)
-```
-```
-{'black': 'siyah', 'green': 'yeşil', 'white': 'beyaz'}
-{}
+
+>>> {'black': 'siyah', 'green': 'yeşil', 'white': 'beyaz'}
+>>> {}
 ```
 
 **Örnek 9**
@@ -201,15 +197,14 @@ kisi_bilgileri.clear()
 print(kisi_bilgileri)
 del kisi_bilgileri
 print(kisi_bilgileri)
-```
-```
-{}
-NameError Traceback (most recent call last)
- HYPERLINK "https://localhost:8080/" <ipython-input-9-c04608b44e6f> in <module>()
- 3 print(kisi_bilgileri)
- 4 del kisi_bilgileri
-----> 5 print(kisi_bilgileri)
-NameError: name 'kisi_bilgileri' is not defined
+
+>>> {}
+>>> NameError Traceback (most recent call last)
+>>>  HYPERLINK "https://localhost:8080/" <ipython-input-9-c04608b44e6f> in <module>()
+>>>  3 print(kisi_bilgileri)
+>>>  4 del kisi_bilgileri
+>>> ----> 5 print(kisi_bilgileri)
+>>> NameError: name 'kisi_bilgileri' is not defined
 ```
 
 Örnek 9’da kisi_bilgileri sözlüğünde clear(  ) metodu ile içi boşaltılmış. Daha sonra del(  ) metodu ile
@@ -230,11 +225,10 @@ sozluk['soyadi']='yılmaz'
 print(sozluk)
 sozluk['yasi']=40
 print (sozluk)
-```
-```
-{'adi': 'sami'}
-{'adi': 'sami', 'soyadi': 'yılmaz'}
-{'adi': 'sami', 'soyadi': 'yılmaz', 'yasi': 40}
+
+>>> {'adi': 'sami'}
+>>> {'adi': 'sami', 'soyadi': 'yılmaz'}
+>>> {'adi': 'sami', 'soyadi': 'yılmaz', 'yasi': 40}
 ```
 
 ### 9.3.4. Sözlükte Eleman Değiştirme İşlemleri
@@ -250,9 +244,8 @@ sozluk = {'isim':'ahmet','yas':40}
 # deger değiştirme
 sozluk['yas'] = 45
 print(sozluk['yas'])
-```
-```
-45
+
+>>> 45
 ```
 
 Örnek 11’de olduğu gibi sözlüğün yas adlı anahtarının değeri 40 iken 45 olarak değiştirilmiştir
@@ -267,10 +260,9 @@ Python’da sözlükler öğelerine erişmek için anahtarlarını (KEY) kullan�
 sozluk = {'ad': 'ali', 1: [5, 4]}
 print(sozluk['ad'])
 print(sozluk.get(1))
-```
-```
-ali
-[5, 4]
+
+>>> ali
+>>> [5, 4]
 ```
 
 Örnek 12’de sozluk adlı sözlükte ad ve 1 adında anahtarlar ve bu anahtarlara bağlı ali ve 5,4 değerleri
@@ -286,11 +278,10 @@ print(sozluk1)
 print(sozluk1 ["bir"])
 # "iki" anahtarına karşılık gelen değeri buluyoruz.
 print(sozluk1["iki"])
-```
-```
-{'sıfır': 0, 'bir': 1, 'iki': 2, 'üç': 3}
-1
-2
+
+>>> {'sıfır': 0, 'bir': 1, 'iki': 2, 'üç': 3}
+>>> 1
+>>> 2
 ```
 
 **Örnek 14**
@@ -298,12 +289,11 @@ print(sozluk1["iki"])
 ```python
 deneme = {"sıfır":0,"bir":1,"iki":2,"üç":3}
 print(deneme["on"])
-```
-```
-Traceback (most recent call last):
-File "<ipython-input-22-e25f3b4387f3>", line 2, in <module>
-print(deneme["on"])
-KeyError: 'on'
+
+>>> Traceback (most recent call last):
+>>> File "<ipython-input-22-e25f3b4387f3>", line 2, in <module>
+>>> print(deneme["on"])
+>>> KeyError: 'on'
 ```
 
 Örnek 14’te sözlükte olmayan bir anahtar girildiğinde ekrana KeyError:’on’ diye key hatası mesajı verecektir.
@@ -321,9 +311,8 @@ Eklenen verilerin program boyunca değiştirilmesinin istenmediği durumlarda ku
 ```python
 demet=()
 print(demet)
-```
-```
-()
+
+>>> ()
 ```
 
 Örnek 15’te boş bir demet oluşturularak, ekrana listelenmiştir.
@@ -333,9 +322,8 @@ print(demet)
 ```python
 demet = ("Python","Java",2020,"JavaScript")
 print(demet)
-```
-```
-('Python', 'Java', 2020, 'JavaScript')
+
+>>> ('Python', 'Java', 2020, 'JavaScript')
 ```
 
 Örnek 16’da 4 ögesi bulunan bir demet oluşturularak ekrana yazdırılmıştır
@@ -350,9 +338,8 @@ buna yönelik bir uygulamadır.
 ```python
 meyveler =("erik",)
 print(meyveler)
-```
-```
-('erik',)
+
+>>> ('erik',)
 ```
 
 **Not**
@@ -373,12 +360,11 @@ print(demet[0])
 print(demet[2])
 print(demet[-1])
 print(demet[2:])
-```
-```
-5
-15
-30
-(15, 20, 25, 30)
+
+>>> 5
+>>> 15
+>>> 30
+>>> (15, 20, 25, 30)
 ```
 
 Aynı zamanda bir demet tuple(  ) fonksiyonu ile de oluşturulabilir ve constructor yöntemiyle başlangıçta
@@ -389,9 +375,8 @@ elemanları ayarlanabilir. Örnek 19’da tuple fonksiyonu ile demet oluşturulm
 ```python
 demet = tuple(("Ankara","İstanbul","Kayseri"))
 print(demet)
-```
-```
-('Ankara', 'İstanbul', 'Kayseri')
+
+>>> ('Ankara', 'İstanbul', 'Kayseri')
 ```
 
 Örnek 20’de sayılar ve harfler diye iki adet demet tanımlanarak elemanları girilmiştir. Sayılar ve harfler
@@ -404,9 +389,8 @@ sayılar = (0,1,2,3,4,5,6,7,8,9,) #bir demet tanımladım
 harfler = ("a","b","c","d","e") #ikinci bir demet tanımladım
 yeni_demet = sayılar + harfler #tanımladığım demetleri topladım
 print(yeni_demet) #yeni demeti ekrana yazdırdım
-```
-```
-(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e')
+
+>>> (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e')
 ```
 
 Örnek 21’de olduğu gibi if koşul yapısı ile demetlerin içerisinde aranılan elemanların olup olmadığını
@@ -419,9 +403,8 @@ if "a" in harfler: #True çıktısı verir
 print(True)
 else:
 print(False)
-```
-```
-True
+
+>>> True
 ```
 
 Demet veri yapılarında elemanlar iki parantez arasına yazılır lakin bu parantez zorunlu değildir. Yine
@@ -434,10 +417,9 @@ aynı şekilde liste veri yapılarında olduğu gibi demetlerde de dilimleme **(
 d=((1,2),(3,4),(5,6),(7,8))
 print(d[2][0])
 print(d[3][1])
-```
-```
-5
-8
+
+>>> 5
+>>> 8
 ```
 
 ## 9.6. Demetlerin Temel Metotları
@@ -451,9 +433,8 @@ print(d[3][1])
 demet = ("lale","kardelen","zambak","papatya")
 # "zambak" elemanının indeksini buluyoruz.
 print(demet.index("zambak"))
-```
-```
-2
+
+>>> 2
 ```
 
 **Count** metodu tuple içinde aynı elemandan kaç adet olduğunu bulunmasına yardımcı olur. Java adlı
@@ -463,9 +444,8 @@ print(demet.index("zambak"))
 ```python
 demet = ("Python","Java","C#","Delphi","C++","Java","Java")
 print(demet.count("Java"))
-```
-```
-3
+
+>>> 3
 ```
 
 Liste tipindeki veriyi tuple’a dönüştürmeyi değişkene aktarıp yapılabilir. Örnek 25’te aylar adlı liste demet adlı değişkene aktarılarak, demet dönüşümü yapılarak, ekrana yazdırılmıştır.
@@ -475,9 +455,8 @@ Liste tipindeki veriyi tuple’a dönüştürmeyi değişkene aktarıp yapılabi
 aylar =["ocak","şubat","mart","nisan","mayıs","haziran"]
 demet = tuple(aylar)
 print(demet)
-```
-```
-('ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran')
+
+>>> ('ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran')
 ```
 
 ## 9.7. Demetler Üzerinde Gezinme
@@ -490,15 +469,14 @@ döngüsü ile ekrana ögeleri alt alta yazdırılmıştır.
 deneme= (1,2,3,4,5,6,7)
 for eleman in deneme:
 print(eleman)
-```
-```
-1
-2
-3
-4
-5
-6
-7
+
+>>> 1
+>>> 2
+>>> 3
+>>> 4
+>>> 5
+>>> 6
+>>> 7
 ```
 
 Örnek 27’de demette sorted(  ) metodu ile ögeleri harflere göre sıralama yapılmıştır.
@@ -507,9 +485,8 @@ print(eleman)
 ```python
 demet =("lale","kardelen","zambak","papatya")
 print(sorted(demet))
-```
-```
-['kardelen', 'lale', 'papatya', 'zambak']
+
+>>> ['kardelen', 'lale', 'papatya', 'zambak']
 ```
 
 ## 9.8. Bölüm Sonu Örnekleri
@@ -562,9 +539,8 @@ aylar =("ocak","şubat","mart","nisan","mayıs","haziran")
 mevsimler = ("kış","ilkbahar","yaz","sonbahar")
 yeni_demet=tuple(mevsimler+aylar)
 print(len(yeni_demet))
-```
-```
-10
+
+>>> 10
 ```
 2.
 ```python 
@@ -572,29 +548,26 @@ sayilar=(20,24,25,79,40,39,50)
 for meyve in sayilar:
 if meyve%5 ==0:
 print(meyve)
-```
-```
-20
-25
-40
-50
+
+>>> 20
+>>> 25
+>>> 40
+>>> 50
 ```
 3.
  ```python
 demet = ("hasan","ali","c","mehmet","deniz","f","fatma")
 yenidemet = demet[3:5]
 print(yenidemet)
-```
-```
-('mehmet', 'deniz')
+
+>>> ('mehmet', 'deniz')
 ```
 4.
 ```python 
 uygulama=("ali","veli","ayşe","Fatma","Hayriye","ali","deniz")
 print(uygulama.count("ali"))
-```
-```
-2
+
+>>> 2
 ```
 
 5. 
@@ -602,11 +575,10 @@ print(uygulama.count("ali"))
 sozluk = {'renk': 'mavi', 'kıyafet': 'pantolon', 'beden': 'M'}
 for anahtar in sozluk:
 print(anahtar)
-```
-```
-renk
-kıyafet
-beden
+
+>>> renk
+>>> kıyafet
+>>> beden
 ```
 6. 
 ```python
@@ -616,15 +588,14 @@ print(anahtar,sozluk[anahtar])
 sozluk_bilesenleri=sozluk.items()
 for bilesen in sozluk_bilesenleri :
 print(bilesen)
-```
-```
-renk mavi
-kıyafet pantolon
-beden M
-('renk', 'mavi')
-<class 'tuple'>
-('kıyafet', 'pantolon')
-<class 'tuple'>
-('beden', 'M')
-<class 'tuple'>
+
+>>> renk mavi
+>>> kıyafet pantolon
+>>> beden M
+>>> ('renk', 'mavi')
+>>> <class 'tuple'>
+>>> ('kıyafet', 'pantolon')
+>>> <class 'tuple'>
+>>> ('beden', 'M')
+>>> <class 'tuple'>
 ```
