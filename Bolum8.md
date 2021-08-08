@@ -1,949 +1,541 @@
-# LİSTELER VE ÖZELLİKLERİ 
+# 8 TURTLE (KAPLUMBAĞA) MODÜLÜ İLE GRAFİK ARAYÜZE GİRİŞ
 
-## Liste Veri Tipleri
+Bu bölüm, bilgisayar ekranlarından aşina olduğunuz pencereler (formlar) ile tanışacağınız ve kullanmaya başlayacağınız kısımdır. Grafik arayüz (pencere) kavramı, temelde yazılımın komut satırından çıkıp
+görsel ara birimler aracılığıyla ifade edilmesidir. Kaplumbağa grafikler grafik arayüz üzerinde çizim
+araçları kullanarak çalışılmasına olanak tanırlar. Kaplumbağa grafikler Python gibi metin tabanlı dillerde kod yazmaya yeni başlayanlar için en eğlenceli modüllerden biridir. Kaplumbağa grafikler ile daha
+önceki bölümlerde öğrendiğiniz kavramları kullanarak bol miktarda pratik yapabilirsiniz. Kaplumbağa
+grafiklerin tarihine bakıldığında matematik eğitimi için logo programla dilinde kullanıldığı görülmektedir. John Dewey’in öğrencisi olan Seymour Papert, öğrencilerine matematik öğretmek için kaplumbağa
+robotunu geliştirmiştir
 
-Bir listede her veri tipinden eleman saklanabilir. Bu anlamda sıralı bir diziye benzemektedir.
+Turtle **(kaplumbağa)** standart python modüllerinden biridir. Bu nedenle turtle modülünü çalışmamızda
+kullanabilmek için modülü içeri aktarmamız (dâhil etmemiz) gerekmektedir. Bunun için ilk satıra **import
+turtle** yazmanız yeterli olacaktır. Python turtle modülünü çağırırken **turtle.py** adında bir dosya çağırdığından yapılacak örneklere turtle.py isminin verilmemesi yararlı olacaktır. turtle modülü projeye dâhil
+edildikten sonra bir turtle nesnesi oluşturup buna isim verilir. Bunu çizim yapmak için bir kalem almak
+gibi düşünebilirsiniz. **Bu bölümdeki uygulamalar idle kullanılarak yapılmıştır.**
+
+## 8.1. Turtle (kaplumbağa) ile Çalışma
+
+**kalem=turtle.Turtle()** yazarak kalem isminde bir Turtle (kaplumbağa) nesnesi oluşturmuş oluruz. Kalem
+artık Turtle nesnesinin sahip olduğu tüm özelliklere sahip olacaktır. Böylece Turtle nesnesinin sahip olduğu fonksiyonlar kullanılarak çizim işlemleri yapılabilir. Nesnenin fonksiyonlarını yazarken nesne adından sonra nokta koyup fonksiyon adı yazılır. Örneğin, **kalem. forward()** kalem nesnesinin ileri gitme
+fonksiyonudur. forward fonksiyonu gidilecek mesafeyi girdi olarak alır. Örneğin **kalem.forward (50)**
+yazılarak elli birim ilerlenir. Çizim işlemi bitince **turtle.done()** fonksiyonu ile program tamamlanır. Böylece turtle modülü kullanarak kod yazmaya hazır hale gelinir. Örnek 1’deki dört satırlık kodu yazıp
+çalıştırdığınızda sonuç Şekil 8.2’de görüldüğü gibi olur.
 
 **Örnek 1**
 
-```python
-liste=[1,2,'ali',0.25]
-print(liste)
-[1, 2, 'ali', 0.25]
-```
-Örnek 1’de int, string ve float gibi farklı veri tiplerini içerisinde barındıran 4 elemanlı bir listedir.
-Karakter dizilerin indis değerleri değiştirilmek istendiğinde aşağıdaki gibi hata mesajı alınır.
+**100 birimlik ileri yönde çizgi çizme**
 
 ```python
-meyve="erik"
-meyve = 5 +meyve[0:]
-print(meyve)
+import turtle
+kalem=turtle.Turtle()
+kalem.forward(100)
+turtle.done()
 ```
-```
-Traceback (most recent call last):
-File "<ipython-input-9-e4575713155c>", line 2, in <module>
-meyve = 5 +meyve[0:]
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
-```
+
+![image](https://user-images.githubusercontent.com/56628866/128643383-8db622bb-ed56-4c76-bd21-bdcb4e490e7b.png)
+
+**Şekil 8.2:** Örnek 1 kod çıktısı
+
+## 8.2. Temel Hareket İşlemleri
+
+Turtle modülünde dört temel hareket bulunmaktadır. Bunlar,
+ileri: **forward (mesafe)**, geri: **backward (mesafe)**,
+sağ: **right (açı)**, sol: **left (açı)** komutlarıdır.
+Bu komutlar kullanılarak yapılan örnekleri inceleyelim.
 
 **Örnek 2**
+**right ve forward fonksiyonlarının birlikte kullanımı**
 
 ```python
-meyve ="erik"
-meyve = "ayva-" +meyve[0:]
-print(meyve)
-liste=['a','b']
-liste[1]=2
-print(liste)
-```
-```
-ayva-erik
-['a', 2]
+import turtle
+kalem=turtle.Turtle()
+kalem.forward(100)
+kalem.right(90)
+kalem.forward(100)
+turtle.done()
 ```
 
-Örnek 2’de karakter dizisi ile liste kullanımı beraber verilmiştir. Karakter dizisi string ama liste 1.indis
-numarasındaki öge ‘b’ iken sonra int veri tipinde 2 olarak değiştirilmiştir.
-Listeyi oluşturmak için önce bir değişken adı verilir, daha sonra bu değişkene çeşitli değerler atanır.
-Atamalar yapılarak liste oluşturulur. Bir liste oluşturulup bir değişkene atandığı zaman aslında tüm atamalarda olduğu gibi liste nesnesinin adresi değişkene atanmaktadır.
-Örnek 3’te oluşturulan liste içine herhangi bir eleman eklenmediği için bu liste içi boş bir listedir. Çıktı
-olarak boş liste vermektedir.
+![image](https://user-images.githubusercontent.com/56628866/128643420-bfcad725-1a28-497f-afc7-00542d8523fa.png)
+
+**Şekil 8.3:** Örnek 2 kod çıktısı
 
 **Örnek 3**
+**right ve backward fonksiyonlarının birlikte kullanımı**
 
 ```python
-liste=[ ] #veya liste=list()
-print(liste)
+import turtle
+kalem=turtle.Turtle()
+kalem.backward(100)
+kalem.right(90)
+kalem.backward(100)
+turtle.done()
 ```
-```
-[ ]
-```
 
-## Liste Kavramı ve İndis Değerleri
+![image](https://user-images.githubusercontent.com/56628866/128643436-951d26a7-5f92-4352-a0b6-7c5ae66228bc.png)
 
-Öncelikle liste üzerinden veri okuyabilmek için hangi indis elemanının okunmak istendiği doğru bir şekilde belirtilmelidir. Örneğin Harfler isminde bir liste olduğunu düşünün. Listelerde ilk eleman her zaman
-0. indistir. Listenin ilk elemanına erişmek veya yazmak istendiğinde Harfler[0] yazılması gerekmektedir.
-Diğer elemanları için de sırasıyla Harfler[1], Harfler[2] şeklinde yazılması gerekmektedir. Buradaki bir
-diğer önemli nokta da listenin ilk elemanı 0. indisten başladığı için son elemanı da liste uzunluğun bir
-eksiğidir.
-
-**Tablo 1.** Listelerde indis numarasına göre veri sıralaması
-
-Başlangıç |  |  | Bitiş(Uzunluk-1)
-----------|---|-----|--------------
-Harfler[0] | Harfler[1] | Harfler[2] | ...
-
+**Şekil 8.4:** Örnek 3 kod çıktısı
 
 **Örnek 4**
+**right ve forward fonksiyonlarının birlikte kullanımı**
 
 ```python
-renkler = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
-print('listeyi ekrana yazdırıyoruz')
-print(renkler)
-```
-```
-listeyi ekrana yazdırıyoruz
-['black', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+import turtle
+kalem=turtle.Turtle()
+kalem.forward(-100.5)
+kalem.right(90)
+kalem.forward(-100.5)
+turtle.done()
 ```
 
-**Tablo 2.** İndis numarasına göre liste örneği
+![image](https://user-images.githubusercontent.com/56628866/128643436-951d26a7-5f92-4352-a0b6-7c5ae66228bc.png)
 
-İndis numarası|Liste[0] |Listte[1]|Listte[2]|Listte[3]
----------------|----------|-----------|---------|-----
-Öge sıralaması|Birinci öge|İkinci öge|Üçüncü öge|Dördüncü öge
-Liste = |‘ali’,|5,|3.14,|‘ayşe’
-
-Başlangıç elemanları belli olan bir listenin tanımlanması ve yazdırılması:
+**Şekil 8.5:** Örnek 4 kod çıktısı
 
 **Örnek 5**
+**right ve backward fonksiyonlarının birlikte kullanımı**
 
 ```python
-#liste1 adında bir liste tanımladık. İçine verileri girdik
-#bu verileri ekrana yazdırdık
-liste1 = ['a','b','c','d','e','f']
-print(liste1)
-```
-```
-['a', 'b', 'c', 'd', 'e', 'f']
-```
-
-Örnek 5’te liste1 adında liste tanımlandı ve char(karakter) olarak ögeleri bulunmaktadır. İndis numarasına bakıldığı zaman; aşağıdaki şekilde ögeler vardır.
-
-```
-liste1[0] ='a' liste1[1] ='b' liste1[2] ='c' liste[3] ='d'
-liste1[4] ='e' liste1[5] ='f'
+import turtle
+kalem=turtle.Turtle()
+kalem.backward(-100.6)
+kalem.right(90)
+kalem.backward(-100.6)
+turtle.done()
 ```
 
-Listeler hem string hem de sayı türünde veriler barındırabilir. Örnek 6 incelendiğinde 7 elemanlı bir liste
-tanımlıdır. 6 ve 7. elamanları sayı diğerleri metin olan bir listedir.
+![image](https://user-images.githubusercontent.com/56628866/128643484-56308d0a-4415-40f2-8506-88168d7744ec.png)
+
+**Şekil 8.6:** Örnek 5 kod çıktısı
+
+Şekil 8.3 ve Şekil 8.6 benzer çıktılar oluştuğunu fark ettiniz mi? Aynı durum Şekil 8.4 ve Şekil 8.5 için
+de geçerlidir. Bilgisayar: ileri 100 adım git ile geri eksi 100 adım git komutlarını aldığında aynı sonucu
+üretir. Kod çıktıları arasındaki fark mesafe girdileridir
 
 **Örnek 6**
+**left ve forward fonksiyonlarının birlikte kullanımı**
 
 ```python
-liste2=['python','geleceği','olan','bir','dil',500,0.567]
-print(liste2)
-```
-```
-['python', 'geleceği', 'olan', 'bir', 'dil', 500,0.567]
-```
-
-Örnek 6’da sayı, float ve string ögelerine sahip liste ekrana yazdırılmıştır.
-
-## Liste Elemanlarına Erişim
-
-Listedeki ögelere ulaşmak için bir değer, listenin indis numarasına göre atanıp çağrılabilir. Liste oluştururken içine herhangi bir değer girilmeden de oluşturulup, sonradan değer ataması yapılabilir ya
-da herhangi bir indis numarasından başlanıp belirlenen indis numarasına kadar olan ögelere ulaşılır.
-Aşağıdaki örneklerde görüldüğü gibi hem indis numarasından hem de başlangıcı ve bitişi belli olan
-indis numarası aralıklarına kadar ifadelere erişilmiştir. Listenin belirli aralıktaki öğelerini alma işlemine
-dilimleme denir. Liste dilimlerken adımlama da başlangıç indisi alır ama bitiş indisi almaz.
-
-**Kullanımı:**
-
-```python
-eleman = liste[indis]
-dilim = liste[baslangic:bitis]
+import turtle
+kalem=turtle.Turtle()
+kalem.left(45)
+kalem.forward(50)
+turtle.done()
 ```
 
-Liste, elemanlarına erişim için tamamını veya indis numarasına göre çağırmaktadır.
+![image](https://user-images.githubusercontent.com/56628866/128643532-4feaf623-9681-4533-bf0b-e136884e81c4.png)
+
+**Şekil 8.7:** Örnek 6 kod çıktısı
 
 **Örnek 7**
+**Açı kullanarak şekil çizme örneği**
 
 ```python
-liste=["birinici veri","ikinci veri","üçüncü veri ","dördüncü veri","beşinci veri"]
-#beş elemenlı listenin ilk verisi
-print(liste[0])
-#beş elemenlı listenin son verisi
-print(liste[4])
-```
-```
-birinici veri
-beşinci veri
+import turtle
+kalem=turtle.Turtle()
+kalem.forward(50)
+kalem.right(120)
+kalem.forward(50)
+kalem.right(120)
+turtle.done()
 ```
 
-Örnek 7’de listenin indis numaraları yazılarak, başlangıç ve bitiş ögelerine ulaşılmıştır.
+![image](https://user-images.githubusercontent.com/56628866/128643548-ce4ddcd6-98ef-40fd-a931-1a4fb251f079.png)
+
+**Şekil 8.8: Örnek 7 kod çıktısı**
+
+Temel hareketler için bu örnekleri uyguladıktan sonra hareket fonksiyonlarının açı ve uzunlukları kullanıcıdan alacağınız örnekleri inceleyebilirsiniz
+
+**HATIRLATMA**
+
+```
+Kullanıcıdan input(  ) fonksiyonu ile alınan metin değerini int veya float değerine dönüştürülmesi
+gerekir aksi durumda hata mesajı karşılaşılır.
+```
+
+**Örnek 8**
+**Çizgi mesafesini kullanıcıdan alıp şekil çizen program**
 
 ```python
-liste=["ayva","armut","kiraz","vişne"]
-print(liste)
-print(liste[1])
-```
-```
-['ayva', 'armut', 'kiraz', 'vişne']
-armut
+import turtle
+kalem=turtle.Turtle()
+mesafe=float(input("çizgi mesafesini
+giriniz"))
+kalem.forward(mesafe)
+kalem.right(90)
+kalem.forward(mesafe)
+turtle.done()
 ```
 
-Örnek 8’de ise listenin tüm ögeleri ve 1. indis numarasındaki öge olan “armut” değeri listelenmiştir.
-Liste içindeki ögeleri kontrol edilebilir. Eşya adında bir liste var. Liste tanımlanır, daha sonra if karar yapısı ile içindeki ögeler de “perde” olup olmadığı kontrol edilir.
+![image](https://user-images.githubusercontent.com/56628866/128643611-985da9ab-3211-43c4-9b00-61d6e539064a.png)
+
+**Şekil 8.9:** Örnek 8 kod çıktısı
 
 **Örnek 9**
+**Çizgi mesafesini ve dönüş açısını kullanıcıdan alıp şekil çizen program**
 
 ```python
-esya = ["ayna", "televizyon", "perde"]
-if("perde" in esya):
- print("Bu değer listede var.")
-else:
- print("Bu değer listede yok")
+import turtle
+kalem=turtle.Turtle()
+mesafe=int(input("çizgi mesafesini
+giriniz"))
+donus_açısı=int(input("dönüş açısını
+giriniz"))
+kalem.forward(mesafe)
+kalem.right(donus_açısı)
+kalem.forward(mesafe)
+turtle.done()
 ```
-```
-Bu değer listede var.
-```
-Aşağıdaki örnekte 5 elemanlı bir liste tanımlanmıştır. İndis numaralarını kullanarak, listenin 1. indisten
-başlayarak, 3. indise kadar öge listesine aktarıp listeleme işlemi yapılmıştır.
 
-```python
-liste = [1,2,3,4,5]
-öge = listem[1:3]
-print(öge)
-```
-```
-[2,3]
-```
+![image](https://user-images.githubusercontent.com/56628866/128643638-a42280ce-a18e-47c1-9560-cf3517c5a7f9.png)
+
+**Şekil 8.10:** Örnek 9 kod çıktısı
+
+## 8.3. İşaretçi ve Çizim Araçları
+
+Turtle nesnesinde çizim için kalem rengi: **pencolor(" ")** veya **color(" ")** girdi olarak iki tırnak içinde
+renk adı “red” veya tırnak içinde diyez ile birlikte html renk kodu “#ACE515” gibi alır. Renk kodlarını
+https://htmlcolorcodes.com/ adresinden öğrenebilirsiniz. Kalem kalınlığı **pensize (sayı değeri)** fonksiyonu ile ayarlanır
+
 **Örnek 10**
+**pencolor, pensize ve color uygulaması**
 
 ```python
-listem=[10,20,30,40,50]
-eleman = listem[3]
-print(eleman)
+import turtle
+kalem=turtle.Turtle()
+kalem.pencolor("red")
+kalem.pensize(3)
+kalem.forward(100)
+kalem.left(90)
+kalem.color("#ACE515")
+kalem.pensize(8)
+kalem.forward(100)
+kalem.left(90)
+kalem.pencolor("yellow")
+kalem.pensize(6)
+kalem.forward(100)
+kalem.left(90)
+kalem.color("#2259C1")
+kalem.pensize(1)
+kalem.forward(100)
+kalem.left (90)
+turtle.done()
 ```
-```
-40
-```
-Örnek 10’da listem adında bir liste tanımlanarak 5 elemanlı ifade girilmiştir. Listem adlı liste için 3. indis
-numarasına ait ifade eleman adlı değişkene atama işlemi yapılmıştır. Eleman adlı değişken de ekrana
-yazdırılarak 40 sonucu elde edilmiştir
+
+![image](https://user-images.githubusercontent.com/56628866/128643665-10ca705c-432f-44d1-ad86-d79b748b8f06.png)
+
+**Şekil 8.11:** Örnek 10 kod çıktısı
+
+Kaplumbağa grafiklerde pencerenin istenen noktasına gidebilme **goto (x ekseni, y ekseni)**
+Kaplumbağa grafiklerde nokta çizme **dot(  )**
+Kaplumbağa grafiklerde çizmeden ilerleme **penup(  )** veya **up(  )** ardından **forward(  )**
+Kaplumbağa grafiklerde çizime tekrar dönmek için ilerleme **pendown(  )** veya **down(  )** ardından
+**forward(  )** fonksiyonları kullanılır.
+Turtle çizim aracının görünüm şekli için de **shape(  )** fonksiyonu bulunmaktadır. Bu fonksiyon **‘arrow’,
+‘classic’, ‘turtle’, ‘circle’** olmak üzere 4 şekle sahip olabilir.
 
 **Örnek 11**
+**dot ile çizim uygulaması**
 
 ```python
-listem = [10,20,30,40,50]
-eleman = listem[1:3]
-print(eleman)
-```
-```
-[20, 30]
+import turtle
+kalem=turtle.Turtle()
+for i in range(5):
+ kalem.dot()
+ kalem.forward(20)
+turtle.done()
 ```
 
-Örnek 11’de listem adlı listede eleman adlı değişkene sadece 1 ve 2. indis numaralarının dâhil edildiği
-3. indis numarasının dâhil edilmediği atama işlemi yapılmıştır. Eleman adlı değişken de ekrana yazdırılarak 20 ve 30 değerleri listelenmiştir.
+![image](https://user-images.githubusercontent.com/56628866/128643703-7ee29fc7-917f-44f5-b7aa-c83b857e7255.png)
 
-**Örnek 12**
+**Şekil 8.12:** Örnek 11 kod çıktısı
+
+**örnek 12**
+**dot ile çizgisiz şekil uygulaması**
 
 ```python
-liste = [1,2,3,4,5,6,7,8,9,10]
-print(liste)
-# 1. eleman
-print(liste[0])
-# 6. eleman
-print(liste[5])
-# Baştan 5. indekse kadar (dahil değil)
-print(liste[:5])
-# 1.indisten 5.indise kadar
-print(liste[1:7])
-print(liste[5:])
-print(liste[::2])
-```
-```
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-1
-7
-[1, 2, 3, 4, 5]
-[2, 3, 4, 5, 6, 7]
-[6, 7, 8, 9, 10]
-[1, 3, 5, 7, 9]
+import turtle
+kalem=turtle.Turtle()
+kalem.up()
+for i in range(5):
+ kalem.dot()
+ kalem.forward(20)
+turtle.done()
 ```
 
-Örnek 12’de, 10 elemanlı bir liste tanımlanmış ve indis numaraları kullanılarak ekrana listeleme işlemi
-yapılmıştır.
+![image](https://user-images.githubusercontent.com/56628866/128643727-e3c62eff-0c52-41a6-b291-866987797092.png)
 
-Listelerde negatif indisler de kullanılabilir. Negatif indis numarası listenin sonuncu elemanından başlayarak sayıldığında (sondan başa) sıra numarasını verir. Örnek 13’te listenin sonuncu elemanına liste[-1]
-olarak, sondan ikinciye ise [-2] olarak ulaşılır. Güle güle elemanı liste de -1.indis olarak görülmektedir.
-Merhaba ise geriye doğru sayıldığında -4. indis’tir.
+**Şekil 8.13:** Örnek 12 kod çıktısı
+
+**Örnek 13**
+**shape ve goto fonksiyonlarının kullanımı**
 
 ```python
-liste = [ "merhaba", "dünya", "merhaba", "güle güle" ]
-print (liste [- 1 ]) #son ögeyi listeler
-print( liste [- 3 ]) #sondan üçüncü ögeyi listeler
-print(liste [- 4 ]) #sondan dördüncü ögeyi listeler
-print(liste[::-1]) #sondan başa doğru listeleme yapmak için kullanılır
+import turtle
+kalem=turtle.Turtle()
+kalem.shape("turtle")
+kalem.forward(100)
+kalem.penup()
+kalem.goto(0,100)
+for i in range(5):
+ kalem.dot()
+ kalem.forward(20)
+turtle.done()
 ```
-```
-güle güle
-dünya
-merhaba
-['güle güle', 'merhaba', 'dünya', 'merhaba']
-```
 
-## Temel Liste Metotları
+![image](https://user-images.githubusercontent.com/56628866/128643747-8f8fc3bf-dde7-48d1-9ee5-124b8b8f1277.png)
 
-Metotlar listelerin işlevlerine erişilmesini sağlar. Listenin metotları için dir(  ) fonksiyonunu kullanarak tüm
-metotlar görülebilir. Bu metotlar yardımıyla listeler ekleme, çıkarma, arama, sıralama vb. birçok işlemin
-kolaylıkla yapabilmesini sağlamaktadır.
-
-**Tablo 3.** Temel liste metotları
-
-| Sıra No | Metot Adı | Görevi                                                                      |
-|---------|-----------|-----------------------------------------------------------------------------|
-| 1       | ‘append’  |Listeye yeni eleman ekleme işlemini yapar. Bu metot ile listeye sadece bir eleman eklenebilir ve eklenen eleman listenin sonunda yer alır.|
-| 2       | ‘clear’   |Listeyi değil içindeki tüm ifadeleri silmeye yarar.|
-| 3       | ‘copy’    |Listeden listeye kopyalama işlevine yaramaktadır.|
-| 4       | ‘count’   |Listenin içinde sorgulanan elemandan kaç adet olduğunu bulmamızı sağlar.|
-| 5       | ‘extend’  |Listeler arası genişletme işlevini görür.|
-| 6       | ‘indis’   |Listedeki elemanları almamızı sağlar.|
-| 7       | ‘insert’  |Listenin istenilen indis numarasına eleman eklenebilir|
-| 8       | ‘pop’     |Listedeki elemanın indisi ile silme işlem yapar. indis belirtmediğinizde ise varsayılan olarak listenin son elemanını siler. Ayrıca bu metot silinen elemanı ekrana yazmaktadır.|
-| 9       | ‘remove’  |Listede istenilen elemanın değerini yazarak silme işlemi yarar|
-| 10      | ‘sort’    |Listenin elemanlarını alfabetik olarak sıralar|
-| 11      | ‘reverse’ |Bu metot sort metodunun aksine listedeki elemanları ters alfabetik olarak sıralar.|
-| 12      | ‘del’     |Liste içerisinden bir elemanı silmek için kullanılır. Silme işlemi indis numarasına göre yapılmaktadır.|
-
-## ‘append’ kullanımı
+**Şekil 8.14:** Örnek 13 kod çıktısı
 
 **Örnek 14**
+**shape ve goto fonksiyonlarının farklı bir çizim için kullanımı**
 
 ```python
-takimlar=["gs","fb","bjk"]
-takimlar.append("ts")
-print(takimlar)
+import turtle
+kalem=turtle.Turtle()
+kalem.shape("turtle")
+for i in range(4):
+ kalem.up()
+ kalem.forward(20)
+ kalem.dot()
+ kalem.down()
+ kalem.forward(20)
+ kalem.dot()
+turtle.done()
 ```
 
-```
-['gs', 'fb', 'bjk', 'ts']
-```
-Örnek 14’te takimlar listesine “ts” ögesi eklenmiş ve son indis numarasında yer almıştır.
+![image](https://user-images.githubusercontent.com/56628866/128643770-c12a36f9-31cb-49f7-9ecb-510aa6b327ed.png)
 
-## ‘insert’ kullanımı
+**Şekil 8.15:** Örnek 14 kod çıktısı
+
+## 8.4. Turtle ile Geometrik Şekiller Çizme
+
+Turtle nesnesi ile geometrik şekiller çizmek oldukça kolaydır. Çokgenler başta olmak üzere birçok geometrik şekli ileri ve sağ/sol dönüş fonksiyonları ile yapmak mümkündür. Örnek 15’te bir kare çizdirildiğini fark
+etmişsinizdir. Fark etmenizi istediğimiz bir diğer nokta, forward ve left fonksiyonlarının 4 defa kullanılmasıdır (Örnek 15). Kodu defalarca yazmak yerine döngüler konusunda işlendiği gibi for yapısı ile kolayca
+çizdirebiliriz. Aynı mantığı Örnek 16’da gösterildiği gibi altıgen çizdirmek için kullanabiliriz.
 
 **Örnek 15**
+**turtle ile kare çizme uygulaması**
 
 ```python
-sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
-sebzeler.insert(2,"patlıcan")
-print(sebzeler)
+import turtle
+kalem=turtle.Turtle()
+kalem.pencolor("red")
+kalem.pensize(3)
+for i in range(4):
+ kalem.forward(100)
+ kalem.left(90)
+turtle.done()
 ```
 
-```
-['lahana', 'marul', 'patlıcan', 'pırasa', 'ıspanak', 'fasulye']
-```
+![image](https://user-images.githubusercontent.com/56628866/128643799-7a1fa966-841d-46a3-a060-10e9b89ac178.png)
 
-Örnek 15’te insert metodu kullanılarak 2. indis numarasına “patlıcan” ögesi eklenerek, listeleme işlemi
-yapılmıştır.
+**Şekil 8.16:** Örnek 15 kod çıktısı
 
-## ‘copy’ kullanımı
+**Örnek 16**
+**turtle ile altıgen çizme uygulaması**
 
 ```python
-iller1 =["konya","karaman","kocaeli","kayseri","kahramanmaraş"]
-iller2=[]
-iller2 = iller1.copy()
-print(iller2)
+import turtle
+kalem=turtle.Turtle()
+kalem.pencolor("blue")
+kalem.pensize(3)
+for i in range(6):
+ kalem.forward(100)
+ kalem.left(60)
+turtle.done()
 ```
 
-```
-['konya', 'karaman', 'kocaeli', 'kayseri', 'kahramanmaraş']
-```
-Örnek 16’da iller1 listesi copy metodu ile iller2 listesine aktarılmıştır.
+![image](https://user-images.githubusercontent.com/56628866/128643814-8387d9b4-d728-46ac-8375-21014a3f4733.png)
 
-## ‘count’ kullanımı
+**Şekil 8.17:** Örnek 16 kod çıktısı
+
+Çokgen çizdirmeyi kenar sayısını kullanıcıdan isteyerek de yapabilirsiniz. Burada dikkat edilecek nokta
+çokgen kaç kenarlı olursa olsun çokgen çizimi tamamlandığında 360 derecelik dönüş yapacak olmasıdır. Bu nedenle çokgenin dönüş açısı **360/ kenar** sayısı olur
 
 **Örnek 17**
 
+**Kullanıcının istediği kenar sayısında çokgen çizdirmek**
+
 ```python
-takimlar = ['GS','FB','BJK','TS']
-print(takimlar.count('FB'))
+import turtle
+kalem=turtle.Turtle()
+kalem.pencolor("red")
+kalem.pensize(3)
+kenar_sayısı=int(input(" çizmek istediğiniz çokgenin kenar sayısını giriniz"))
+for i in range(kenar_sayısı):
+ kalem.forward(50)
+ kalem.left(360/kenar_sayısı)
+turtle.done()
 ```
 
-```
-1
-```
-Örnek 17’de takimlar listesinde ‘FB’ ögesinin kaç adet olduğu count metodu bulunmuştur.
+![image](https://user-images.githubusercontent.com/56628866/128643841-618d09e4-fb63-4c0f-a483-5fc00eda35da.png)
 
-##  ‘extend’ kullanımı
+**Şekil 8.18:** Örnek 17 kod çıktısı
+
+Çember çizmek için **circle (yarıçap değeri)** fonksiyonu yeterlidir. Örnek 18’de farklı renkte ve yarıçapta
+3 adet çember çizdirilmektedir.
 
 **Örnek 18**
+**circle fonksiyonu ile 3 farklı yarıçapta ve renkte çember çizdirme**
 
 ```python
-kus1=["bıldırcın","papağan","kartal","akbaba","şahin"]
-kus2=["baykuş","muhabbet"]
-kus1.extend(kus2)
-print(kus1)
+import turtle
+kalem=turtle.Turtle()
+kalem.pencolor("orange")
+kalem.pensize(2)
+kalem.circle(20)
+kalem.pencolor("red")
+kalem.circle(30)
+kalem.pencolor("blue")
+kalem.circle(40)
+turtle.done()
 ```
 
-```
-['bıldırcın', 'papağan', 'kartal', 'akbaba', 'şahin', 'baykuş', 'muhabbet']
-```
+![image](https://user-images.githubusercontent.com/56628866/128643857-93a3ca93-63ce-4984-979e-9c0f6821d0dc.png)
 
-Örnek 18’de extend komutu listelerdeki ögelerin kendi elemanlarını koruyarak genişletme işlemi yapılmıştır.
+**Şekil 8.19:** Örnek 18 kod çıktısı
 
-## ‘indis’ kullanımı
+Çember ve çokgenler kullanılarak çok farklı desenler oluşturabileceğini fark ettiniz mi?
+Çokgenlerle farklı desenler oluşturmaya dair Örnek 19’u inceleyebilirsiniz. Bunu yapmak için iç içe
+döngüler kullanılmaktadır. Yani çokgenlerden bol miktarda çizdirilmesi gerekmektedir. Bu kodlar robota
+yaptırıldığında istenilen desenler farklı yüzeylere çizdirilebilirdi.
 
 **Örnek 19**
+**İç içe döngüler ile desen çizdirme**
 
 ```python
-sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
-print(sebzeler.indis("ıspanak"))
+import turtle
+kalem=turtle.Turtle()
+kalem.color("green")
+for i in range (6):
+ for j in range (6):
+ kalem.forward(50)
+ kalem.left(60) # iç döngü
+ kalem.left(60)# dış döngü
+turtle.done()
 ```
 
-```
-3
-```
-İndis metodu yardımıyla Örnek 19’da görüldüğü gibi verilen bir ögenin indis numarasını vermektedir.
+![image](https://user-images.githubusercontent.com/56628866/128643881-9f01bac1-a55f-4eae-b665-2a9db0a0387e.png)
 
-## ‘clear’ kullanımı
+**Şekil 8.20:** Örnek 19 kod çıktıs
+
+Örnek 19’daki deseni istendiğinde ve parametreler girildiğinde çizen bir fonksiyon tanımlayıp kullanınız.
+
+Örnekte fonksiyon için verilen değerlerin doğruluğunun kontrol edildiğine dikkat ediniz. Kenar uzunluğunun eksi olarak da girilebileceği düşünüldüğünden ve if koşul yapısının karmaşık hâle getirilmemesi
+için dâhil edilmemiştir.
 
 **Örnek 20**
 
-```python
-liste =["ayva","nar","kiraz","kayısı","Üzüm"]
-liste.clear()
-print(liste)
-```
-
-```
-[]
-```
-
-lear(  ) metodu kullanılarak örnek 20’deki listenin tüm ögeleri silinmiştir
-
-##  ‘pop’ kullanımı
-
-**Örnek 21**
+**Desen çizen fonksiyon uygulaması**
 
 ```python
-sebzeler =["lahana","marul","pırasa","ıspanak","fasulye"]
-sebzeler.pop(2)
-print(sebzeler)
+import turtle
+def desen_çiz (kenar_uzunluğu=50,iç_kenar=3,tur_sayısı=3):
+ if(tur_sayısı <01 or iç_kenar<3):
+ print("hatalı veri girdiniz")
+ else:
+ kalem=turtle.Turtle()
+ for i in range (tur_sayısı):
+ for j in range (iç_kenar):
+ kalem.forward(kenar_uzunluğu)
+ kalem.left(360/iç_kenar)
+ kalem.left(360/tur_sayısı)
+desen_çiz()
+desen_çiz(60,4,5)
+desen_çiz(70,6,10)
+turtle.done()
 ```
 
-```
-['lahana', 'marul', 'ıspanak', 'fasulye']
-```
+![image](https://user-images.githubusercontent.com/56628866/128643903-62e39702-17b9-41f9-91c9-ed8da4cbf315.png)
 
-Örnek 21’de pop metodu ile sebzeler listesinden 2.indis numarasına ait olan “pırasa” adlı öge silinmiştir.
+**Şekil 8.21:** Örnek 20 kod çıktısı
 
-## ‘remove’ kullanımı
+## 8.5. Bölüm Sonu Örnekleri
 
-**Örnek 22**
+**Resimlerde gösterilen şekilleri çizecek Python kodlarını yazınız.**
 
+
+| Soru-1<br>![image](https://user-images.githubusercontent.com/56628866/128643996-11ec8570-17e7-45f9-9bca-713488272e7a.png)|Soru-2<br>![image](https://user-images.githubusercontent.com/56628866/128644001-d4f24eca-5b6d-4467-9e59-5daa5882f68b.png)|Soru-3<br>![image](https://user-images.githubusercontent.com/56628866/128644006-cd04ca05-e860-46c5-b528-db0f82f0c540.png)|
+|---|---|---|
+|Soru-4<br>![image](https://user-images.githubusercontent.com/56628866/128644008-b287198c-181c-418d-a9cc-3b315037f6e9.png)|Soru-5<br>![image](https://user-images.githubusercontent.com/56628866/128644013-68d440da-3eba-4f5d-9dd3-15c869613f16.png)|Soru-6<br>![image](https://user-images.githubusercontent.com/56628866/128644022-1ebd2bb3-2dff-4d3b-9e5f-9265ea53f0a2.png)|
+
+**Cevaplar**
+
+1.
 ```python
-sehirler =["adana","ağrı","bursa","konya","ankara"]
-sehirler.remove("konya")
-print(sehirler)
+import turtle
+yıldız = turtle.Turtle()
+for i in range(5):
+ yıldız.forward(100)
+ yıldız.right(144)
+turtle.done()
 ```
-
-```
-['adana', 'ağrı', 'bursa', 'ankara']
-```
-
-Örnek 22’de öge adına göre silme işlemi yapılmıştır ve “**konya**” adlı öge sehirler listesinden silinmiştir.
-
-## ‘reverse’ kullanımı
+2.
 ```python
-sayilar=[10,20,30,40,50,60,70]
-sayilar.reverse()
-print(sayilar)
+import turtle
+yıldız = turtle.Turtle()
+for i in range(20):
+ yıldız.forward(i * 10)
+ yıldız.right(144)
+turtle.done()
 ```
-
-```
-[70, 60, 50, 40, 30, 20, 10]
-```
-Örnek 23’te reverse metodu ile liste öge elemanları tersten sıralanmıştır.
-
-## ‘sort’ kullanımı
-
-**Örnek 24**
-
+3.
 ```python
-isimler=["elif","ayşe","kemal","kaan","hafsa"]
-isimler.sort()
-print(isimler)
+import turtle
+yıldız = turtle.Turtle()
+for i in range(50):
+ yıldız.forward(100)
+ yıldız.right(123)
+turtle.done()
 ```
-
-```
-['ayşe', 'elif', 'hafsa', 'kaan', 'kemal']
-```
-
-Sort metodu ile Örnek 24’te isimler listesi ögeleri alfabetik olarak sıralanmıştır
-
-##  ‘del’ kullanımı
-
-**Örnek 25**
-
+4.
 ```python
-takimlar = ['GS','FB','BJK','TS']
-del takimlar[2]
-print(takimlar)
+import turtle
+kalem = turtle.Turtle()
+kalem.penup()
+for y in range(4):
+ for i in range(4):
+ kalem.dot()
+ kalem.forward(20)
+ kalem.backward(80)
+ kalem.right(90)
+ kalem.forward(20)
+ kalem.left(90)
+turtle.done()
 ```
-
-```
-['GS', 'FB', 'TS']
-```
-
-Örnek 25’te del metodu ile takimlar listesine ait ‘BJK’ ögesi indis numarasına göre silinmiştir.
-
-Yukarıdaki örneklerde temel liste metotlarının her birine yönelik örnek ve çıktıları verilmiştir. Ayrıca
-__xxx__ şeklinde özel metotlar da bulunmaktadır. Bu metotlarda dir(list) şeklinde komut satırına yazıldığında aşağıdaki şekilde çıktı alınır.
-
+5.
 ```python
-['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__',
-'__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__',
-'__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__',
-'__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__',
-'__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__',
-'__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy',
-'count', 'extend', 'indis', 'insert', 'pop', 'remove', 'reverse', 'sort']
+import turtle
+kalem = turtle.Turtle()
+for y in range(4):
+ kalem.down()
+ kalem.dot()
+ for i in range(4):
+ kalem.forward(20)
+ kalem.dot()
+ kalem.up()
+ kalem.backward(80)
+ kalem.right(90)
+ kalem.forward(20)
+ kalem.left(90)
+turtle.done()
 ```
-
-## Len() Fonksiyonu ile Uzunluk Bilgisi
-
-len(  ) fonksiyonu, İngilizce length’in (uzunluk) kısaltılmış hâlidir. String ifadesinin uzunluğunu yani karakter sayısını verir. Örnek 14’te a adlı string değişkene değer atadığımızda değişkendeki karakterlerin
-sayısını vermektedir
-
-**Örnek 26**
-
+6.
 ```python
-a="Galatasaray"
-print(len(a))
+import turtle
+kalem = turtle.Turtle()
+kalem.color("blue")
+for k in range(5,106,25):
+ print(k)
+ for i in range(4):
+ kalem.forward(k)
+ kalem.left(90)
+turtle.done()
 ```
 
-```
-11
-```
-
-Örnek 26’da “len(  )” kullanımına bakıldığında, takimlar adında bir liste tanımlanmış. Bu listeye veri girişi yapılmıştır. Len(  ) komutu ile listenin adı yazılarak, kaç elemanlı olduğu ekrana yazdırılmıştır. Örnek
-27’de len(  ) fonksiyonu ile takimlar listesinin eleman listesi 4 olarak verilmiştir
-
-**Örnek 27**
-
-```python
-takimlar = ['GS','FB','BJK','TS']
-print( len(takimlar))
-```
-
-```
-4
-```
-
-Örnek 28’de 2 adet liste1 ve liste2 adında liste tanımlanmıştır. Bu listelere elemanlar girilerek, len()
-komutu ile kaç elemanlı olduğu bulunmuştur.
-
-**Örnek 28**
-
-```python
-liste1, liste2 = ['abc',56,74 ,'python'], [12, 'opencv','a']
-print ("İlk liste uzunlugu : ", len(liste1))
-print( "İkinci listenin uzunluğu : ", len(liste2))
-```
-
-```
-İlk liste uzunlugu : 4
-İkinci listenin uzunluğu : 3
-```
-
-## İç İçe Listeler
-
-Bir liste herhangi bir sıralama nesnesi içerebilir, hatta başka bir liste (alt liste) içerebilir, alt listeler de
-alt listeler içerebilir ve bu şekilde devam eder. Bu yuvalanmış liste olarak bilinir. Hiyerarşik yapılara veri
-düzenlemek için bunlar kullanılabilir.
-
-**Örnek 29**
-
-```python
-liste1 = [1,2,3]
-liste2 = [4,5,6]
-liste3 = [7,8,9]
-yeniliste = [liste1,liste2,liste3]
-print(yeniliste)
-```
-
-```
-[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-```
-
-Örnek 29’da 3 adet liste oluşturuldu. Bu listelerin her biri ayrı öge olacak şekilde birleştirilerek iç içe
-liste oluşturuldu ve ekrana yazdırıldı.
-Örnek 30’da sebzeler adında boş şekilde liste oluşturuldu
-
-**Örnek 30**
-
-```python
-sebzeler=[]
-sebzeler.append(['yeşil','ıspanak'])
-sebzeler.append(['beyaz','lahana'])
-sebzeler.append(['turuncu','havuç'])
-sebzeler.append(['siyah','turp'])
-sebzeler.append(['kırmızı','domates'])
-```
-Append(  ) metodunu kullanarak sebzeler adlı listeye 5 adet eleman girildi. Girilen verilerin listelenmesi:
-
-```python
-print(sebzeler)
-```
-
-```
-[['yeşil', 'ıspanak'], ['beyaz', 'lahana'], ['turuncu', 'havuç'], ['siyah', 'turp'],
-['kırmızı', 'domates']]
-```
-Sebzeler adında listede 4 adet eleman bulunmaktadır. Bunları teker teker sıralanırsa:
-```python
-print(sebzeler[0])
-```
-
-```
-['yeşil', 'ıspanak']
-```
-
-**Tablo 4.** Sebzeler listesi elemanları
-
-Liste adı | sebzeler|
-----------|---------|
-Eleman Değeri |‘yeşil’, ‘ıspanak’  |‘beyaz’, ‘lahana’  |‘turuncu’, ‘havuç’  |‘siyah’, ‘turp’  |kırmızı’, ‘domates’
-İndis numarası|0|1|2|3|4
-
-
-
-**Örnek 31**
-
-```python
-sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
-sebze=sebzeler[1]
-print(sebze)
-```
-
-```
-['beyaz', 'lahana']
-```
-Örnek 31’e bakıldığı zaman, sebze değişkenine sadece sebzeler [1] matrisindeki değer atanmıştır. Tablo
-4’te sebzeler listesinde sadece havuç değeri listelenmek isteniyorsa indis numarasından faydalanılır.
-
-
-**Örnek 32**
-
-```python
-sebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]
-print(sebzeler[2][1])
-```
-
-```
-havuç
-```
-
-Örnek 33’te 4 adet liste oluşturulmuştur. İlk üç listenin tüm ögeleri son_liste adında listeye aktarılarak,
-ekrana yazdırılmıştır.
-
-**Örnek 33**
-
-```python
-# 3 Adet liste oluşturalım.
-birinci_liste = [1,2,3]
-ikinci_liste = ['a','b','c']
-ucuncu_liste= [40,50,60]
-son_liste= [birinci_liste,ikinci_liste,ucuncu_liste]
-print(son_liste)
-```
-
-```
-[[1, 2, 3], ['a', 'b', 'c'], [40, 50, 60]]
-```
-
-Örnek 34’te 3 adet liste oluşturulmuştur. Bunlara birinci_liste, ikinci_liste, ucuncu_liste isimleri verilmiştir. Son_liste adında liste oluşturularak diğer üç listenin elemanları bu listeye kaydedilmiştir. Ekrana
-sadece a ve 50 değerlerini yan yana listelemek için aşağıdaki kodlar kullanılır.
-
-**Örnek 34**
-
-```python
-# 3 Adet liste oluşturalım.
-birinci_liste = [1,2,3]
-ikinci_liste = ['a','b','c']
-ucuncu_liste= [40,50,60]
-son_liste= [birinci_liste,ikinci_liste,ucuncu_liste]
-print(son_liste[1][0],son_liste[2][1])
-```
-
-```
-a 50
-```
-
-## Veri Tipi Dönüşümleri
-
-Listelerde veri tipi dönüşümleri için, elemanlara yeni değer ataması yapıldığında string, int, float vb. veri
-tipleri arasında değer alabilir.
-
-**Örnek 35**
-
-```python
-liste=[1,2,3,4,5,'ankara']
-print(liste)
-liste[0]=str("kocaeli")
-liste[2]=float(1.5)
-liste[5]=int(20)
-print(liste)
-```
-
-```
-[1,2,3,4,5,'ankara']
-['kocaeli', 2, 1.5, 4, 5, 20]
-```
-
-Örnek 35’te liste adında bir liste örneği tanımlanmıştır. İçindeki elemanları 1,2,3,4,5,’ankara’ ‘dır. İndis
-numarasına göre liste [0] değeri önce 1 iken veri tipi dönüşümünden dolayı ‘kocaeli’ olmuştur. Liste
-[2]’in değeri ise ilk başta 3’tür. Daha sonra float veri tipinde 1.5 değerini almıştır. Son olarak liste[5]’in
-değeri ‘ankara’dır. Liste[5]’e int veri tipinde bir değer kaydedilerek 20 olmuştur.
-Herhangi bir string türünde veriyi parçalayarak da liste oluşturulabilir. Örnek 36’da string veri türünde
-adı meyve olan bir değişken olarak tanımlanmış ve veri olarak elmayı atanmıştır. Meyve adlı değişken
-liste yardımıyla parçalanmıştır.
 
-**Örnek 36**
 
-```python
-meyve="elma"
-liste=list(meyve)
-print (liste)
-```
-
-```
-['e', 'l', 'm', 'a']
-```
-
-Örnek 37’de 1 ile 15 arasındaki sayılardan oluşan liste oluşturulmuştur. Listenin ögeleri ekrana listelenmiştir. Ekrana listeleme işleminde sort(  ) metodu ile ögeler küçükten büyüğe, reverse ile büyükten küçüğe
-doğru sıralanmıştır.
-
-**Örnek 37**
-
-```python
-liste=list(range(1,15,2))
-print(liste)
-liste.sort()
-print(liste)
-liste.reverse()
-print(liste)
-```
-
-```
-[1, 3, 5, 7, 9, 11, 13]
-[1, 3, 5, 7, 9, 11, 13]
-[13, 11, 9, 7, 5, 3, 1]
-```
-
-**split(  ) metodu**, listeyi belirtilen ayıracı kullanarak yeniden döndürmeye yarar. Yani split(  ) karakter
-dizilerini istenen şekilde böler. -ayırıcı diye tanımladığımız ilk parametre, karakter dizisinin nereden bölüneceğini seçer. Eğer ayırıcı tanımlanmazsa karakter dizisi her boşluk gördüğünde ayırır. Örnek 38’de
-bilgiler girildikçe listeye kaydedecektir. Listeye 4 adet öge girilmiş ve listeleme işlemi yapılmıştır.
-
-**Örnek 38**
-
-```python
-bilgi=input("bilgilerinizi araya virgül koyarak yazınız: ")
-liste=bilgi.split(",")
-print(liste)
-```
-
-```
-bilgilerinizi araya virgül koyarak yazınız: Hafsa,Meva,Konya,1
-['Hafsa', 'Meva', 'Konya', '1']
-```
-
-Örnek 39’da ise cümle değişkenindeki kelimeler split metodu ile kelimeler listesine aktarılmıştır. Len(  )
-metodu ile de kaç adet öge olduğu ekrana listelenmiştir.
-
-**Örnek 39**
-
-```python
-cumle="23 nisan herkese mutlu olsun"
-kelimeler=cumle.split(" ")
-print("cümlenizde ",len(kelimeler),"adet kelime vardır")
-```
-
-```
-cümlenizde 5 adet kelime vardır
-```
-
-## Bölüm Sonu Örnekleri
-
-1. Harfler adıyla bir liste oluşturup içine ‘a’, ‘e’, ‘i’, ‘o’, ‘i’, ‘u’ elemanları kaydediniz. Bu listede i ve p
-harflerinin sayısını ekrana yazdırınız.
-
-2. Liste1, liste2, liste3 ve liste4 adında dört adet liste oluşturup aynı satırda olacak şekilde tanımlayıp,
-her bir listeye birer adet eleman girip listeleyiniz.
-
-3. İki adet liste tanımlayarak bu iki listeyi “+” operatörü ile toplama işlemi yaptırılıp, üçüncü bir listeye
-atama işlemini yapınız. Son listeyi ekrana yazdırınız.
-
-4. Aşağıdaki listeyi hem küçükten büyüğe hem de büyükten küçüğe doğru sıralanacak şekilde ekrana
-listeleyiniz.
-```
-liste = [34,1,56,334,23,2,3,19]
-```
-
-5. Aşağıdaki kodları verilen liste örneğinde ekran çıktısını yazınız.
-```python
-listem= ["Merhaba", "Türkiye", "Nasılsın", "Tebrikler"]
-print(listem[-1])
-print(listem[-3])
-print(listem[-4])
-```
-6. Aşağıdaki örnekte liste tanımlanmış ve ekran çıktısı verilmiştir. Ekran çıktısının aşağıdaki gibi olması
-için boş kalan kısımları tamamlayınız.
-```
-liste = [1, 2, 3, 4, 5, 6, 7]
-……………………
-……………………
-……………………
-……………………
-```
-```
-[2, 3]
-[1, 2, 3]
-[4, 5, 6, 7]
-[1, 2, 3, 4, 5, 6, 7]
-```
-7. Aşağıda verilen örnekte boş kalan kısımları doldurunuz.
 
-```python
-isimler = ['ali','veli','ayşe']
-……………………………………………………..
-ad_soy1 = isimler[0] +' '+ soyisimler[0]
-……………………………………………………………
-ad_soy3 = isimler[2] +' '+ soyisimler[2]
-print(ad_soy1)
-………………………….
-print(ad_soy3)
-```
-```
-ali türk
-veli izci
-ayşe erel
-```
-8. 
-```python
-liste = ['bir','iki','dört']
-print(liste)
-```
-```
-['bir', 'iki', 'dört'] şeklinde ekran çıktısı olmaktadır. Ama ['bir', 'iki', 'üç',
-'dört', 'beş'] olacak şekilde listeyi güncelleyiniz.
-```
-9. Aşağıdaki listede listenin ilk ve son verilerine ulaşmak ve listelemek için gerekli kodları yazınız.
-```
-liste=["birinci veri", "ikinci veri", "üçüncü veri ", "dördüncü veri",
-"beşinci veri"]
-```
-
-## Cevaplar
-
-1. Aşağıdaki örnekte harfler adında bir liste tanımlanmış ve 6 adet eleman girilmiştir. count metodu
-kullanılarak, i ve p harflerinin sayısı ekrana yazdırılmıştır. İ harfi için 2 ve p harfi için 0 değeri listelenmiştir.
-```python
-harfler = ['a', 'e', 'i', 'o', 'i', 'u']
-count = harfler.count('i')
-print('i harflerinin sayısı:', count)
-count = harfler.count('p')
-print('p harflerinin sayısı:', count)
-```
-```
-i harflerinin sayısı: 2
-p harflerinin sayısı: 0
-```
-2. Aşağıdaki örnekte 4 adet liste tanımlanmıştır. Bu listelere elemanlar atanarak listelenmiştir.
-```python
-liste1,liste2,liste3,liste4= ['a',100,3.14,'python']
-print(liste1)
-print(liste2)
-print(liste3)
-print(liste4)
-```
-```
-a
-100
-3.14
-python
-```
-3. 
-```python
-list1 = ["a", "b" , "c"]
-list2 = [1, 2, 3]
-list3 = list1 + list2
-print(list3)
-```
-```
-['a', 'b', 'c', 1, 2, 3]
-```
-
-4. 
-```python
-liste = [34,1,56,334,23,2,3,19]
-liste.sort()
-print('küçükten büyüğe doğru',liste)
-liste.reverse()
-print('büyükten küçüğe doğru',liste)
-```
-```
-küçükten büyüğe doğru [1, 2, 3, 19, 23, 34, 56, 334]
-büyükten küçüğe doğru [334, 56, 34, 23, 19, 3, 2, 1]
-```
-5. 
-```python
-listem= ["Merhaba", "Türkiye", "Nasılsın", "Tebrikler"]
-print(listem[-1])
-print(listem[-3])
-print(listem[-4])
-```
-```
-Tebrikler
-Türkiye
-Merhaba
-```
-6. 
-```python
-liste = [1, 2, 3, 4, 5, 6, 7]
-print(liste[1:3])
-print(liste[:3])
-print(liste[3:])
-print(liste[:])
-```
-```
-[2, 3]
-[1, 2, 3]
-[4, 5, 6, 7]
-[1, 2, 3, 4, 5, 6, 7]
-```
-
-7. 
-```python
-isimler = ['ali','veli','ayşe']
-soyisimler = ['türk','izci','erel']
-ad_soy1 = isimler[0] +' '+ soyisimler[0]
-ad_soy2 = isimler[1] +' '+ soyisimler[1]
-ad_soy3 = isimler[2] +' '+ soyisimler[2]
-print(ad_soy1)
-print(ad_soy2)
-print(ad_soy3)
-```
-```
-ali türk
-veli izci
-ayşe erel
-```
-8. 
-```python
-liste = ['bir','iki','dört']
-liste[2]='üç'
-liste.insert(3,'dört')
-liste.insert(4,'beş')
-print(liste)
-```
-```
-['bir', 'iki', 'üç', 'dört', 'beş']
-```
-9. 
-```python
-liste=["birinci veri","ikinci veri","üçüncü veri ","dördüncü veri","beşinci
-veri"]
-#beş elemanlı listenin ilk verisi
-print(liste[0])
-#beş elemanlı listenin son verisi
-print(liste[4])
-```
-```
-birinci veri
-beşinci veri
-```
 
 
 
