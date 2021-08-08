@@ -1,5 +1,5 @@
 # Modül 5
-# LİSTELER VE ÖZELLİKLERİ 
+# 5. LİSTELER VE ÖZELLİKLERİ 
 
 Programlamada bir değişken üzerinde sadece bir değer tutulabilmektedir. Listeler ise bir değişkenin
 altında birden fazla değer tutulabilmesine yarar. Listeler, içinde farklı türlerden verileri barındırabilen taşıyıcılar olarak adlandırılmaktadır. Listeler Python’daki veri tiplerinden biridir. Listeler sıralı olarak
