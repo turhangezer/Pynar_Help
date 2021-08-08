@@ -1,6 +1,6 @@
-# KOŞULLU VE MANTIKSAL İFADELER
+# 4. KOŞULLU VE MANTIKSAL İFADELER
 
-##  Koşullu İfadeler
+##  4.1. Koşullu İfadeler
 
 Program yazarken kodlar sıralı olarak alt alta satırlar şeklinde yazılır. Programın akışında bazı dallanmalar (farklı durumlar için farklı kodların çalışmasını istediğimiz durumlar) olabilir. Programlarda belirli
 koşul veya durumlar için çalışması istenen kodlar koşullu ifade blokları kullanılarak oluşturulur.
@@ -22,7 +22,7 @@ başka bir değer alamaz. Bu durum koşullu ifadeler üretme olanağı sağlar. 
 atlanarak sonraki kodlara geçilir. Sonrasında yeni şart yapısı (Şart 2) aynı şekilde kontrol edilir ve akış
 devam eder
 
-## Mantıksal İfadeler ve Bağlaçlar
+## 4.2. Mantıksal İfadeler ve Bağlaçlar
 
 Bir mantıksal ifadeyi diğer mantıksal ifadelerle bağlamanın farklı yolları vardır. Modül 2’de açıklanan
 ilişkisel operatörler ve mantıksal bağlaçlar kullanılarak (or, and, not vb. gibi) farklı koşul durumları
@@ -38,24 +38,25 @@ Aşağıdaki örnek kodda kullanıcı adı ve şifresi doğru girilirse ekrana �
 kullaniciAdi=input('Kullanıcı Adı:')
 kullaniciParola=input('Parola:')
 print(kullaniciAdi=='Admin' and kullaniciParola=='123456')
-Kullanıcı Adı:Admin
-Parola:123456
-True
+>>>Kullanıcı Adı:Admin
+>>>Parola:123456
+>>>True
 ```
 
 **Örnek 2**
 Bölümü Bilgisayar veya Elektronik olanları seçmek için bir kod yazalım. bolum==’Bilgisayar’ “or” bolum==’Elektronik’ koşullarından biri doğruysa “True” değilse “False” değeri döndürür.
 
-```bolum=input('Bölümünüzü giriniz: ')
+```python
+bolum=input('Bölümünüzü giriniz: ')
 #Büyük harf küçük harf duyarlılığını ulatmayın
 print(bolum=='Bilgisayar' or bolum=='Elektronik')
-Bölümünüzü giriniz: Bilgisayar
-True
+>>>Bölümünüzü giriniz: Bilgisayar
+>>>True
 ```
 
 Örneklerde sadece mantıksal operatörlerin sonucu “boolean” değeri ekrana yazdırıldı. Mantıksal operatörler koşul ifadeleriyle birlikte kullanıldığında belirli şartlarda belirli kod blokları çalıştırılabilir.
 
-## Python Blok Yapısı
+## 4.3. Python Blok Yapısı
 
 Python’da (başka programlama dillerinde de) kodlar belirli alt kümeler hâlinde (blok) ifade edilir. Bu
 yapı Python’da girinti (Indentation) ile oluşturulur. Python’da dikey olarak aynı hizadaki kodlar aynı blok
@@ -83,13 +84,13 @@ için hata verir
 ```python
 print('Blok yapısı')
  print('Girinti')
-File "<ipython-input-7-b54d1a37c7f1>", line 2
- print('Girinti')
- ^
-IndentationError: unexpected indent
+>>>File "<ipython-input-7-b54d1a37c7f1>", line 2
+>>> print('Girinti')
+>>> ^
+>>>IndentationError: unexpected indent
 ```
 
-## if Yapısı
+## 4.4. if Yapısı
 
 Bu yapıda, belirli komutların çalışması, bir koşula bağlıdır. Koşul sağlanmazsa herhangi bir işlem yapılmaz.
 Kullanımı: Aşağıda bir “if” bloğu gösterilmektedir “if” bloğunun dikey hizasının sağında olan kod satırları koşul gerçekleştiğinde çalışır. Bu kodlar “if” bloğunda yer almaktadır. Büyük eşittir operatörü karşılaştırma sonucu “boolean” (True veya False) bir değer verir. True değer verirse “if” bloğu içinde (girintide
@@ -107,9 +108,9 @@ yasi=int(input('Lütfen yaşınızı giriniz: '))
 if (yasi>=18):
  print('Oy kullanabilirsiniz.')
 print ('Program bitti.')
-Lütfen yaşınızı giriniz: 18
-Oy kullanabilirsiniz.
-Program bitti.
+>>>Lütfen yaşınızı giriniz: 18
+>>>Oy kullanabilirsiniz.
+>>>Program bitti.
 ```
 
 “if” bloğunun içindeki kod ancak şart sağlandığında çalışır ve blok bittikten sonra program akışı devam
@@ -120,8 +121,8 @@ yasi=int(input('Lütfen yaşınızı giriniz: '))
 if (yasi>=18):
  print('Oy kullanabilirsiniz.')
 print ('Program bitti.')
-Lütfen yaşınızı giriniz: 15
-Program bitti.
+>>>Lütfen yaşınızı giriniz: 15
+>>>Program bitti.
 ```
 
 **Örnek 5**
@@ -136,9 +137,9 @@ if (adi=='Tahsin'):
  print('2. Şart sağlandı')
  print ('2. if bloğunun içindesiniz.')
 print('Normal program akışı girinti yok.')
-2. Şart sağlandı.
-2. if bloğunun içindesiniz.
-Normal program akışı girinti yok.
+>>>2. Şart sağlandı.
+>>>2. if bloğunun içindesiniz.
+>>>Normal program akışı girinti yok.
 ```
 
 Koşul ifadelerinde birden fazla koşul birlikte kullanılabilir. Bunun için operatörler konusunda açıklanan
@@ -154,15 +155,15 @@ kullaniciParola=input('Parola:')
 if (kullaniciAdi=='Admin' and kullaniciParola=='123456'):
  print('Giriş başarılı.')
  print ('Menülere erişebilirsiniz.')
-Kullanıcı Adı:Admin
-Parola:123456
-Giriş başarılı.
-Menülere erişebilirsiniz.
+>>>Kullanıcı Adı:Admin
+>>>Parola:123456
+>>>Giriş başarılı.
+>>>Menülere erişebilirsiniz.
 ```
 
 Örnekte şartlardan biri bile sağlanmazsa “if” bloğundaki kodlar çalışmaz.
 
-## İç İçe Koşul İfadeleri
+## 4.5. İç İçe Koşul İfadeleri
 
 Yukarıdaki örnekte birden fazla koşulu “and” operatörünü kullanarak kontrol edilmiştir. Aynı işlem, iç içe
 koşul ifadeleri kullanarak da yapılabilir.
@@ -188,10 +189,10 @@ if (kullaniciAdi=='Admin'):
  if (kullaniciParola=='123456'):
  print('Giriş başarılı.')
  print ('Menülere erişebilirsiniz.')
-Kullanıcı Adı:Admin
-Parola:123456
-Giriş başarılı.
-Menülere erişebilirsiniz.
+>>>Kullanıcı Adı:Admin
+>>>Parola:123456
+>>>Giriş başarılı.
+>>>Menülere erişebilirsiniz.
 ```
 
 İlk şart yapısında kullanıcı adının doğru olup olmadığı kontrol edilmektedir. Eğer şart doğruysa içteki 2.
@@ -199,7 +200,7 @@ Menülere erişebilirsiniz.
 Sadece 1. şart sağlanırsa kullanıcı adı doğru girilip parola yanlış girilirse “Kullanıcı adı doğru” mesajı
 ekranda görünecektir. Kullanıcı adı yanlış girilirse hiçbir mesaj görünmeyecektir.
 
-## if-else Yapısı
+## 4.6. if-else Yapısı
 
 “if” yapısında şart sağlanırsa blok içindeki kodlar çalışmaktadır. Ancak şartın sağlanmadığı durumlarda
 herhangi bir işlem yapılmaz. “else” ifadesi değilse anlamındadır. Yani şartın sağlanmadığı durumda
@@ -218,8 +219,8 @@ if ((sayi1%2)==0):
  print('Girdiğiniz sayı çifttir.')
 else:
  print('Girdiğiniz sayı tektir: ')
-Lütfen bir sayı giriniz: 12
-Girdiğiniz sayı çifttir.
+>>>Lütfen bir sayı giriniz: 12
+>>>Girdiğiniz sayı çifttir.
 ```
 Tek bir sayı girildiğinde “else” bloğunun içindeki kodlar çalışır
 
@@ -230,8 +231,8 @@ if ((sayi1%2)==0):
  print('Girdiğiniz sayı çifttir.')
 else:
  print('Girdiğiniz sayı tektir: ')
-Lütfen bir sayı giriniz: 13
-Girdiğiniz sayı tektir:
+>>>Lütfen bir sayı giriniz: 13
+>>>Girdiğiniz sayı tektir:
 ```
 
 **Örnek 9**
@@ -246,10 +247,10 @@ if (kullaniciAdi=='Admin' and kullaniciParola=='123456'):
  print ('Menülere erişebilirsiniz.')
 else:
  print ('Yanlış kullanıcı adı veya şifre')
-Kullanıcı Adı:Admin
-Parola:123456
-Giriş başarılı.
-Menülere erişebilirsiniz.
+>>>Kullanıcı Adı:Admin
+>>>Parola:123456
+>>>Giriş başarılı.
+>>>Menülere erişebilirsiniz.
 ```
 
 **Örnek 10**
@@ -265,11 +266,11 @@ if (yasi>=18 and yasi<35 and bolum=='Bilgisayar' and yabanciDil==True):
  print('Mülakata katılabilirsiniz.')
 else:
  print('Şartlarınız tutmuyor.')
-Lütfen yaşınızı giriniz: 20
-Mülakata katılabilirsiniz.
+>>>Lütfen yaşınızı giriniz: 20
+>>>Mülakata katılabilirsiniz.
 ```
 
-## if-elif-else Yapısı
+## 4.7. if-elif-else Yapısı
 
 Bu yapıda koşullar art arda verilir. if ile verilen koşulun devamında ‘değilse şu ise’ anlamına gelen “elif”
 ifadesi yer alır. Yapının en sonunda ise ‘hiçbiri değilse’ anlamında else ifadesi yer almaktadır. Her ifade
@@ -293,8 +294,8 @@ elif sinavPuani>=55:
 elif sinavPuani>=45:
  print('geçer')
 else: print('Kaldı')
-Puanınız giriniz (0-100): 65
-Orta
+>>>Puanınız giriniz (0-100): 65
+>>>Orta
 ```
 
 **Örnek 12**
@@ -329,15 +330,15 @@ if (basariPuani>=0):
  print('Başarı notu : D')
  elif (basariPuani< 50 ):
  print('Başarı notu : F')
-Vize puanını giriniz: 70
-Final puanını giriniz: 80
-Vize oranını % olarak giriniz (30, 40 gibi): 30
-Final oranını % olarak giriniz (70, 60 gibi): 70
-Başarı puanı: 77.0
-Başarı notu : B
+>>>Vize puanını giriniz: 70
+>>>Final puanını giriniz: 80
+>>>Vize oranını % olarak giriniz (30, 40 gibi): 30
+>>>Final oranını % olarak giriniz (70, 60 gibi): 70
+>>>Başarı puanı: 77.0
+>>>Başarı notu : B
 ```
 
-## Bölüm Sonu Örnekleri
+## 4.8. Bölüm Sonu Örnekleri
 
 1. Kullanıcının girdiği tam sayının “Negatif”, “Pozitif” ya da “Sıfır” olduğunu yazdıran programın kodlarını yazınız.
 2. Öğrencinin sınav ortalamalarını kullanıcıdan alan ortalama en az 50 ise geçti değilse kaldı yazan
@@ -380,8 +381,8 @@ elif(int(sayi)>0):
  print("Sayı Pozitif")
 else:
  print("Sayı Sıfır")
-Sayı : -30
-Sayı Negatif
+>>>Sayı : -30
+>>>Sayı Negatif
 ```
 2.
 ```python 
@@ -390,8 +391,8 @@ if(int(ort)>=50):
  print("Geçtiniz")
 else:
  print("Kaldınız")
-Ortalamanızı Girin : 60
-Geçtiniz 
+>>>Ortalamanızı Girin : 60
+>>>Geçtiniz 
 ```
 3. 
 ```python
@@ -403,9 +404,9 @@ if sayi1<sayi2:
  print ('1.sayi 2. sayıdan küçüktür.')
 if sayi1==sayi2:
  print ('Sayılar eşittir.')
-1 sayıyı giriniz: 12
-2 sayıyı giriniz: 24
-1.sayi 2. sayıdan küçüktür.
+>>>1 sayıyı giriniz: 12
+>>>2 sayıyı giriniz: 24
+>>>1.sayi 2. sayıdan küçüktür.
 ```
 4.
  ```python
@@ -416,14 +417,12 @@ if sayi1>sayi2:
 elif sayi1<sayi2:
  print ('1.sayi 2. sayıdan küçüktür.')
 else: print ('Sayılar eşittir.')
-1. sayıyı giriniz: 12
-2. sayıyı giriniz: 24
-1.sayi 2. sayıdan küçüktür
+>>>1. sayıyı giriniz: 12
+>>>2. sayıyı giriniz: 24
+>>>1.sayi 2. sayıdan küçüktür
 ```
-5. 
-240
-6. 
-1
+5. 240
+6. 1
 
 7. 
 ```python
@@ -437,8 +436,8 @@ elif(a==3):
 elif(a==4):
  print("Kış")
 else: print("Aralıkta olmayan bir değer girdiniz")
-Mevsim No: 2
-Yaz
+>>>Mevsim No: 2
+>>>Yaz
 ```
 8. 
 ```python
@@ -451,11 +450,11 @@ if(a==b==c==d):
 elif(a==c and b==d or a==b and c==d ):
  print("Dikdörtgen")
 else: print("Diğer Dörtgen")
-1. kenar:6
-2. kenar:7
-3. kenar:8
-4. kenar:9
-Diğer Dörtgen
+>>>1. kenar:6
+>>>2. kenar:7
+>>>3. kenar:8
+>>>4. kenar:9
+>>>Diğer Dörtgen
 ```
 
 9. 
@@ -468,10 +467,10 @@ if(a!=b and a!=c and b!=c):
 elif(a==b==c):
  print("Eşkenar Üçgen!")
 else: print("İkizkenar Üçgen")
-1. kenar:3
-2. kenar:5
-3. kenar:6
-Çeşitkenar Üçgen!
+>>>1. kenar:3
+>>>2. kenar:5
+>>>3. kenar:6
+>>>Çeşitkenar Üçgen!
 ```
 10. 
 ```python
@@ -486,7 +485,7 @@ elif endeks > 25 and endeks <=30:
  print("Kilolusunuz")
 elif endeks > 30:
  print("Dikkat! obez")
-Boy: Örnek 1.73----:1.75
-Kilo: Örnek: 78.40----:95
-Dikkat! obez
+>>>Boy: Örnek 1.73----:1.75
+>>>Kilo: Örnek: 78.40----:95
+>>>Dikkat! obez
 ```
