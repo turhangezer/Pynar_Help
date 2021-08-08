@@ -54,7 +54,7 @@ Bir sayının çift olup olmadığını ekrana yazan bir fonksiyon.
 ```python
 def sayiCiftMi (sayi):
  if sayi%2==0:
- print('Sayı çifttir')
+  print('Sayı çifttir')
  else: ('Sayı tektir')
 ```
 Bir fonksiyonu oluşturduktan sonra print(  ) fonksiyonunda kullandığınız şekilde parametrelere uygun
