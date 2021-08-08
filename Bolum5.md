@@ -108,9 +108,8 @@ biri olan listelerde, her bir eleman bir indis (indis) numarasına sahiptir. Bir
 
 Tablo 2. İndis numarasına göre liste örneği
 
-|                 |             |            |            |              |
-|-----------------|-------------|------------|------------|--------------|
 | İndis numarası  | Liste[0]    | Liste[1]   | Liste[2]   | Liste[3]     |
+|-----------------|-------------|------------|------------|--------------|
 | Öge sıralaması  | Birinci öge | İkinci öge | Üçüncü öge | Dördüncü öge |
 | Liste =         | ‘ali’,      | 5,         | 3.14,      | ‘ayşe’       |
 
