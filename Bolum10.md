@@ -35,7 +35,7 @@ yazınca otomatik atmaktadır.
 ```python
 # modul.py
 def cagir():
-print("Merhaba Öğretmen Arkadaşım")
+ print("Merhaba Öğretmen Arkadaşım")
 ```
 
 Oluşturduğunuz modülü çağırmak için;
@@ -48,7 +48,8 @@ içindeki metotları görmekteyiz. Listenin son elemanı ise oluşturulan cagir 
 #ana.py
 import modul
 print(dir(modul))
-['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__
+
+>>> ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__
 package__', '__spec__', 'cagir']
 ```
 
@@ -58,7 +59,8 @@ Cagir foksiyonunu kullanmak için **deneme.py** adında bir Python dosyası olu�
 #deneme.py
 import modul #modülü çağırdık
 modul.cagir()#modül içindeki fonksiyonu çalıştırdık
-Merhaba Öğretmen Arkadaşım
+
+>>> Merhaba Öğretmen Arkadaşım
 ```
 
 Bir modül boş bir dosyadan oluşabileceği gibi, çeşitli değişkenlerin bulunduğu bazı işlevlerin yazıldığı, bir
@@ -89,10 +91,11 @@ print('Adı :',modul.ad)
 print('Soyadı :',modul.soyad)
 print('Yaşı :',modul.yas)
 print('Mesleği:',modul.meslek)
-Adı :Cemal
-Soyadı :Türk
-Yaşı :60
-Mesleği:Kaptan
+
+>>> Adı :Cemal
+>>> Soyadı :Türk
+>>> Yaşı :60
+>>> Mesleği:Kaptan
 ```
 
 Program içinde sadece nesneleri sadece ismi ile çağırmak istenebilir. Bundan dolayı modülde sadece o
@@ -106,7 +109,8 @@ sayfamızdaki sadece meslek nesnesinin değeri gelmiş olur. Bu şekilde modül 
 #deneme2.py
 from modul import meslek
 print('Mesleği:',meslek)
-Mesleği:Kaptan
+
+>>> Mesleği:Kaptan
 ```
 
 Tüm nesneler kullanılmak istendiğinde ise; **from <modül> import\*** şeklinde tanımlama gerekmektedir. **deneme3.py** adında bir Python dosyası oluşturarak, içine aşağıdaki kodları yazınız. Bu şekilde
@@ -120,10 +124,11 @@ print('Adı :',ad)
 print('Soyadı :',soyad)
 print('Yaşı :',yas)
 print('Mesleği:',meslek)
-Adı : Cemal
-Soyadı : Türk
-Yaşı : 60
-Mesleği: Kaptan
+
+>>> Adı : Cemal
+>>> Soyadı : Türk
+>>> Yaşı : 60
+>>> Mesleği: Kaptan
 ```
 
 Tüm nesneleri kullanmak istiyoruz ve modülümüze takma isim verilerek de çağırma işlemi gerçekleştirebilir.
@@ -139,10 +144,11 @@ print('Adı :',mod.ad)
 print('Soyadı :',mod.soyad)
 print('Yaşı :',mod.yas)
 print('Mesleği:',mod.meslek)
-Adı : Cemal
-Soyadı : Türk
-Yaşı : 60
-Mesleği: Kaptan
+
+>>> Adı : Cemal
+>>> Soyadı : Türk
+>>> Yaşı : 60
+>>> Mesleği: Kaptan
 ```
 
 ## 10.2. Hazır Modülleri Kullanımı
@@ -158,7 +164,8 @@ edilerek çağrılmaktadır. Modül içindeki nesneler ise adlarıyla birlikte k
 ```python
 import math
 print(dir(math))
-['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh',
+
+>>> ['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh',
 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh',
 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod',
 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf',
@@ -184,7 +191,8 @@ import math
 yaricap=4
 alan=math.pi*(math.pow(yaricap,2))
 print(alan)
-50.26548245743669
+
+>>> 50.26548245743669
 ```
 
 Örnek 5’e bakıldığında, math modül içerisindeki cos(), factorial(  ), pow(  ), sqrt(  ) gibi fonksiyonları çağırarak çeşitli işlemler yapılmıştır.
@@ -201,10 +209,11 @@ print(ustal)
 print(fak)
 print(cosinus)
 print(karekok)
-25.0
-24
-0.8141809705265618
-9.0
+
+>>> 25.0
+>>> 24
+>>> 0.8141809705265618
+>>> 9.0
 ```
 
 **Random Kütüphanesi**, Python’da rastgele sayı üretilmesini sağlamaktadır.
@@ -216,7 +225,8 @@ listeleyiniz.
 ```python
 import random
 print(dir(random))
-['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST',
+
+>>> ['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST',
 'SystemRandom', 'TWOPI', '_BuiltinMethodType', '_MethodType', '_Sequence', '_Set',
 '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__
 name__', '__package__', '__spec__', '_acos', '_bisect', '_ceil', '_cos', '_e',
@@ -238,7 +248,8 @@ olamaz; yani [0, 1) aralığında oluşmaktadır.
 import random
 a=random.random()
 print(a)
-0.2980492500422903
+
+>>> 0.2980492500422903
 ```
 
 Eğer integer tipinde bir sayı istenirse bu durumda randint metodu kullanmak gerekmektedir. Bu metot
@@ -254,7 +265,8 @@ oluşturulan sayıyı değişkene aktararak, ekrana yazdırınız.
 ```python
 import random
 sayi=random.randint(1, 10)
-print(sayi)
+
+>>> print(sayi)
 3
 ```
 
@@ -270,9 +282,10 @@ cicekler = ['gül', 'karanfil', 'papatya''begonya','menekşe']
 print(random.choice(cicekler))#1. rastgele seçim
 print(random.choice(cicekler))#2. rastgele seçim
 print(random.choice(cicekler))#3. rastgele seçim
-gül
-menekşe
-menekşe
+
+>>> gül
+>>> menekşe
+>>> menekşe
 ```
 
 ## 10.4. Pip Paket Yükleyici Kullanımı
@@ -332,18 +345,19 @@ aynı şekilde “uninstall” komutu kullanılır.
 Pip ile django paketini yükleyip, listele işlemini yaparak, yüklü paketler hakkında bilgi alalım.
 
 ```python
-pip install django
+
+>>> pip install django
 Collecting django
  Downloading Django-3.0.5-py3-none-any.whl (7.5 MB)
-Collecting sqlparse>=0.2.2
+>>> Collecting sqlparse>=0.2.2
  Using cached sqlparse-0.3.1-py2.py3-none-any.whl (40 kB)
-Collecting asgiref~=3.2
+>>> Collecting asgiref~=3.2
  Downloading asgiref-3.2.7-py2.py3-none-any.whl (19 kB)
-Requirement already satisfi ed: pytz in c:\programdata\anaconda3\lib\site-packages
+>>> Requirement already satisfi ed: pytz in c:\programdata\anaconda3\lib\site-packages
 (from django) (2019.3)
-Installing collected packages: sqlparse, asgiref, django
+>>> Installing collected packages: sqlparse, asgiref, django
 Successfully installed asgiref-3.2.7 django-3.0.5 sqlparse-0.3.1
-Note: you may need to restart the kernel to use updated packages.
+>>> Note: you may need to restart the kernel to use updated packages.
 ```
 
 **Örnek 11**
@@ -352,15 +366,16 @@ pip install django ile kurduğunuz paketi yükseltmeye çalışabilirsiniz.
 
 ```python
 pip install django --upgrade
-Requirement already up-to-date: django in c:\programdata\anaconda3\lib\site-packages
+
+>>> Requirement already up-to-date: django in c:\programdata\anaconda3\lib\site-packages
 (3.0.5)
-Requirement already satisfied, skipping upgrade: pytz in c:\programdata\anaconda3\
+>>> Requirement already satisfied, skipping upgrade: pytz in c:\programdata\anaconda3\
 lib\site-packages (from django) (2019.3)
-Requirement already satisfied, skipping upgrade: asgiref~=3.2 in c:\programdata\
+>>> Requirement already satisfied, skipping upgrade: asgiref~=3.2 in c:\programdata\
 anaconda3\lib\site-packages (from django) (3.2.7)
-Requirement already satisfied, skipping upgrade: sqlparse>=0.2.2 in c:\programdata\
+>>> Requirement already satisfied, skipping upgrade: sqlparse>=0.2.2 in c:\programdata\
 anaconda3\lib\site-packages (from django) (0.3.1)
-Note: you may need to restart the kernel to use updated packages.
+>>> Note: you may need to restart the kernel to use updated packages.
 ```
 
 **Örnek 12**
@@ -369,20 +384,24 @@ Yüklediğiniz django paketini kaldırabilirsiniz.
 
 ```python
 pip uninstall django
-10.5. Time Modülü
+```
+
+## 10.5. Time Modülü
+
 Time modülü zaman değerlerini düzenlemekle ilgili birçok görevi yerine getirebilmektedir. Zamanı
 göstermek için iki standart bulunmaktadır. Birincisi zamanı Epoch’tan itibaren saniye olarak vermektir.
 Epoch Unix zaman başlangıcı olarak alınır ve takvime göre 1 Ocak 1970’e denk gelmektedir. Eğer
 Epoch türünden şimdiki zaman saniye biçiminde alınmak istenirse şu yöntemi kullanabilirsiniz.
 
-```
+
 
 **Örnek 13**
 
 ```python
 import time
 print (time.time())
-1587590353.7686868
+
+>>> 1587590353.7686868
 ```
 
 Ekran çıktısı bize 1 Ocak 1970’ten itibaren kaç saniye geçtiğini vermektedir. Elde edilen değeri gmtime(  )
@@ -405,7 +424,8 @@ nesnesini kullanarak zaman bilgilerini sıralı bir şekilde işlemi yapmaktadı
 ```python
 import time
 print (time.localtime())
-time.struct_time(tm_year=2020, tm_mon=4, tm_mday=23, tm_hour=0, tm_min=25, tm_
+
+>>> time.struct_time(tm_year=2020, tm_mon=4, tm_mday=23, tm_hour=0, tm_min=25, tm_
 sec=31, tm_wday=3, tm_yday=114, tm_isdst=0)
 ```
 
@@ -417,7 +437,8 @@ güncel tarih bilgilerini yazmaktadır.
 ```python
 import time
 print (time.ctime())
-Thu Apr 23 00:36:07 2020
+
+>>> Thu Apr 23 00:36:07 2020
 ```
 
 **strftime(  )** fonksiyonu ile kendimize ait zaman cümlesi oluşturabilirsiniz. Bu zaman cümlesinin belirlediğimiz duruma göre ekran çıktısının verilmesini sağlar. Tablo 1’de strftime() fonksiyonuna ait yönergeler
@@ -451,7 +472,8 @@ verilmektedir. Bu yönergeler ister tek başına istersek yönergeleri birleşti
 ```python
 import time
 print (time.strftime("%d/%m/%Y"))
-23/04/2020
+
+>>> 23/04/2020
 ```
 **sleep() Fonksiyonu**, programın belirlenen süre boyunca durdurulmasına olanak sağlar. Aldığı argüman saniye cinsindendir. Örnek 18’deki kodlar çalıştırıldığında 10 saniye program duraklar.
 
@@ -470,6 +492,7 @@ import time
 print ("Başlangıç : %s" % time.ctime())
 time.sleep( 5 )
 print ("Bitiş : %s" % time.ctime())
-Başlangıç : Thu Apr 23 01:19:27 2020
-Bitiş : Thu Apr 23 01:19:32 2020
+
+>>> Başlangıç : Thu Apr 23 01:19:27 2020
+>>> Bitiş : Thu Apr 23 01:19:32 2020
 ```
