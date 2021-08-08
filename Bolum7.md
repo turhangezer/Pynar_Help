@@ -78,7 +78,7 @@ Bu fonksiyonda yazdırılacak metin ve yazdırılma sayısı olmak üzere iki ad
 ```python
 def yazdir(metin,kacKere):
  for i in range (1, (kacKere+1)):
- print (metin, end='\n')
+  print (metin, end='\n')
 #Fonksiyon çağırma
 yazdir('Merhaba', 5)
 
@@ -117,9 +117,9 @@ değilse “False” değerini döndürecektir.
 def asalMi(sayi):
  sayac=2 # tüm sayılar 1'e bölüneceğinden 2 ile başlattık
  while sayac<=int(sayi/2):
- if sayi%sayac==0:
- return False
- sayac+=1
+  if sayi%sayac==0:
+   return False
+  sayac+=1
  return True
 #Fonksiyonu çağırma
 asalMi(113)
@@ -136,11 +136,11 @@ başlayarak 1’e kadar olan tüm sayıların çarpımıdır. 3!=3*2*1)
 def faktoriyelAl(sayi):
  sonuc=1
  if (sayi==0 or sayi==1):
- print('sonuç= ', 1)
+  print('sonuç= ', 1)
  elif sayi>1:
- for i in range(1, sayi+1, 1):
- sonuc*=i
- print ('sonuc=', sonuc)
+  for i in range(1, sayi+1, 1):
+   sonuc*=i
+  print ('sonuc=', sonuc)
  else: print ('0 veya daha büyük sayısal bir değer girmelisiniz')
 ```
 
@@ -165,8 +165,8 @@ Döngülerde örnek olarak verilen ağaç çizme kodlarını bir fonksiyon hâli
 def agacCiz(agacinYuksekligi, karakter='*'):
  b=agacinYuksekligi
  for i in range(1,agacinYuksekligi+1):
- print(b*' ',(2*i-1)*karakter)
- b-=1
+  print(b*' ',(2*i-1)*karakter)
+  b-=1
 ```
 
 Şimdi, fonksiyonu kullanıcıdan aldığınız parametrelerle çağırabilirsiniz.
@@ -215,10 +215,10 @@ döndüren bir fonksiyondur.
 def faktoriyelAl(sayi):
  sonuc=1
  if (sayi==0 or sayi==1):
- sonuc=1
+  sonuc=1
  elif sayi>1:
- for i in range(1, sayi+1, 1):
- sonuc*=i
+  for i in range(1, sayi+1, 1):
+   sonuc*=i
  else: sonuc=-1 #hatalı bir işlem olduğunu anlamak için -1 değerini veriyoruz
  return sonuc
 ```
@@ -249,7 +249,7 @@ def ortalamaBul(sayilar):
  sayilarinToplami=0
  sayilarinOrtalamasi=0
  for i in range(len(sayilar)):
- sayilarinToplami+=sayilar[i]
+  sayilarinToplami+=sayilar[i]
  sayilarinOrtalamasi=sayilarinToplami/len(sayilar)
  return sayilarinOrtalamasi
 ```
@@ -375,7 +375,7 @@ Aynı şekilde fonksiyonlar içinde tanımlanmış değişkenler yerel (lokal) d
 def toplamBul (sayiListesi):
  toplam=0
  for i in range (len(sayiListesi)):
- topla+=sayiListesi[i]
+  topla+=sayiListesi[i]
  return topla
 print (topla)
  
@@ -394,7 +394,7 @@ topla=0
 def toplamBul (sayiListesi):
  topla=0
  for i in range (len(sayiListesi)):
- topla+=sayiListesi[i]
+  topla+=sayiListesi[i]
  return topla
 ```
 Fonksiyonu tanımlanmasına rağmen global değişkene atanan değer ekrana yazdırılabilir.
