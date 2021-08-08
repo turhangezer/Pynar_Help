@@ -111,7 +111,7 @@ programı yazınız.
 a=1
 while a<=100:
  if a%2==0:
- print(a,end=",")
+  print(a,end=",")
  a=a+1
  
 >>> 2,4,6,8…..,100
@@ -149,7 +149,7 @@ while True:
  print(i)
  i+=1
  if i==6:
- break
+  break
 print("döngü sonlandı")
 
 >>> 1
@@ -169,7 +169,7 @@ liste=[]
 while 1:
  ürün=input("ürün adı giriniz:")
  if ürün=="q":
- break
+  break
  liste.append(ürün)
 print("girdiğiniz meyveler:",liste)
 
@@ -195,12 +195,12 @@ while 1==1:
  sayaç+=1
  cevap=int(input("1-100 arası bir sayı girin: "))
  if cevap>sayi:
- print("daha küçük bir sayı girmelisin")
+  print("daha küçük bir sayı girmelisin")
  elif cevap<sayi:
- print("daha büyük bir sayı girmelisin")
+  print("daha büyük bir sayı girmelisin")
  else:
- print("tebrikler tuttuğum sayıyı bildin")
- break
+  print("tebrikler tuttuğum sayıyı bildin")
+  break
 print("tebrikler {} seferde sayıyı bulabildin".format(sayaç))
 
 >>> 1-100 arası bir sayı tuttum tahmin et
@@ -311,7 +311,7 @@ harf="a"
 sayac=0
 for i in yazi:
  if i=="a":
- sayac=sayac+1
+  sayac=sayac+1
 print("cümle içerisinde geçen a harfi sayısı: ",sayac)
 
 >>> cümle içerisinde geçen a harfi sayısı: 9
@@ -327,7 +327,7 @@ yorumlanabilir bir script dilidir."
 sesli="aeıioöuü"
 for i in yazi:
  if i in sesli:
- print(i,end=",")
+  print(i,end=",")
  
 >>> o,ü,ü,e,a,i,ö,i,i,i,e,a,i,ö,e,e,i,o,u,a,o,a,o,ü,e,i,i,o,u,a,i,i,i,i,e,e,e,e,a,o,a,ı, ı,e,e,ö,e,i,i,o,u,a,a,i,i,i,i,i,i,i,
 ```
@@ -342,7 +342,7 @@ yorumlanabilir bir script dilidir."
 cumle2=" Python interaktif yani etkileşimli bir programlama dilidir."
 for i in cumle2:
  if not i in cumle1:
- print(i,end=",")
+  print(i,end=",")
  
 >>> ş,g,
 ```
@@ -359,9 +359,9 @@ sessizler=""
 a=input("bir metin giriniz")
 for i in a:
  if i in sesli_harfler:
- sesliler=sesliler+i
+  sesliler=sesliler+i
  if i in sessiz_harfler:
- sessizler=sessizler+i
+  sessizler=sessizler+i
 print("sesli harfler",sesliler)
 print("sessiz harfler",sessizler)
 
@@ -412,7 +412,7 @@ Listedeki değerlerden 3’ün katları olan sayıları ekrana yazdırın.
 sayılar = [5,8,12,17,25,36,41,49,60,72]
 for i in sayılar:
  if i%3==0:
- print(i,end=",")
+  print(i,end=",")
  
 >>> 12,36,60,72,
 ```
@@ -524,7 +524,7 @@ a=int(input("tablonun satır uzunluğunu giriniz"))
 b=int(input("tablonun sütun uzunluğu giriniz"))
 for i in range(1,a+1):
  for j in range(1,b+1):
- print(j,end=" ")
+  print(j,end=" ")
  print(  )
 
 >>> tablonun satır uzunluğunu giriniz5
@@ -547,11 +547,11 @@ ozel_harf_sayısı,rakam_sayısı,sesli_sayısı=0,0,0
 kelime=input("lütfen incelemek için bir metin giriniz: ")
 for harf in kelime:
  if harf in sesli_harfler:
- sesli_sayısı+=1
+  sesli_sayısı+=1
  if harf in rakamlar:
- rakam_sayısı+=1
+  rakam_sayısı+=1
  if harf in ozel_harf:
- ozel_harf_sayısı+=1
+  ozel_harf_sayısı+=1
  print("girdiğiniz metinde {} adet sesli harf {} adet rakam ve {} adet özel karakter
 bulunmaktadır. ".format(sesli_sayısı,rakam_sayısı,ozel_harf_sayısı) )
 
@@ -571,7 +571,7 @@ continue ifadesi, döngünün baştan sona kadar çalışmasını engellemeyen a
 ```python
 for i in range(1,6):
  if i ==2 or i==4:
- continue
+  continue
  print(i)
  
 >>> 1
@@ -589,7 +589,7 @@ i=0
 while i < 5:
  i=i+1
  if i == 2 or i==4:
- continue
+  continue
  print(i)
 
 >>> 1
@@ -604,7 +604,7 @@ continue deyiminin altında kullanılırsa i değeri sürekli 2 olarak kalır. D
 ```python
 while i < 5:
  if i == 2 or i==4:
- continue
+  continue
  i=i+1
  print(i)
 ```
@@ -616,7 +616,7 @@ dersler = ["Ders 1", "Ders 2", "Ders 3"]
 konular = ["Konu 1", "Konu 2", "Konu 3"]
 for x in dersler:
  for y in konular:
- print(x, y)
+  print(x, y)
  
 >>> Ders 1 Konu 1
 >>> Ders 1 Konu 2
@@ -637,8 +637,8 @@ i=1
 while i<4:
  j=1
  while j<4:
- print("i nin değeri: {} j nin değeri: {} ".format(i,j))
- j=j+1
+  print("i nin değeri: {} j nin değeri: {} ".format(i,j))
+  j=j+1
  i=i+1
  
 >>> i nin değeri: 1 j nin değeri: 1
