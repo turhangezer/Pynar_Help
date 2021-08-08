@@ -518,7 +518,7 @@ print(sorted(demet))
 ['kardelen', 'lale', 'papatya', 'zambak']
 ```
 
-**Bölüm Sonu Örnekleri**
+## 9.8. Bölüm Sonu Örnekleri
 
 1. 5 ve 6 elemanlı olacak şekilde iki adet demet tanımlayınız. Bu iki adet demeti önce birleştirip sonra
 eleman sayılarını bulan programı yapınız.
@@ -560,7 +560,7 @@ print(type(bilesen))# demet veri tipinde oluyor
 ...
 ```
 
-**Cevaplar**
+## Cevaplar
 
 1.
 ```python 
