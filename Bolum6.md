@@ -559,6 +559,7 @@ bulunmaktadır. ".format(sesli_sayısı,rakam_sayısı,ozel_harf_sayısı) )
 karakterli bulan program123456!@&
 >>> girdiğiniz metinde 23 adet sesli harf 6 adet rakam ve 3 adet özel karakter
 bulunmaktadır.
+
 ```
 ## 6.3. Continue İfadesi
 
