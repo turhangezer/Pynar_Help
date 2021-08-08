@@ -1,4 +1,4 @@
-# SÖZLÜKLER VE DEMETLER
+# 9. SÖZLÜKLER VE DEMETLER
 
 Sözlükler, gerçek hayattaki sözlükler gibi davranan bir veri tipi olarak bilinmektedir. Python ile JSON formatında verilerde İsim Değer Çifti Koleksiyonu sözlük yapısıyla birebir uyumludur. Bundan dolayı sözlük
 yapısı JSON verilerinde kullanılmaktadır. Sözlüğün içindeki her bir eleman indeks olarak değil, anahtar
@@ -7,7 +7,7 @@ kısmı bütün veri türünü içerebilir fakat anahtar kısmı sadece string v
 bir öge koleksiyonudur. Anahtar ve değer yapısında veri kümeleri oluştururlar. Değerler herhangi bir veri
 türüne ait olabilir ve tekrarlanabilir fakat anahtarlar kesinlikle benzersiz olmalıdır.
 
-## Sözlük Oluşturma
+## 9.1. Sözlük Oluşturma
 
 Sözlük oluştururken dikkat edilmesi gerekenler:
 
@@ -68,7 +68,7 @@ print(sozluk)
 {'bilgisayar': 'computer', 'sarı': 'yellow', 'masa': 'chair'}
 ```
 
-## Sözlük Anahtar ve Değerlerine Erişim
+## 9.2. Sözlük Anahtar ve Değerlerine Erişim
 
 Sözlük anahtar ve değerlerini listelemek için keys ve values komutları kullanılır.
 
@@ -87,8 +87,8 @@ dict_keys(['konya', 'istanbul', 'ankara'])
 dict_values(['42', '34', '06'])
 ```
 
-## Sözlüklerde Eleman Seçme, Silme, Ekleme, Değiştirme
-### Sözlükte Eleman Seçme İşlemleri
+## 9.3. Sözlüklerde Eleman Seçme, Silme, Ekleme, Değiştirme
+### 9.3.1. Sözlükte Eleman Seçme İşlemleri
 
 Örnek 4’te meyveler adında sözlük oluşturulmuştur. Bu sözlükte adı, türü ve kg adında 3 adet anahtar
 ve bu anahtarlara ait değerleri mevcuttur. Araçlar sözlüğünde adı ve kg anahtarları ekrana yazdırılarak
@@ -128,7 +128,7 @@ kisi_bilgileri['yas'] =45
 ve değerleri tanımlanmıştır. Bu değerler 1.çıktıda ekrana yazdırılmıştır. Daha sonra yas değeri 45 olarak
 değiştirilmiştir. 2. çıktıda tüm değerler ekrana yazdırılarak yas değerinin 45 olarak değiştirildiği görülmüştür. 3. çıktıda ise adres adında anahtar ve değeri eklenerek listelenmiştir.
 
-### Sözlükte Eleman Silme İşlemleri
+### 9.3.2. Sözlükte Eleman Silme İşlemleri
 
 **pop(  )** metodu, öğeyi belirtilen anahtar adıyla kaldırmak için kullanılır.
 
@@ -222,7 +222,7 @@ NameError: name 'kisi_bilgileri' is not defined
 kisi_bilgileri sözlüğü silinmiştir. Ekrana listele işlemi yapıldığında kisi_bilgileri adlı sözlük olmadığı için
 hata mesajı ile karşılaşılmıştır.
 
-### Sözlüğe Eleman Ekleme İşlemleri
+### 9.3.3. Sözlüğe Eleman Ekleme İşlemleri
 
 Sözlüklere veri ekleme işlemi yapılabilmektedir. Yöntem sözlükadı[“anahtar”]=“deger” şeklinde olmaktadır. Örnek 10’da sözlükte önce tek öğesi bulunmaktadır. İkinci ve üçüncü öge eklenerek listeleme
 işlemi yapılmıştır.
@@ -243,7 +243,7 @@ print (sozluk)
 {'adi': 'sami', 'soyadi': 'yılmaz', 'yasi': 40}
 ```
 
-### Sözlükte Eleman Değiştirme İşlemleri
+### 9.3.4. Sözlükte Eleman Değiştirme İşlemleri
 
 Sözlükte eleman değiştirmek için anahtarı kullanarak güncelleme işlemi yapılmıştır.
 **Kullanımı:**
@@ -263,7 +263,7 @@ print(sozluk['yas'])
 
 Örnek 11’de olduğu gibi sözlüğün yas adlı anahtarının değeri 40 iken 45 olarak değiştirilmiştir
 
-## Sözlükler Üzerinde Gezinme
+## 9.4. Sözlükler Üzerinde Gezinme
 
 Python’da sözlükler öğelerine erişmek için anahtarlarını (KEY) kullanırlar ve değerler bu indexler üzerinden gösterilir. Anahtarlar köşeli parantez içerisinde ya da get(  ) fonksiyonu ile kullanılır. get(  ) fonksiyonunda anahtar bulunamazsa KeyError yerine “None” döndürür.
 
@@ -314,7 +314,7 @@ KeyError: 'on'
 
 Örnek 14’te sözlükte olmayan bir anahtar girildiğinde ekrana KeyError:’on’ diye key hatası mesajı verecektir.
 
-## Demet (tuple) Oluşturma ve Eleman İşlemleri
+## 9.5. Demet (tuple) Oluşturma ve Eleman İşlemleri
 
 Demetler veri ekleme ve çıkarmanın yapılamadığı veri yapılarıdır. Bu değiştirilemez özellikleri dışında
 listelere benzemektedirler. Demetler ekleme çıkarma gibi işlemlerle uğraşmadığı için daha hızlı çalışır.
@@ -446,7 +446,7 @@ print(d[3][1])
 8
 ```
 
-## Demetlerin Temel Metotları
+## 9.6. Demetlerin Temel Metotları
 
 **index metodu** demette yer alan ögenin sırasını bulmaya yardımcı olur. Örnek 23’te demet adında demet oluşturulmuştur. 4 ögeden oluşan demette index metodu kullanılarak zambak adlı ögenin
 2. sırada olduğunu görülmüştür
@@ -486,7 +486,7 @@ print(demet)
 ('ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran')
 ```
 
-## Demetler Üzerinde Gezinme
+## 9.7. Demetler Üzerinde Gezinme
 
 Demetler üzerinde gezinme işlemleri için for döngüsü kullanılır. Bu şekilde tüm öğeleri aynı anda listelenebilir. Örnek 26’da deneme adlı demet tanımlanarak içine 7 adet öge girilmiştir. Bu ögeler ise for
 döngüsü ile ekrana ögeleri alt alta yazdırılmıştır.
