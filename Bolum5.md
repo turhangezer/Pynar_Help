@@ -623,7 +623,9 @@ print(liste)
 ```
 Örnek 39’da ise cümle değişkenindeki kelimeler split metodu ile kelimeler listesine aktarılmıştır. Len(  )
 metodu ile de kaç adet öge olduğu ekrana listelenmiştir.
+
 **Örnek 39**
+
 ```python
 cumle="23 nisan herkese mutlu olsun"
 kelimeler=cumle.split(" ")
