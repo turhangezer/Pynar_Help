@@ -23,10 +23,9 @@ içeren bir sözlük oluşturunuz.
 kisisel_bilgiler={"ad":"ali","telefon":"05554442211","e_posta":"ali@abc.
 com","ülke":"Türkiye","il":"istanbul","ilçe":"beşiktaş"}
 print(kisisel_bilgiler)
-```
-```
-{'ad': 'ali', 'telefon': '05554442211', 'e_posta': 'ali@abc.com', 'ülke': 'Türkiye',
-'il': 'istanbul', 'ilçe': 'beşiktaş'}
+
+>>> {'ad': 'ali', 'telefon': '05554442211', 'e_posta': 'ali@abc.com', 'ülke': 'Türkiye',
+>>> 'il': 'istanbul', 'ilçe': 'beşiktaş'}
 ```
 
 Şimdi de key tiplerine göre sözlükler oluşturup ekrana yazdırınız.
@@ -48,12 +47,11 @@ print(sozluk3)
 # dict fonksiyonu
 sozluk4 = dict({1:'erik', 2:'ayva'})
 print(sozluk4)
-```
-```
-{}
-{1: 'adana', 2: 'adıyaman'}
-{'isim': 'ali', 1: [5, 4, 3]}
-{1: 'erik', 2: 'ayva'}
+
+>>> {}
+>>> {1: 'adana', 2: 'adıyaman'}
+>>> {'isim': 'ali', 1: [5, 4, 3]}
+>>> {1: 'erik', 2: 'ayva'}
 ```
 
 Örnek 2’de 3 adet anahtara sahip sözlük oluşturularak listelenmiştir.
@@ -63,9 +61,8 @@ print(sozluk4)
 ```python
 sozluk = {"bilgisayar" : "computer","sarı" : "yellow","masa" : "chair"}
 print(sozluk)
-```
-```
-{'bilgisayar': 'computer', 'sarı': 'yellow', 'masa': 'chair'}
+
+>>> {'bilgisayar': 'computer', 'sarı': 'yellow', 'masa': 'chair'}
 ```
 
 ## 9.2. Sözlük Anahtar ve Değerlerine Erişim
@@ -81,10 +78,9 @@ iller={ "konya" :"42","istanbul" :"34","ankara" :"06" }
 print ( iller.keys())
 #values()metodu sözlükteki değerleri bize yazdırır.
 print (iller.values())
-```
-```
-dict_keys(['konya', 'istanbul', 'ankara'])
-dict_values(['42', '34', '06'])
+
+>>> dict_keys(['konya', 'istanbul', 'ankara'])
+>>> dict_values(['42', '34', '06'])
 ```
 
 ## 9.3. Sözlüklerde Eleman Seçme, Silme, Ekleme, Değiştirme
@@ -100,10 +96,9 @@ eleman seçme işlemi yapılmıştır
 meyveler={"Adı": "Portakal","Türü": "Turunçgiller","Kg": 20}
 print(meyveler["Adı"])
 print(meyveler["Kg"])
-```
-```
-Portakal
-20
+
+>>> Portakal
+>>> 20
 ```
 
 **Örnek 5**
@@ -117,11 +112,10 @@ kisi_bilgileri['yas'] =45
  # deger ekleme
  kisi_bilgileri['adres'] = 'nişantaşı'
  print(kisi_bilgileri)
-```
-```
-{'ad': 'ali', 'yas': 40, 'memleketi': 'konya'} 1.çıktı
-{'ad': 'ali', 'yas': 45, 'memleketi': 'konya'} 2.çıktı
-{'ad': 'ali', 'yas': 45, 'memleketi': 'konya', 'adres': 'nişantaşı'} 3.çıktı
+
+>>> {'ad': 'ali', 'yas': 40, 'memleketi': 'konya'} 1.çıktı
+>>> {'ad': 'ali', 'yas': 45, 'memleketi': 'konya'} 2.çıktı
+>>> {'ad': 'ali', 'yas': 45, 'memleketi': 'konya', 'adres': 'nişantaşı'} 3.çıktı
 ```
 
 Örnek 5’te kişi bilgileri adında sözlük oluşturulmuştur. Bu sözlükte ad, yas, memleketi adında 3 anahtar
