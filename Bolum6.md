@@ -42,11 +42,12 @@ sayac=1
 while sayac<6:
  print("merhaba dünya")
  sayac=sayac+1
-merhaba dünya
-merhaba dünya
-merhaba dünya
-merhaba dünya
-merhaba dünya
+ 
+>>> merhaba dünya
+>>> merhaba dünya
+>>> merhaba dünya
+>>> merhaba dünya
+>>> merhaba dünya
 ```
 Örnek 1’de sayaç isimli değişkenin değeri 1’den başlamış, yine değişken değeri 6’dan küçük olduğu
 sürece konsol üzerinde “merhaba dünya” yazılır. Sayacın değeri 1 arttırılarak döngünün başına döner
@@ -60,11 +61,12 @@ sayac=1
 while sayac<6:
  print(sayac)
  sayac=sayac+1
-1
-2
-3
-4
-5
+ 
+>>> 1
+>>> 2
+>>> 3
+>>> 4
+>>> 5
 ```
 ### 6.1.1. Döngünün Kapsamı
 Hatırlanacağı üzere döngü koşulunun sağlandığı sürece daha içteki bloklarda bulunan kodların çalışacağı belirtilmişti. Döngü bittiği zaman Python bir üstteki bloğa dönerek çalışmasına devam eder.
@@ -80,12 +82,13 @@ while sayac<6:
  sayac=sayac+1
 #döngü bittiği zaman
 print("döngü sonlandı")
-1
-2
-3
-4
-5
-döngü sonlandı
+
+>>> 1
+>>> 2
+>>> 3
+>>> 4
+>>> 5
+>>> döngü sonlandı
 ```
 while döngüsü ile çalışırken sık yapılan hatalardan birisi döngü içerisinde koşulu sağlayan değişkenin
 değerini arttırma işleminin unutulmasıdır. Bu durumda koşul sürekli sağlanacağı için döngü sürekli çalışır ve dışarıdan bir müdahale ile sonlandırılması gerekir.
@@ -110,7 +113,8 @@ while a<=100:
  if a%2==0:
  print(a,end=",")
  a=a+1
-2,4,6,8…..,100
+ 
+>>> 2,4,6,8…..,100
 ```
 **Örnek 6**
 
@@ -122,7 +126,8 @@ while i<=100:
  toplam=toplam+i
  i=i+1
 print("sayıların toplamı",toplam)
-sayıların toplamı 5050
+
+>>> sayıların toplamı 5050
 ```
 Örnek 6’da yapılan işlemde toplam isimli bir değişken oluşturularak başlangıç değeri 0 olarak belirlenmiştir. Çünkü toplam değerini hesaplarken toplam=toplam+i şeklinde bir işlem yapılmaktadır.
 Eğer toplam tanımlı olmasaydı, tanımlanmamış_değer=tanımlanmamış_değer+sayı şeklinde bir işlem yapılmaya çalışacak ve hata verecekti. Yani bir değişken ile işlem yapılmadan önce tanımlanması
@@ -146,12 +151,13 @@ while True:
  if i==6:
  break
 print("döngü sonlandı")
-1
-2
-3
-4
-5
-döngü sonlandı
+
+>>> 1
+>>> 2
+>>> 3
+>>> 4
+>>> 5
+>>> döngü sonlandı
 ```
 while döngüsü ile kullanılan True ifadesinin yerine farklı kullanımlarla da karşılaşılabilir. Örneğin, bir
 alışveriş yapıldığını ve sürekli ürün girişi yapıldığını düşünülürse “q” harfi girilene kadar yapılan alışverişler listeye eklensin, eğer “q” harfi girilirse döngüyü sonlandırılsın.
@@ -166,12 +172,13 @@ while 1:
  break
  liste.append(ürün)
 print("girdiğiniz meyveler:",liste)
-ürün adı giriniz:elma
-ürün adı giriniz:armut
-ürün adı giriniz:peynir
-ürün adı giriniz:su
-ürün adı giriniz:q
-girdiğiniz meyveler: ['elma', 'armut', 'peynir', 'su']
+
+>>> ürün adı giriniz:elma
+>>> ürün adı giriniz:armut
+>>> ürün adı giriniz:peynir
+>>> ürün adı giriniz:su
+>>> ürün adı giriniz:q
+>>> girdiğiniz meyveler: ['elma', 'armut', 'peynir', 'su']
 ```
 **Örnek 9**
 
@@ -195,14 +202,15 @@ while 1==1:
  print("tebrikler tuttuğum sayıyı bildin")
  break
 print("tebrikler {} seferde sayıyı bulabildin".format(sayaç))
-1-100 arası bir sayı tuttum tahmin et
-1-100 arası bir sayı girin: 50
-daha küçük bir sayı girmelisin
-1-100 arası bir sayı girin: 40
-daha büyük bir sayı girmelisin
-1-100 arası bir sayı girin: 45
-tebrikler tuttuğum sayıyı bildin
-tebrikler 3 seferde sayıyı bulabildin
+
+>>> 1-100 arası bir sayı tuttum tahmin et
+>>> 1-100 arası bir sayı girin: 50
+>>> daha küçük bir sayı girmelisin
+>>> 1-100 arası bir sayı girin: 40
+>>> daha büyük bir sayı girmelisin
+>>> 1-100 arası bir sayı girin: 45
+>>> tebrikler tuttuğum sayıyı bildin
+>>> tebrikler 3 seferde sayıyı bulabildin
 ``` 
 Yine burada **while** **True** yapısına benzer bir yapı kullanarak while 1==1: şeklinde bir yapı ile sonsuz
 döngü oluşturulmuştur.
@@ -218,8 +226,9 @@ while i<=f:
  sonuc=sonuc*i
  i+=1
 print(sonuc)
-faktöriyeli alınacak sayıyı giriniz: 5
-120
+
+>>> faktöriyeli alınacak sayıyı giriniz: 5
+>>> 120
 ```
 Örnek 10’da i isimli değişkeni 1 değerinden başlayarak while döngüsünü i değeri girilen sayıdan küçük
 olduğu sürece çalıştırılmış, daha sonra i değeri arttırarak sonuç isimli değişkenle çarpma işlemi yapılmış, i değeri f değerine eşit olduğunda döngüden çıkılarak, sonuç isimli değişkenin değeri gösterilmiştir.
@@ -269,7 +278,8 @@ Python’da for döngüsü ile karakter dizileri üzerinde kolaylıkla iterasyon
 isim="Mustafa"
 for i in isim:
  print(i,end=",")
-M,u,s,t,a,f,a,
+ 
+>>> M,u,s,t,a,f,a,
 ```
 Örnek 11’de yapılan işlemle isim adlı değişken üzerinde ilk karakterden son karaktere kadar tüm değerleri hiçbir harf kalmayana kadar sırayla i değişkenine atayarak ekrana yazdırılmıştır.
 Aynı işlemi while döngüsü ile yapılmak istenirse,
@@ -282,7 +292,8 @@ i=0
 while i<len(isim):
  print(isim[i],end=",")
  i=i+1
-M,u,s,t,a,f,a,
+
+>>> M,u,s,t,a,f,a,
 ```
 Örnek 12’de **while** döngüsü ile karakter dizileri üzerinde işlem yapılmak istendiğinde hem daha fazla
 kod yazılması hem de daha karışık bir yapı kullanılması gerekmektedir. Python’da genellikle listeler veya
@@ -302,7 +313,8 @@ for i in yazi:
  if i=="a":
  sayac=sayac+1
 print("cümle içerisinde geçen a harfi sayısı: ",sayac)
-cümle içerisinde geçen a harfi sayısı: 9
+
+>>> cümle içerisinde geçen a harfi sayısı: 9
 ```
 
 **Örnek 14**
@@ -316,8 +328,8 @@ sesli="aeıioöuü"
 for i in yazi:
  if i in sesli:
  print(i,end=",")
-o,ü,ü,e,a,i,ö,i,i,i,e,a,i,ö,e,e,i,o,u,a,o,a,o,ü,e,i,i,o,u,a,i,i,i,i,e,e,e,e,a,o,a,ı,
-ı,e,e,ö,e,i,i,o,u,a,a,i,i,i,i,i,i,i,
+ 
+>>> o,ü,ü,e,a,i,ö,i,i,i,e,a,i,ö,e,e,i,o,u,a,o,a,o,ü,e,i,i,o,u,a,i,i,i,i,e,e,e,e,a,o,a,ı, ı,e,e,ö,e,i,i,o,u,a,a,i,i,i,i,i,i,i,
 ```
 
 **Örnek 15**
@@ -331,7 +343,8 @@ cumle2=" Python interaktif yani etkileşimli bir programlama dilidir."
 for i in cumle2:
  if not i in cumle1:
  print(i,end=",")
-ş,g,
+ 
+>>> ş,g,
 ```
 
 **Örnek 16**
@@ -351,11 +364,12 @@ for i in a:
  sessizler=sessizler+i
 print("sesli harfler",sesliler)
 print("sessiz harfler",sessizler)
-bir metin giriniz Python üst düzey basit söz dizimine sahip, öğrenmesi oldukça
+
+>>> bir metin giriniz Python üst düzey basit söz dizimine sahip, öğrenmesi oldukça
 kolay, modülerliği, okunabilirliği destekleyen, platform bağımsız nesne yönelimli
 yorumlanabilir bir script dilidir.
-sesli harfler oüüeaiöiiieaiöeeiouaoaoüeiiouaiiiieeeeaoaııeeöeiiouaaiiiiiii
-sessiz harfler ythnstdzybstszdzmnshpğrnmsldkçklymdlrlğknblrlğdsktkynpltfrmbğmsznsnynl
+>>> sesli harfler oüüeaiöiiieaiöeeiouaoaoüeiiouaiiiieeeeaoaııeeöeiiouaaiiiiiii
+>>> sessiz harfler ythnstdzybstszdzmnshpğrnmsldkçklymdlrlğknblrlğdsktkynpltfrmbğmsznsnynl
 mlyrmlnblrbrscrptdldr
 ```
 
@@ -374,7 +388,8 @@ kareler = []
 for i in sayılar:
  kareler.append(i*i)
 print(kareler)
-[1, 4, 9, 16, 25]
+
+>>> [1, 4, 9, 16, 25]
 ```
 
 **Örnek 18**
@@ -386,7 +401,8 @@ toplam=0
 for i in sayılar:
  toplam=toplam+i
 print("sayıların ortalaması: ",toplam/len(sayılar))
-sayıların ortalaması: 5.0
+
+>>> sayıların ortalaması: 5.0
 ```
 
 **Örnek 19**
@@ -397,7 +413,8 @@ sayılar = [5,8,12,17,25,36,41,49,60,72]
 for i in sayılar:
  if i%3==0:
  print(i,end=",")
-12,36,60,72,
+ 
+>>> 12,36,60,72,
 ```
 
 **Örnek 20**
@@ -408,9 +425,10 @@ varsayalım. Liste elemanları üzerinde klasik bir şekilde gezinme işlemi yap
 liste = [[3,4],[7,8],[10,11],[14,15]]
 for i in liste:
  print(i,end=",")
- [3, 4],[7, 8],[10, 11],[14, 15],
-Listeye erişildi ancak alt listelere erişilebilmesi için aşağıdaki gibi bir yapının kullanılması gerekmektedir.
+ 
+>>> [3, 4],[7, 8],[10, 11],[14, 15],
 ```
+Listeye erişildi ancak alt listelere erişilebilmesi için aşağıdaki gibi bir yapının kullanılması gerekmektedir.
 
 **Örnek 21**
 
@@ -419,7 +437,8 @@ liste = [[3,4],[7,8],[10,11],[14,15]]
 for i,j in liste:
  print(i,end=",")
  print(j,end=",")
-3,4,7,8,10,11,14,15,
+ 
+>>> 3,4,7,8,10,11,14,15,
 ```
 **Örnek 22**
 
@@ -429,7 +448,8 @@ liste = [[3,4],[7,8],[10,11],[14,15]]
 for i in liste:
  for j in i:
  print(j,end=",")
-3,4,7,8,10,11,14,15,
+ 
+>>> 3,4,7,8,10,11,14,15,
 ```
 
 ### 6.2.4. range Fonksiyonu ile For Döngüsü Kullanımı
@@ -441,23 +461,27 @@ döngüsünün iterasyon yapması sağlanır.
 
 ```python
 print(*range(10))
-0 1 2 3 4 5 6 7 8 9
-range fonksiyonu, girilen aralık arasında integer değerler oluşturur. Örnek 23’te aralık belirtilmediği
-için başlangıç değeri 0 alınmıştır. Başlangıç değeri verilerek girilen değerler arasında sayı dizisi oluşturulması sağlanabilir.
+
+>>> 0 1 2 3 4 5 6 7 8 9
 ```
+**range** fonksiyonu, girilen aralık arasında integer değerler oluşturur. Örnek 23’te aralık belirtilmediği
+için başlangıç değeri 0 alınmıştır. Başlangıç değeri verilerek girilen değerler arasında sayı dizisi oluşturulması sağlanabilir.
 
 **Örnek 24**
 
 ```python
-range(5,20))
-5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
-Ayrıca range fonksiyonuna üçüncü bir parametre verilerek atlama değeri de verilebilir.
+print(*range(5,20))
+
+>>> 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 ```
 **Örnek 25**
 
+Ayrıca range fonksiyonuna üçüncü bir parametre verilerek atlama değeri de verilebilir.
+
 ```python
 print(*range(1,20,3))
-1 4 7 10 13 16 19
+
+>>> 1 4 7 10 13 16 19
 ```
 
 **Örnek 26**
@@ -468,7 +492,8 @@ toplam=0
 for i in range(20):
  toplam=toplam+i
 print("girdiğiniz sayıların toplamı:",toplam)
-girdiğiniz sayıların toplamı: 190
+
+>>> girdiğiniz sayıların toplamı: 190
 ```
 
 **Örnek 27**
@@ -477,7 +502,8 @@ girdiğiniz sayıların toplamı: 190
 20’den geriye doğru 0’a kadar olan sayıları ekrana yazdırınız.
 for i in range(20,0,-1):
  print(i,end=",")
-20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,
+
+>>> 20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,
 ```
 
 **Örnek 28**
@@ -486,6 +512,7 @@ for i in range(20,0,-1):
 ```python
 for i in range(0,100,5):
  print(i,end=",")
+>>> 
 0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,
 ```
 
@@ -499,13 +526,14 @@ for i in range(1,a+1):
  for j in range(1,b+1):
  print(j,end=" ")
  print(  )
-tablonun satır uzunluğunu giriniz5
-tablonun sütun uzunluğu giriniz4
-1 2 3 4
-1 2 3 4
-1 2 3 4
-1 2 3 4
-1 2 3 4
+
+>>> tablonun satır uzunluğunu giriniz5
+>>> tablonun sütun uzunluğu giriniz4
+>>> 1 2 3 4
+>>> 1 2 3 4
+>>> 1 2 3 4
+>>> 1 2 3 4
+>>> 1 2 3 4
 ```
 
 **Örnek 29**
@@ -526,9 +554,10 @@ for harf in kelime:
  ozel_harf_sayısı+=1
  print("girdiğiniz metinde {} adet sesli harf {} adet rakam ve {} adet özel karakter
 bulunmaktadır. ".format(sesli_sayısı,rakam_sayısı,ozel_harf_sayısı) )
-lütfen incelemek için bir metin giriniz: girilen metindeki sesli harf sayı ve özel
+
+>>> lütfen incelemek için bir metin giriniz: girilen metindeki sesli harf sayı ve özel
 karakterli bulan program123456!@&
-girdiğiniz metinde 23 adet sesli harf 6 adet rakam ve 3 adet özel karakter
+>>> girdiğiniz metinde 23 adet sesli harf 6 adet rakam ve 3 adet özel karakter
 bulunmaktadır.
 ```
 ## 6.3. Continue İfadesi
@@ -543,9 +572,10 @@ for i in range(1,6):
  if i ==2 or i==4:
  continue
  print(i)
-1
-3
-5
+ 
+>>> 1
+>>> 3
+>>> 5
 ```
 Görüldüğü üzere Python, 2 veya 4 değerlerini görünce döngünün başına gitmiş ve alt satırdaki ifadeler
 çalıştırılmamıştır.
@@ -560,9 +590,10 @@ while i < 5:
  if i == 2 or i==4:
  continue
  print(i)
-1
-3
-5
+
+>>> 1
+>>> 3
+>>> 5
 ```
 while döngüsü ile continue deyimi kullanırken döngü, sonsuz döngüye girebilir. Eğer i=i+1 ifadesi
 continue deyiminin altında kullanılırsa i değeri sürekli 2 olarak kalır. Değişkenin değeri artmaz ve uygulama sonsuz döngüye girer. Örnek 32’de hatalı kullanım şekli gösterilmiştir.
@@ -585,15 +616,16 @@ konular = ["Konu 1", "Konu 2", "Konu 3"]
 for x in dersler:
  for y in konular:
  print(x, y)
-Ders 1 Konu 1
-Ders 1 Konu 2
-Ders 1 Konu 3
-Ders 2 Konu 1
-Ders 2 Konu 2
-Ders 2 Konu 3
-Ders 3 Konu 1
-Ders 3 Konu 2
-Ders 3 Konu 3
+ 
+>>> Ders 1 Konu 1
+>>> Ders 1 Konu 2
+>>> Ders 1 Konu 3
+>>> Ders 2 Konu 1
+>>> Ders 2 Konu 2
+>>> Ders 2 Konu 3
+>>> Ders 3 Konu 1
+>>> Ders 3 Konu 2
+>>> Ders 3 Konu 3
 ```
 
 **Örnek 34**
@@ -607,13 +639,14 @@ while i<4:
  print("i nin değeri: {} j nin değeri: {} ".format(i,j))
  j=j+1
  i=i+1
-i nin değeri: 1 j nin değeri: 1
-i nin değeri: 1 j nin değeri: 2
-i nin değeri: 1 j nin değeri: 3
-i nin değeri: 2 j nin değeri: 1
-i nin değeri: 2 j nin değeri: 2
-i nin değeri: 2 j nin değeri: 3
-i nin değeri: 3 j nin değeri: 1
-i nin değeri: 3 j nin değeri: 2
-i nin değeri: 3 j nin değeri: 3
+ 
+>>> i nin değeri: 1 j nin değeri: 1
+>>> i nin değeri: 1 j nin değeri: 2
+>>> i nin değeri: 1 j nin değeri: 3
+>>> i nin değeri: 2 j nin değeri: 1
+>>> i nin değeri: 2 j nin değeri: 2
+>>> i nin değeri: 2 j nin değeri: 3
+>>> i nin değeri: 3 j nin değeri: 1
+>>> i nin değeri: 3 j nin değeri: 2
+>>> i nin değeri: 3 j nin değeri: 3
 ```
