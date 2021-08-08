@@ -87,9 +87,8 @@ eksiğidir.
 
 Tablo 1. Listelerde indis numarasına göre veri sıralaması
 
-|            |             |             |                  |
-|------------|-------------|-------------|------------------|
 | Başlangıç  |             |             | Bitiş(Uzunluk-1) |
+|------------|-------------|-------------|------------------|
 | Harfler[0] | Harfler[1]  | Harfler[2]  | …                |
 
 
