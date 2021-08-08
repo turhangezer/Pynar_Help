@@ -32,10 +32,11 @@ print ('Merhaba', 'Mars', sep=' ', end='\n') #parametreleri kullanarak
 print ('Merhaba')
 print ('Merhaba',' ', 'Mars') #parametreleri kullanmadan
 print ('Merhaba')
-Merhaba Mars
-Merhaba
-Merhaba Mars
-Merhaba
+
+>>> Merhaba Mars
+>>> Merhaba
+>>> Merhaba Mars
+>>> Merhaba
 ```
 
 ## 7.2. Fonksiyon Oluşturma
@@ -61,7 +62,8 @@ argümanları girip çağırabilirsiniz.
 
 ```python
 sayiCiftMi(10)
-Sayı çifttir
+
+>>> Sayı çifttir
 ```
 
 Fonksiyonun adı ve parametrelerine değerleri yazılarak fonksiyon kullanılabilir. Fonksiyon çağrıldığında
@@ -79,13 +81,12 @@ def yazdir(metin,kacKere):
  print (metin, end='\n')
 #Fonksiyon çağırma
 yazdir('Merhaba', 5)
-```
-```
-Merhaba
-Merhaba
-Merhaba
-Merhaba
-Merhaba
+
+>>> Merhaba
+>>> Merhaba
+>>> Merhaba
+>>> Merhaba
+>>> Merhaba
 ```
 
 Aynı fonksiyon için parametreleri kullanıcıdan alabilirsiniz.
@@ -94,12 +95,13 @@ Aynı fonksiyon için parametreleri kullanıcıdan alabilirsiniz.
 yazdirilacakMetin=input('Yazdırılacak metni giriniz: ')
 yazdirmaSayisi=int(input('Metin kaç kez yazdırılacak: '))
 yazdir(yazdirilacakMetin, yazdirmaSayisi)
-Yazdırılacak metni giriniz: Kara Murat
-Metin kaç kez yazdırılacak: 4
-Kara Murat
-Kara Murat
-Kara Murat
-Kara Murat
+
+>>> Yazdırılacak metni giriniz: Kara Murat
+>>> Metin kaç kez yazdırılacak: 4
+>>> Kara Murat
+>>> Kara Murat
+>>> Kara Murat
+>>> Kara Murat
 ```
 
 **Örnek 4**
@@ -121,7 +123,8 @@ def asalMi(sayi):
  return True
 #Fonksiyonu çağırma
 asalMi(113)
-True
+
+>>> True
 ```
 
 **Örnek 5**
@@ -145,7 +148,7 @@ Yukarıda tanımlanan fonksiyonu çağırmak için kullanıcıdan argüman alman
 
 ```python
 faktoriyelAl(int(input('Faktöriyeli alınacak sayıyı giriniz: ')))
-Faktöriyeli alınacak sayıyı giriniz: 5
+>>> Faktöriyeli alınacak sayıyı giriniz: 5
 sonuc= 120
 ```
 
@@ -177,9 +180,9 @@ elif agacKarakteri=='' and agacYuksekligi>=1:
  agacCiz(agacYuksekligi)
 else: print('Hatalı giriş')
 
-Ağacın yüksekliği kaç satır olsun? : 10
-Ağaç için bir sembol veya karakter giriniz :
-            *
+>>> Ağacın yüksekliği kaç satır olsun? : 10
+>>> Ağaç için bir sembol veya karakter giriniz :
+>>>         *
            ***
           *****
          *******
@@ -229,7 +232,8 @@ sonucumuz=faktoriyelAl(5)
 if sonucumuz!=-1: # bir hata olup olmadığını kontrol edelim
  print(sonucumuz)
 else:print('Bir hata oluştu')
-120
+
+>>> 120
 ```
 Kendi tanımladığınız fonksiyonların içinde temel fonksiyonları ya da tanımladığınız başka fonksiyonları
 da kullanabilirsiniz
@@ -260,16 +264,17 @@ for i in range(0,sayiAdedi):
  sayi=int(input())
  sayilarim.append(sayi)
 ortalamaBul(sayilarim)
-Kaç adet sayının ortalamasını alacaksınız: 4
-1 . sayıyı giriniz?
-10
-2 . sayıyı giriniz?
-20
-3 . sayıyı giriniz?
-30
-4 . sayıyı giriniz?
-40
-25.0
+
+>>> Kaç adet sayının ortalamasını alacaksınız: 4
+>>> 1 . sayıyı giriniz?
+>>> 10
+>>> 2 . sayıyı giriniz?
+>>> 20
+>>> 3 . sayıyı giriniz?
+>>> 30
+>>> 4 . sayıyı giriniz?
+>>> 40
+>>> 25.0
 ```
 
 **NOT**
@@ -286,9 +291,10 @@ de değerini korur.
 for i in range (1,3):
  print ('i değişkenin değeri=', i)
 print ('i değişkenin son değeri=', i)
-i değişkenin değeri= 1
-i değişkenin değeri= 2
-i değişkenin son değeri= 2
+
+>>> i değişkenin değeri= 1
+>>> i değişkenin değeri= 2
+>>> i değişkenin son değeri= 2
 ```
 
 “for” bloğu en dışta yer aldığı için i değeri onunla aynı hizada ve daha içerideki girintilerde tanınmakta
@@ -305,7 +311,8 @@ yas=35
 if yas ==35:
  deger='yolun yarısı'
 print (deger)
-yolun yarısı
+
+>>> yolun yarısı
 ```
 
 **Örnek 11**
@@ -317,11 +324,12 @@ yas=34
 if yas ==35:
  deger2='yolun yarısı'
 print (deger2)
-NameError Traceback (most recent call last)
-<ipython-input-126-3f455a188ff0> in <module>()
- 2 if yas ==35:
- 3 deger2='yolun yarısı'
-----> 4 print (deger2)
+
+>>> NameError Traceback (most recent call last)
+>>> <ipython-input-126-3f455a188ff0> in <module>()
+          2 if yas ==35:
+          3 deger2='yolun yarısı'
+    ----> 4 print (deger2)
 ```
 
 Hata mesajında deger2 adında bir değişkenin tanımlı olmadığı ifade edilmektedir.
@@ -338,7 +346,8 @@ dogumGunuMu=True
 if dogumGunuMu==True:
  yas+=1 #yerelde aynı değişken 1 artırılmıştır.
  print ('Nice yıllara! Yaş:', yas)
-Nice yıllara! Yaş: 35
+ 
+>>> Nice yıllara! Yaş: 35
 ```
  
  
@@ -353,7 +362,8 @@ if dogumGunuMu==True:
  yas2+=1 #yerelde aynı değişken 1 artırılmıştır.
  print ('Nice yıllara! Yaş:', yas2)
 print ('Yaşınız: ', yas2)
-Yaşınız: 34
+ 
+>>> Yaşınız: 34
 ```
 
 **Örnek 14**
@@ -368,10 +378,11 @@ def toplamBul (sayiListesi):
  topla+=sayiListesi[i]
  return topla
 print (topla)
-NameError Traceback (most recent call last)
-<ipython-input-132-e72b6ce4bac6> in <module>()
-----> 1 print (topla)
-NameError: name 'topla' is not defined
+ 
+>>> NameError Traceback (most recent call last)
+    <ipython-input-132-e72b6ce4bac6> in <module>()
+    ----> 1 print (topla)
+    NameError: name 'topla' is not defined
 ```
  
  **Örnek 15**
@@ -385,11 +396,18 @@ def toplamBul (sayiListesi):
  for i in range (len(sayiListesi)):
  topla+=sayiListesi[i]
  return topla
+```
 Fonksiyonu tanımlanmasına rağmen global değişkene atanan değer ekrana yazdırılabilir.
+```python
 print (topla)
-0
+ 
+>>> 0
+```
 Şimdi de fonksiyonunuzu çağırabilirsiniz.
+
+```python
 toplamBul([1, 2, 3, 4, 5])
-15
+ 
+>>> 15
 ```
 Değişkene atanan yeni değer yani fonksiyonun sonucu görülmektedir.
