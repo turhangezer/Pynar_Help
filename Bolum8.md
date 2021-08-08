@@ -1,4 +1,4 @@
-# 8 TURTLE (KAPLUMBAĞA) MODÜLÜ İLE GRAFİK ARAYÜZE GİRİŞ
+# 8. TURTLE (KAPLUMBAĞA) MODÜLÜ İLE GRAFİK ARAYÜZE GİRİŞ
 
 Bu bölüm, bilgisayar ekranlarından aşina olduğunuz pencereler (formlar) ile tanışacağınız ve kullanmaya başlayacağınız kısımdır. Grafik arayüz (pencere) kavramı, temelde yazılımın komut satırından çıkıp
 görsel ara birimler aracılığıyla ifade edilmesidir. Kaplumbağa grafikler grafik arayüz üzerinde çizim
