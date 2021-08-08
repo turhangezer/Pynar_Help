@@ -265,9 +265,9 @@ oluşturulan sayıyı değişkene aktararak, ekrana yazdırınız.
 ```python
 import random
 sayi=random.randint(1, 10)
+print(sayi)
 
->>> print(sayi)
-3
+>>> 3
 ```
 
 **random.choice**, ile listeden rastgele bir öge seçilmesine izin vermektedir. Örnek 9’da cicekler adında
