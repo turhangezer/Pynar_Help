@@ -537,8 +537,9 @@ print(sebzeler[2][1])
 ekrana yazdırılmıştır.
 
 **Örnek 33**
-# 3 Adet liste oluşturalım.
+
 ```python
+# 3 Adet liste oluşturalım.
 birinci_liste = [1,2,3]
 ikinci_liste = ['a','b','c']
 ucuncu_liste= [40,50,60]
@@ -551,8 +552,9 @@ print(son_liste)
 sadece a ve 50 değerlerini yan yana listelemek için aşağıdaki kodlar kullanılır.
 
 **Örnek 34**
-# 3 Adet liste oluşturalım.
+
 ```python
+# 3 Adet liste oluşturalım.
 birinci_liste = [1,2,3]
 ikinci_liste = ['a','b','c']
 ucuncu_liste= [40,50,60]
