@@ -44,6 +44,7 @@ sağ: **right (açı)**, sol: **left (açı)** komutlarıdır.
 Bu komutlar kullanılarak yapılan örnekleri inceleyelim.
 
 **Örnek 2**
+
 **right ve forward fonksiyonlarının birlikte kullanımı**
 
 ```python
@@ -60,6 +61,7 @@ turtle.done()
 **Şekil 8.3:** Örnek 2 kod çıktısı
 
 **Örnek 3**
+
 **right ve backward fonksiyonlarının birlikte kullanımı**
 
 ```python
@@ -76,6 +78,7 @@ turtle.done()
 **Şekil 8.4:** Örnek 3 kod çıktısı
 
 **Örnek 4**
+
 **right ve forward fonksiyonlarının birlikte kullanımı**
 
 ```python
@@ -92,6 +95,7 @@ turtle.done()
 **Şekil 8.5:** Örnek 4 kod çıktısı
 
 **Örnek 5**
+
 **right ve backward fonksiyonlarının birlikte kullanımı**
 
 ```python
@@ -112,6 +116,7 @@ de geçerlidir. Bilgisayar: ileri 100 adım git ile geri eksi 100 adım git komu
 üretir. Kod çıktıları arasındaki fark mesafe girdileridir
 
 **Örnek 6**
+
 **left ve forward fonksiyonlarının birlikte kullanımı**
 
 ```python
@@ -127,6 +132,7 @@ turtle.done()
 **Şekil 8.7:** Örnek 6 kod çıktısı
 
 **Örnek 7**
+
 **Açı kullanarak şekil çizme örneği**
 
 ```python
@@ -153,6 +159,7 @@ gerekir aksi durumda hata mesajı karşılaşılır.
 ```
 
 **Örnek 8**
+
 **Çizgi mesafesini kullanıcıdan alıp şekil çizen program**
 
 ```python
@@ -171,6 +178,7 @@ turtle.done()
 **Şekil 8.9:** Örnek 8 kod çıktısı
 
 **Örnek 9**
+
 **Çizgi mesafesini ve dönüş açısını kullanıcıdan alıp şekil çizen program**
 
 ```python
@@ -197,6 +205,7 @@ renk adı “red” veya tırnak içinde diyez ile birlikte html renk kodu “#A
 https://htmlcolorcodes.com/ adresinden öğrenebilirsiniz. Kalem kalınlığı **pensize (sayı değeri)** fonksiyonu ile ayarlanır
 
 **Örnek 10**
+
 **pencolor, pensize ve color uygulaması**
 
 ```python
@@ -234,6 +243,7 @@ Turtle çizim aracının görünüm şekli için de **shape(  )** fonksiyonu
 ‘classic’, ‘turtle’, ‘circle’** olmak üzere 4 şekle sahip olabilir.
 
 **Örnek 11**
+
 **dot ile çizim uygulaması**
 
 ```python
@@ -249,7 +259,8 @@ turtle.done()
 
 **Şekil 8.12:** Örnek 11 kod çıktısı
 
-**örnek 12**
+**Örnek 12**
+
 **dot ile çizgisiz şekil uygulaması**
 
 ```python
@@ -267,6 +278,7 @@ turtle.done()
 **Şekil 8.13:** Örnek 12 kod çıktısı
 
 **Örnek 13**
+
 **shape ve goto fonksiyonlarının kullanımı**
 
 ```python
@@ -287,6 +299,7 @@ turtle.done()
 **Şekil 8.14:** Örnek 13 kod çıktısı
 
 **Örnek 14**
+
 **shape ve goto fonksiyonlarının farklı bir çizim için kullanımı**
 
 ```python
@@ -314,6 +327,7 @@ etmişsinizdir. Fark etmenizi istediğimiz bir diğer nokta, forward ve left fon
 çizdirebiliriz. Aynı mantığı Örnek 16’da gösterildiği gibi altıgen çizdirmek için kullanabiliriz.
 
 **Örnek 15**
+
 **turtle ile kare çizme uygulaması**
 
 ```python
@@ -332,6 +346,7 @@ turtle.done()
 **Şekil 8.16:** Örnek 15 kod çıktısı
 
 **Örnek 16**
+
 **turtle ile altıgen çizme uygulaması**
 
 ```python
@@ -376,6 +391,7 @@ turtle.done()
 3 adet çember çizdirilmektedir.
 
 **Örnek 18**
+
 **circle fonksiyonu ile 3 farklı yarıçapta ve renkte çember çizdirme**
 
 ```python
@@ -401,6 +417,7 @@ döngüler kullanılmaktadır. Yani çokgenlerden bol miktarda çizdirilmesi ger
 yaptırıldığında istenilen desenler farklı yüzeylere çizdirilebilirdi.
 
 **Örnek 19**
+
 **İç içe döngüler ile desen çizdirme**
 
 ```python
