@@ -179,17 +179,17 @@ sağlanmış olacaktır. Aynı mantık virgül gibi başka bir karakter kullanı
 ```python
 asal_sayı=[2]
 for sayı in range (3,1001):
- for bolen_sayı in range (2,sayı):
- sayı_asalmı=False
- if sayı % bolen_sayı==0:
- sayı_asalmı=True
- break
- if sayı_asalmı==False:
- asal_sayı.append(sayı)
- veri=" "
+  for bolen_sayı in range (2,sayı):
+    sayı_asalmı=False
+    if sayı % bolen_sayı==0:
+      sayı_asalmı=True
+      break
+  if sayı_asalmı==False:
+     asal_sayı.append(sayı)
+veri=" "
 for i in asal_sayı:
- veri+=str(i) # veri=veri+str(i)
- veri+=" "
+    veri+=str(i) # veri=veri+str(i)
+    veri+=" "
 dosya=open ("asalsayı.txt","w")
 dosya.write(veri)
 dosya.close()
@@ -210,8 +210,7 @@ olup olmadığına bakılarak sayının asal olup olmadığını kontrol edilmi�
 with open("asalsayı.txt","r") as dosya :
  veri=dosya.read()
  asal_sayılar=veri.split(" ")
-kontrol_sayısı=input("asal olup olmadığını kontrol etmek istediğiniz sayıyı
-giriniz")
+kontrol_sayısı=input("asal olup olmadığını kontrol etmek istediğiniz sayıyı giriniz")
 if kontrol_sayısı in asal_sayılar :
  print("asal sayı")
 else:
