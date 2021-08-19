@@ -414,8 +414,8 @@ def rezervasyon_yap():
  rezervasyonlar=dosya.readlines()
  mecut_rezervasyon=len(rezervasyonlar)
  if rezervasyon_kapasitesi-mecut_rezervasyon >0 :
-  print(rezervasyon_kapasitesi-mecut_rezervasyon,"adet daha rezervasyon yapabiliriz")
-  yeni_rezervasyon=input("rezervasyon bilgilerini araya virgül girerek giriniz")
+   print(rezervasyon_kapasitesi-mecut_rezervasyon,"adet daha rezervasyon yapabiliriz")
+   yeni_rezervasyon=input("rezervasyon bilgilerini araya virgül girerek giriniz")
    dosya.write("\n"+yeni_rezervasyon )
    print("rezervasyon numaranız =",mecut_rezervasyon+1,end="")
    print("rezervasyon bilgileriniz : ",yeni_rezervasyon)
@@ -424,9 +424,7 @@ def rezervasyon_yap():
    print("rezervasyon kapasitemiz dolmuştur.")
  dosya.close()
  
-p
-Örnek 15’te yapılan rezervasyonun nasıl silineceğini gösteren bir dosya uygulaması bulunmaktadır.
-rint("rezervasyon ekranına hoş geldiniz")
+print("rezervasyon ekranına hoş geldiniz")
 rezervasyon_yap()
 ```
 
